@@ -1,5 +1,6 @@
 import { state } from "./state.js";
 import { getIcon } from "./icons.js";
+import { openTheaterGame } from "./theaterModal.js";
 
 export async function initPortsView() {
   try {
@@ -80,7 +81,7 @@ export function renderPortsList() {
 
   container.innerHTML = state.filteredPorts.map((p) => {
     const initial = p.title.slice(0, 2).toUpperCase();
-    const isExternal = !!p.openExternal;
+    const hasMulti = p.sources && p.sources.length > 1;
 
     return `
       <div class="port-card fade-in">
@@ -101,12 +102,20 @@ export function renderPortsList() {
           <h3 class="port-title-text" title="${p.title}">${p.title}</h3>
           <p class="port-desc-text">${p.desc}</p>
         </div>
-        ${isExternal ? `
+        ${hasMulti ? `
+          <div style="margin-bottom: 8px;">
+            <label style="font-size: 11px; color: var(--text-dim); display: block; margin-bottom: 4px; font-weight: 600;">Servidor (${p.sources.length} opções):</label>
+            <select id="server-select-${p.id}" class="chip" style="width: 100%; outline: none; font-size: 12px; padding: 4px 8px;">
+              ${p.sources.map((s, idx) => `<option value="${idx}">${s.name}${s.extra ? ' (' + s.extra + ')' : ''}</option>`).join("")}
+            </select>
+          </div>
+        ` : ""}
+        ${p.openExternal ? `
           <a class="btn-action btn-external" href="${p.url}" target="_blank" rel="noopener">
             ${getIcon("external")} Abrir em Nova Aba
           </a>
         ` : `
-          <button class="btn-action btn-play" onclick="window.launchPortIframe('${encodeURIComponent(p.url)}', '${encodeURIComponent(p.title)}')">
+          <button class="btn-action btn-play" onclick="window.launchPortById('${p.id}')">
             ${getIcon("play")} Jogar no Navegador
           </button>
         `}
@@ -115,23 +124,20 @@ export function renderPortsList() {
   }).join("");
 }
 
+window.launchPortById = (portId) => {
+  const p = state.webports.find(x => x.id === portId);
+  if (!p) return;
+
+  let url = p.url;
+  let selectedIdx = 0;
+  if (p.sources && p.sources.length > 1) {
+    const sel = document.getElementById(`server-select-${p.id}`);
+    selectedIdx = sel ? parseInt(sel.value, 10) : 0;
+    url = p.sources[selectedIdx]?.url || p.url;
+  }
+  openTheaterGame(url, p.title, p.sources, selectedIdx);
+};
+
 window.launchPortIframe = (encodedUrl, encodedTitle) => {
-  const url = decodeURIComponent(encodedUrl);
-  const title = decodeURIComponent(encodedTitle);
-
-  const modal = document.getElementById("theaterModal");
-  const modalTitle = document.getElementById("theaterTitle");
-  const modalBody = document.getElementById("theaterBody");
-  const coreBadge = document.getElementById("theaterBadge");
-
-  if (!modal || !modalBody) return;
-
-  if (modalTitle) modalTitle.textContent = title;
-  if (coreBadge) coreBadge.textContent = "WEB PORT";
-
-  modalBody.innerHTML = `
-    <iframe src="${url}" style="width:100%;height:100%;border:0;" allow="autoplay; fullscreen; gamepad; pointer-lock *" allowfullscreen></iframe>
-  `;
-
-  modal.classList.add("active");
+  openTheaterGame(decodeURIComponent(encodedUrl), decodeURIComponent(encodedTitle));
 };

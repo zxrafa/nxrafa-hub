@@ -26,7 +26,7 @@ export const CONSOLE_CORES = {
   NES: "nes",
   Genesis: "segaMD",
   GB: "gb",
-  GBC: "gbc",
+  GBC: "gb",
   N64: "n64",
   PS1: "psx",
   NDS: "nds"
@@ -41,7 +41,7 @@ export const EXTENSION_CORES = {
   md: "segaMD",
   smd: "segaMD",
   gb: "gb",
-  gbc: "gbc",
+  gbc: "gb",
   z64: "n64",
   n64: "n64",
   v64: "n64",

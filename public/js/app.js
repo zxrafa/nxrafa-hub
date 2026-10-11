@@ -61,13 +61,21 @@ function initModalControls() {
   const closeBtn = document.getElementById("theaterCloseBtn");
   const fsBtn = document.getElementById("theaterFsBtn");
   const body = document.getElementById("theaterBody");
+  const serverWrap = document.getElementById("theaterServerWrap");
 
-  if (closeBtn && modal) {
-    closeBtn.onclick = () => {
-      modal.classList.remove("active");
-      if (body) body.innerHTML = "";
-    };
-  }
+  const closeModal = () => {
+    if (modal) modal.classList.remove("active");
+    if (body) body.innerHTML = "";
+    if (serverWrap) serverWrap.style.display = "none";
+  };
+
+  if (closeBtn) closeBtn.onclick = closeModal;
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal && modal.classList.contains("active")) {
+      closeModal();
+    }
+  });
 
   if (fsBtn) {
     fsBtn.onclick = () => {

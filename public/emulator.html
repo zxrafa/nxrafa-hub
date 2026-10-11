@@ -60,16 +60,13 @@
     const core = params.get("core") || "gba";
     let rawUrl = params.get("gameUrl") || "";
     const isBlob = rawUrl.startsWith("blob:") || rawUrl.startsWith("data:");
+    const isLocal = rawUrl.startsWith("/") || rawUrl.startsWith("./") || rawUrl.startsWith("roms/");
+    const isProxy = rawUrl.startsWith("/api/proxy");
 
-    try {
-      while (rawUrl.includes("%25")) {
-        rawUrl = decodeURIComponent(rawUrl);
-      }
-    } catch(e) {}
-
-    const resolvedUrl = (isBlob || rawUrl.startsWith("/api/proxy"))
-      ? rawUrl
-      : `/api/proxy?url=${encodeURIComponent(rawUrl)}`;
+    let resolvedUrl = rawUrl;
+    if (!isBlob && !isLocal && !isProxy) {
+      resolvedUrl = `/api/proxy?url=${encodeURIComponent(rawUrl)}`;
+    }
 
     window.EJS_player = "#game-container";
     window.EJS_core = core;
@@ -77,16 +74,29 @@
     window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
     window.EJS_startOnLoaded = true;
 
-    window.EJS_onGameStart = () => {
+    const hideLoader = () => {
       const loader = document.getElementById("loader");
-      if (loader) loader.style.display = "none";
+      if (loader && loader.style.display !== "none") {
+        loader.style.opacity = "0";
+        setTimeout(() => { loader.style.display = "none"; }, 200);
+      }
     };
+
+    window.EJS_onGameStart = hideLoader;
+    const readyWatcher = setInterval(() => {
+      if (document.querySelector("#game-container canvas") || document.querySelector(".ejs_game")) {
+        hideLoader();
+        clearInterval(readyWatcher);
+      }
+    }, 150);
 
     const script = document.createElement("script");
     script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
     script.onerror = () => {
+      clearInterval(readyWatcher);
       const loader = document.getElementById("loader");
       if (loader) {
+        loader.style.opacity = "1";
         loader.innerHTML = `
           <div style="font-size: 18px; font-weight: 700; color: #ef4444; margin-bottom: 8px;">Falha ao carregar núcleo</div>
           <p style="font-size: 13px; color: #a1a1aa; margin-bottom: 14px;">Não foi possível carregar os arquivos WebAssembly.</p>

@@ -27,11 +27,17 @@ export default async function handler(request) {
     }
   } catch (e) {}
 
+  const upstreamHeaders = new Headers();
+  upstreamHeaders.set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36");
+  const range = request.headers.get("range");
+  if (range) {
+    upstreamHeaders.set("range", range);
+  }
+
   try {
     const upstream = await fetch(targetUrl, {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-      },
+      method: request.method === "HEAD" ? "HEAD" : "GET",
+      headers: upstreamHeaders,
     });
 
     const headers = new Headers(upstream.headers);
@@ -40,6 +46,13 @@ export default async function handler(request) {
     headers.set("Access-Control-Allow-Headers", "*");
     headers.delete("content-security-policy");
     headers.delete("x-frame-options");
+
+    if (request.method === "HEAD") {
+      return new Response(null, {
+        status: upstream.status,
+        headers,
+      });
+    }
 
     return new Response(upstream.body, {
       status: upstream.status,

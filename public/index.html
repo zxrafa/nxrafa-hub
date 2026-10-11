@@ -166,7 +166,7 @@
             <option value="n64">Nintendo 64 (N64)</option>
             <option value="segaMD">Mega Drive / Genesis</option>
             <option value="gb">Game Boy (GB)</option>
-            <option value="gbc">Game Boy Color (GBC)</option>
+            <option value="gb">Game Boy Color (GBC)</option>
             <option value="psx">PlayStation 1 (PS1)</option>
             <option value="nds">Nintendo DS (NDS)</option>
           </select>
@@ -233,6 +233,10 @@
         <div class="theater-info">
           <span class="chip-badge" id="theaterBadge" style="background: var(--violet-dark); color: #fff; padding: 4px 8px; border-radius: 6px;">PORT</span>
           <div class="theater-title" id="theaterTitle">Jogo em Execução</div>
+        </div>
+        <div id="theaterServerWrap" style="display: none; align-items: center; gap: 8px;">
+          <label for="theaterServerSelect" style="font-size: 12px; color: var(--text-dim); font-weight: 600;">Servidor:</label>
+          <select id="theaterServerSelect" class="chip" style="outline: none; padding: 6px 12px; font-size: 12px;"></select>
         </div>
         <div class="theater-actions">
           <button class="theater-btn" id="theaterFsBtn" title="Tela Cheia">

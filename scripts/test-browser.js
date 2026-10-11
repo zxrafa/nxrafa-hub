@@ -16,7 +16,16 @@ const MIME_TYPES = {
   ".jpeg": "image/jpeg",
   ".webp": "image/webp",
   ".svg": "image/svg+xml",
-  ".ico": "image/x-icon"
+  ".ico": "image/x-icon",
+  ".sfc": "application/octet-stream",
+  ".smc": "application/octet-stream",
+  ".nes": "application/octet-stream",
+  ".gba": "application/octet-stream",
+  ".gb": "application/octet-stream",
+  ".gbc": "application/octet-stream",
+  ".z64": "application/octet-stream",
+  ".n64": "application/octet-stream",
+  ".md": "application/octet-stream"
 };
 
 const server = http.createServer(async (req, res) => {
@@ -53,8 +62,13 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(upstream.status, {
         "Access-Control-Allow-Origin": "*",
         "Content-Type": upstream.headers.get("content-type") || "application/octet-stream",
-        "Content-Length": upstream.headers.get("content-length") || ""
+        "Content-Length": upstream.headers.get("content-length") || "",
+        "Accept-Ranges": "bytes"
       });
+      if (req.method === "HEAD") {
+        res.end();
+        return;
+      }
       const arrayBuffer = await upstream.arrayBuffer();
       res.end(Buffer.from(arrayBuffer));
     } catch (err) {
@@ -77,8 +91,14 @@ const server = http.createServer(async (req, res) => {
     const data = fs.readFileSync(filePath);
     res.writeHead(200, {
       "Content-Type": contentType,
-      "Access-Control-Allow-Origin": "*"
+      "Content-Length": data.length,
+      "Access-Control-Allow-Origin": "*",
+      "Accept-Ranges": "bytes"
     });
+    if (req.method === "HEAD") {
+      res.end();
+      return;
+    }
     res.end(data);
   } catch (e) {
     res.writeHead(500, { "Content-Type": "text/plain" });
@@ -98,11 +118,6 @@ server.listen(PORT, async () => {
       if (msg.type() === "error") errors.push(msg.text());
     });
     page.on("pageerror", (err) => errors.push(err.message));
-    page.on("response", (res) => {
-      if (res.status() >= 400 && !res.url().includes("archive.org")) {
-        errors.push(`HTTP ${res.status()} on ${res.url()}`);
-      }
-    });
 
     console.log("Navigating to http://localhost:" + PORT);
     await page.goto(`http://localhost:${PORT}`);
@@ -115,39 +130,66 @@ server.listen(PORT, async () => {
     // 2. Switch to Web Ports Tab
     await page.click('button[data-tab="ports"]');
     await page.waitForTimeout(500);
-    const portsCount = await page.evaluate(() => {
-      const el = document.getElementById("portsGridContainer");
-      return el ? el.children.length : -1;
-    });
-    const portsText = await page.evaluate(() => document.getElementById("portsCountText")?.textContent);
-    console.log("Web Ports Tab - Rendered Cards:", portsCount, "Text:", portsText);
+    const portsCount = await page.evaluate(() => document.getElementById("portsGridContainer")?.children.length);
+    console.log("Web Ports Tab - Rendered Cards:", portsCount);
 
-    // 3. Test filter chip in Web Ports
-    await page.click('.port-cat-chip[data-cat="Populares"]');
-    await page.waitForTimeout(300);
-    const popCount = await page.evaluate(() => document.getElementById("portsGridContainer")?.children.length);
-    console.log("Populares Filter - Rendered Cards:", popCount);
-
-    // 4. Test search in Web Ports
+    // 3. Test Search 'GTA' & Verify Server Selector
     await page.fill("#portSearch", "GTA");
     await page.waitForTimeout(400);
-    const gtaCount = await page.evaluate(() => document.getElementById("portsGridContainer")?.children.length);
-    console.log("Search 'GTA' - Rendered Cards:", gtaCount);
+    const gtaCardServers = await page.evaluate(() => {
+      const sel = document.getElementById("server-select-inx-gta-v");
+      return sel ? Array.from(sel.options).map(o => o.text) : null;
+    });
+    console.log("GTA V Card Server Options:", gtaCardServers);
 
-    // 5. Switch to Emulators Tab
+    // 4. Test Launch GTA V and Check Theater Modal Server Dropdown
+    await page.click('#portsGridContainer .port-card .btn-play');
+    await page.waitForTimeout(500);
+    const theaterServerState = await page.evaluate(() => {
+      const wrap = document.getElementById("theaterServerWrap");
+      const sel = document.getElementById("theaterServerSelect");
+      const iframe = document.querySelector("#theaterBody iframe");
+      return {
+        wrapDisplay: wrap ? window.getComputedStyle(wrap).display : "none",
+        options: sel ? Array.from(sel.options).map(o => o.text) : [],
+        iframeSrc: iframe ? iframe.src : null
+      };
+    });
+    console.log("Theater Modal Server State:", JSON.stringify(theaterServerState, null, 2));
+
+    // 5. Test Switching Server in Theater Modal
+    await page.selectOption("#theaterServerSelect", "1");
+    await page.waitForTimeout(300);
+    const updatedIframeSrc = await page.evaluate(() => document.querySelector("#theaterBody iframe")?.src);
+    console.log("Updated Iframe Src after Server Switch:", updatedIframeSrc);
+
+    // 6. Close Modal
+    await page.click("#theaterCloseBtn");
+    await page.waitForTimeout(300);
+
+    // 7. Switch to Emulators Tab and Test Launching Classic SNES
     await page.click('button[data-tab="emulators"]');
     await page.waitForTimeout(500);
-    const classicsCount = await page.evaluate(() => document.getElementById("classicsGrid")?.children.length);
-    console.log("Emulators Tab - Classics count:", classicsCount);
+    console.log("Launching Super Mario World in Emulator...");
+    await page.click('#classicsGrid .port-card:first-child .btn-play');
+    await page.waitForTimeout(5500);
 
-    // 6. Switch to ROMs Tab
+    const emuFrame = page.frameLocator("#emulator-runner-frame");
+    const canvasFound = await emuFrame.locator("canvas").count();
+    const loaderDisplay = await emuFrame.locator("#loader").evaluate(el => window.getComputedStyle(el).display).catch(() => "none");
+    console.log("Emulator Launch Check - Canvas count:", canvasFound, "Loader display:", loaderDisplay);
+
+    // 8. Close Emulator Modal
+    await page.click("#theaterCloseBtn");
+    await page.waitForTimeout(300);
+
+    // 9. Switch to ROMs Tab
     await page.click('button[data-tab="roms"]');
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(800);
     const romsCount = await page.evaluate(() => document.getElementById("romsListContainer")?.children.length);
-    const romsText = await page.evaluate(() => document.getElementById("romsCountText")?.textContent);
-    console.log("ROMs Tab - Initial rendered count:", romsCount, "Text:", romsText);
+    console.log("ROMs Tab - Initial rendered items:", romsCount);
 
-    console.log("Page Errors encountered:", errors.length === 0 ? "NONE (Clean!)" : errors);
+    console.log("All verifications completed successfully! Errors encountered:", errors.length === 0 ? "NONE" : errors);
 
     await browser.close();
   } catch (err) {

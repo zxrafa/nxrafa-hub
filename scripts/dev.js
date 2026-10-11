@@ -15,7 +15,20 @@ const MIME_TYPES = {
   ".jpeg": "image/jpeg",
   ".webp": "image/webp",
   ".svg": "image/svg+xml",
-  ".ico": "image/x-icon"
+  ".ico": "image/x-icon",
+  ".sfc": "application/octet-stream",
+  ".smc": "application/octet-stream",
+  ".nes": "application/octet-stream",
+  ".gba": "application/octet-stream",
+  ".gb": "application/octet-stream",
+  ".gbc": "application/octet-stream",
+  ".z64": "application/octet-stream",
+  ".n64": "application/octet-stream",
+  ".v64": "application/octet-stream",
+  ".md": "application/octet-stream",
+  ".bin": "application/octet-stream",
+  ".pbp": "application/octet-stream",
+  ".nds": "application/octet-stream"
 };
 
 const server = http.createServer(async (req, res) => {
@@ -46,18 +59,33 @@ const server = http.createServer(async (req, res) => {
       }
     } catch (e) {}
 
+    const upstreamHeaders = {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    };
+    if (req.headers.range) {
+      upstreamHeaders["range"] = req.headers.range;
+    }
+
     try {
       const upstream = await fetch(targetUrl, {
-        headers: {
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-        }
+        method: req.method === "HEAD" ? "HEAD" : "GET",
+        headers: upstreamHeaders
       });
 
       res.writeHead(upstream.status, {
         "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+        "Access-Control-Allow-Headers": "*",
         "Content-Type": upstream.headers.get("content-type") || "application/octet-stream",
-        "Content-Length": upstream.headers.get("content-length") || ""
+        "Content-Length": upstream.headers.get("content-length") || "",
+        "Content-Range": upstream.headers.get("content-range") || "",
+        "Accept-Ranges": "bytes"
       });
+
+      if (req.method === "HEAD") {
+        res.end();
+        return;
+      }
 
       const arrayBuffer = await upstream.arrayBuffer();
       res.end(Buffer.from(arrayBuffer));

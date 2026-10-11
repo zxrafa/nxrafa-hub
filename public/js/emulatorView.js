@@ -5,37 +5,37 @@ export const FEATURED_CLASSICS = [
   {
     title: "Super Mario World",
     console: "SNES",
-    url: "https://archive.org/download/SNESTOSEC/Super%20Mario%20World%20%28USA%29.zip"
+    url: "/roms/super-mario-world.sfc"
   },
   {
     title: "Pokemon - Emerald Version",
     console: "GBA",
-    url: "https://archive.org/download/GameBoyAdvanceTOSEC/Pokemon%20-%20Emerald%20Version%20(USA%2C%20Europe).zip"
+    url: "/roms/pokemon-emerald.gba"
   },
   {
     title: "Super Mario 64",
     console: "N64",
-    url: "https://archive.org/download/N64TOSEC/Super%20Mario%2064%20(USA).zip"
+    url: "/roms/super-mario-64.z64"
   },
   {
     title: "Sonic The Hedgehog 2",
     console: "Genesis",
-    url: "https://archive.org/download/nointro.md/Sonic%20The%20Hedgehog%202%20(World).7z"
+    url: "/roms/sonic-2.md"
   },
   {
     title: "Super Mario Bros.",
     console: "NES",
-    url: "https://archive.org/download/NESTOSEC/Super%20Mario%20Bros.%20(World).zip"
+    url: "/roms/super-mario-bros.nes"
   },
   {
     title: "Pokemon - Red Version",
     console: "GB",
-    url: "https://archive.org/download/GameBoyTOSEC/Pokemon%20-%20Red%20Version%20(USA%2C%20Europe)%20(SGB%20Enhanced).zip"
+    url: "/roms/pokemon-red.gb"
   },
   {
     title: "Pokemon - Crystal Version",
     console: "GBC",
-    url: "https://archive.org/download/GameBoyColorTOSEC/Pokemon%20-%20Crystal%20Version%20(USA%2C%20Europe)%20(Rev%20A).zip"
+    url: "/roms/pokemon-crystal.gbc"
   },
   {
     title: "Castlevania: Symphony of the Night",
@@ -93,6 +93,9 @@ export function launchWebEmulator(gameUrl, platformOrCore, title, isLocal = fals
 
   if (modalTitle) modalTitle.textContent = title;
   if (coreBadge) coreBadge.textContent = (platformOrCore || core).toUpperCase();
+
+  const serverWrap = document.getElementById("theaterServerWrap");
+  if (serverWrap) serverWrap.style.display = "none";
 
   const runnerUrl = `/emulator.html?core=${encodeURIComponent(core)}&gameUrl=${encodeURIComponent(gameUrl)}`;
 
