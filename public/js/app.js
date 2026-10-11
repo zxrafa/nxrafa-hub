@@ -4,15 +4,21 @@ import { loadRomStats, loadRomsData } from "./romService.js";
 import { initRomsView, renderRomsList } from "./romsView.js";
 import { initEmulatorView } from "./emulatorView.js";
 import { initPortsView } from "./portsView.js";
+import { initGamepadDetection } from "./gamepadService.js";
+import { exportBackup, importBackup } from "./favoritesService.js";
+import { renderRecentGames } from "./recentsView.js";
 
 async function init() {
   initCloak();
   initTabs();
   initModalControls();
+  initGamepadDetection();
+  initBackupControls();
 
   initRomsView();
   initEmulatorView();
   initPortsView();
+  renderRecentGames();
 
   const stats = await loadRomStats();
   updateHomeStats(stats);
@@ -38,10 +44,35 @@ export function switchTab(tabName) {
   document.querySelectorAll(".tab-content").forEach((c) => {
     c.classList.toggle("active", c.id === `tab-${tabName}`);
   });
+  if (tabName === "home") renderRecentGames();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 window.goToTab = switchTab;
+
+function initBackupControls() {
+  const backupBtn = document.getElementById("backupBtn");
+  const backupInput = document.getElementById("backupInput");
+  if (!backupBtn || !backupInput) return;
+
+  backupBtn.onclick = () => {
+    const choice = confirm("Exportar ou Restaurar backup?\n\nClique OK para EXPORTAR (baixar arquivo .json) ou CANCELAR para IMPORTAR.");
+    if (choice) {
+      exportBackup();
+    } else {
+      backupInput.click();
+    }
+  };
+
+  backupInput.onchange = async (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      await importBackup(file);
+      alert("Backup restaurado com sucesso! Recarregando página...");
+      location.reload();
+    }
+  };
+}
 
 function updateHomeStats(stats) {
   const totalRomsEl = document.getElementById("statTotalRoms");
@@ -67,6 +98,7 @@ function initModalControls() {
     if (modal) modal.classList.remove("active");
     if (body) body.innerHTML = "";
     if (serverWrap) serverWrap.style.display = "none";
+    renderRecentGames();
   };
 
   if (closeBtn) closeBtn.onclick = closeModal;

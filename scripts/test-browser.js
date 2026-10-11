@@ -133,43 +133,54 @@ server.listen(PORT, async () => {
     const portsCount = await page.evaluate(() => document.getElementById("portsGridContainer")?.children.length);
     console.log("Web Ports Tab - Rendered Cards:", portsCount);
 
-    // 3. Test Search 'GTA' & Verify Server Selector
-    await page.fill("#portSearch", "GTA");
+    // 3. Test Search 'Celeste' & Verify Self-Hosted Port
+    await page.fill("#portSearch", "Celeste");
     await page.waitForTimeout(400);
-    const gtaCardServers = await page.evaluate(() => {
-      const sel = document.getElementById("server-select-inx-gta-v");
-      return sel ? Array.from(sel.options).map(o => o.text) : null;
+    const celesteIframe = await page.evaluate(() => {
+      const card = document.querySelector("#portsGridContainer .port-card");
+      return card ? card.querySelector(".port-title-text")?.textContent : null;
     });
-    console.log("GTA V Card Server Options:", gtaCardServers);
+    console.log("Celeste Search Result:", celesteIframe);
 
-    // 4. Test Launch GTA V and Check Theater Modal Server Dropdown
+    // Launch Celeste
     await page.click('#portsGridContainer .port-card .btn-play');
-    await page.waitForTimeout(500);
-    const theaterServerState = await page.evaluate(() => {
-      const wrap = document.getElementById("theaterServerWrap");
-      const sel = document.getElementById("theaterServerSelect");
-      const iframe = document.querySelector("#theaterBody iframe");
-      return {
-        wrapDisplay: wrap ? window.getComputedStyle(wrap).display : "none",
-        options: sel ? Array.from(sel.options).map(o => o.text) : [],
-        iframeSrc: iframe ? iframe.src : null
-      };
-    });
-    console.log("Theater Modal Server State:", JSON.stringify(theaterServerState, null, 2));
-
-    // 5. Test Switching Server in Theater Modal
-    await page.selectOption("#theaterServerSelect", "1");
-    await page.waitForTimeout(300);
-    const updatedIframeSrc = await page.evaluate(() => document.querySelector("#theaterBody iframe")?.src);
-    console.log("Updated Iframe Src after Server Switch:", updatedIframeSrc);
-
-    // 6. Close Modal
+    await page.waitForTimeout(1000);
+    const celesteSrc = await page.evaluate(() => document.querySelector("#theaterBody iframe")?.src);
+    console.log("Celeste Theater Iframe Src:", celesteSrc);
     await page.click("#theaterCloseBtn");
     await page.waitForTimeout(300);
 
-    // 7. Switch to Emulators Tab and Test Launching Classic SNES
+    // 4. Test Favorites on a Port
+    await page.fill("#portSearch", "Celeste");
+    await page.waitForTimeout(300);
+    await page.click("#portsGridContainer .port-card .btn-fav");
+    await page.waitForTimeout(300);
+    const favCount = await page.evaluate(() => document.getElementById("portFavCount")?.textContent);
+    console.log("Port Favorites Count after liking Celeste:", favCount);
+
+    // 5. Test Recent Games on Home Tab
+    await page.click('button[data-tab="home"]');
+    await page.waitForTimeout(500);
+    const recentGames = await page.evaluate(() => {
+      const section = document.getElementById("recentGamesSection");
+      const cards = Array.from(document.querySelectorAll("#recentGrid .recent-card"));
+      return {
+        sectionVisible: section ? window.getComputedStyle(section).display !== "none" : false,
+        cardCount: cards.length,
+        titles: cards.map(c => c.textContent.trim().replace(/\s+/g, " "))
+      };
+    });
+    console.log("Recent Games Section on Home:", JSON.stringify(recentGames, null, 2));
+
+    // 6. Test Switch to Emulators Tab and Check New Cores
     await page.click('button[data-tab="emulators"]');
     await page.waitForTimeout(500);
+    const coreOptions = await page.evaluate(() => {
+      const sel = document.getElementById("localCoreSelect");
+      return sel ? Array.from(sel.options).map(o => o.value) : [];
+    });
+    console.log("Local Core Select options (including PSP, Saturn, MAME, Atari):", coreOptions);
+
     console.log("Launching Super Mario World in Emulator...");
     await page.click('#classicsGrid .port-card:first-child .btn-play');
     await page.waitForTimeout(5500);
@@ -179,15 +190,36 @@ server.listen(PORT, async () => {
     const loaderDisplay = await emuFrame.locator("#loader").evaluate(el => window.getComputedStyle(el).display).catch(() => "none");
     console.log("Emulator Launch Check - Canvas count:", canvasFound, "Loader display:", loaderDisplay);
 
-    // 8. Close Emulator Modal
+    // 7. Close Emulator Modal
     await page.click("#theaterCloseBtn");
     await page.waitForTimeout(300);
 
-    // 9. Switch to ROMs Tab
+    // 8. Switch to ROMs Tab & Test Dreamcast 200 OK
     await page.click('button[data-tab="roms"]');
     await page.waitForTimeout(800);
     const romsCount = await page.evaluate(() => document.getElementById("romsListContainer")?.children.length);
     console.log("ROMs Tab - Initial rendered items:", romsCount);
+
+    // Test Dreamcast ROM search
+    await page.fill("#romSearch", "Sonic Adventure");
+    await page.waitForTimeout(400);
+    const dreamcastItem = await page.evaluate(() => {
+      const item = document.querySelector("#romsListContainer .rom-item");
+      if (!item) return null;
+      const downloadBtn = item.querySelector("a.btn-download");
+      return {
+        title: item.querySelector(".rom-title-text")?.textContent,
+        console: item.querySelector(".badge-console")?.textContent,
+        downloadUrl: downloadBtn ? downloadBtn.href : null
+      };
+    });
+    console.log("Dreamcast Search Result:", JSON.stringify(dreamcastItem, null, 2));
+
+    if (dreamcastItem && dreamcastItem.downloadUrl) {
+      console.log("Checking Dreamcast ROM URL via HTTP HEAD...");
+      const headRes = await fetch(dreamcastItem.downloadUrl, { method: "HEAD" });
+      console.log("Dreamcast ROM HTTP Status:", headRes.status, headRes.statusText);
+    }
 
     console.log("All verifications completed successfully! Errors encountered:", errors.length === 0 ? "NONE" : errors);
 

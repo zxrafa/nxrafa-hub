@@ -2377,17 +2377,26 @@
     "id": "carter-celeste",
     "title": "Celeste",
     "slug": "celeste",
-    "desc": "Port oficial em WebAssembly de Celeste.",
-    "url": "https://gn-math.dev/?id=623",
+    "desc": "Port oficial de Celeste compilado em WebAssembly e C#/.NET rodando 100% nativo no navegador.",
+    "url": "/ports/celeste/index.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
+        "name": "nxrafa hub Local (Direto)",
+        "url": "/ports/celeste/index.html",
+        "isolated": true
+      },
+      {
+        "name": "jsDelivr WebAssembly CDN",
+        "url": "https://cdn.jsdelivr.net/gh/web-ports/celeste@4f043a5ce121b74dc54ce56d74f213a2eeea6b4e/index.html"
+      },
+      {
+        "name": "gn-math Mirror",
         "url": "https://gn-math.dev/?id=623"
       }
     ],
-    "cover": "",
+    "cover": "/covers/celeste.jpg",
     "categories": [
       "Todos",
       "WebAssembly (WASM)",

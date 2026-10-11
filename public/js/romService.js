@@ -1,4 +1,5 @@
 import { state } from "./state.js";
+import { isFavorite } from "./favoritesService.js";
 
 export async function loadRomStats() {
   try {
@@ -27,15 +28,17 @@ export function applyRomFilters() {
   const query = state.activeSearch.trim().toLowerCase();
   const cTarget = state.activeConsole.toLowerCase();
   const rTarget = state.activeRegion;
+  const onlyFav = state.romOnlyFavorites;
 
   state.filteredRoms = state.allRoms.filter((item) => {
+    const matchFav = !onlyFav || isFavorite(item.id);
     const matchConsole = cTarget === "all" || item.console.toLowerCase() === cTarget;
     const matchRegion = rTarget === "all" || item.region === rTarget;
     const matchQuery = !query || 
       item.title.toLowerCase().includes(query) || 
       (item.file && item.file.toLowerCase().includes(query));
 
-    return matchConsole && matchRegion && matchQuery;
+    return matchFav && matchConsole && matchRegion && matchQuery;
   });
 
   state.romPage = 1;

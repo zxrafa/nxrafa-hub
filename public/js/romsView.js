@@ -1,6 +1,7 @@
 import { state, CONSOLE_CORES, EXTENSION_CORES, REGION_NAMES } from "./state.js";
 import { applyRomFilters, loadNextRomPage } from "./romService.js";
 import { launchWebEmulator } from "./emulatorView.js";
+import { isFavorite, toggleFavorite, addRecentGame } from "./favoritesService.js";
 import { getIcon } from "./icons.js";
 
 export function initRomsView() {
@@ -21,6 +22,16 @@ export function initRomsView() {
   if (regionSelect) {
     regionSelect.onchange = (e) => {
       state.activeRegion = e.target.value;
+      applyRomFilters();
+      renderRomsList();
+    };
+  }
+
+  const favToggleBtn = document.getElementById("romFavToggleBtn");
+  if (favToggleBtn) {
+    favToggleBtn.onclick = () => {
+      state.romOnlyFavorites = !state.romOnlyFavorites;
+      favToggleBtn.classList.toggle("active", state.romOnlyFavorites);
       applyRomFilters();
       renderRomsList();
     };
@@ -70,10 +81,14 @@ export function renderRomsList() {
   container.innerHTML = state.displayedRoms.map((r) => {
     const regionName = REGION_NAMES[r.region] || r.region;
     const canPlay = isEmulatorCompatible(r);
+    const fav = isFavorite(r.id);
 
     return `
       <div class="rom-item fade-in">
         <div class="rom-info-left">
+          <button class="btn-fav-rom ${fav ? 'active' : ''}" onclick="window.toggleFavRom('${r.id}', event)" title="Favoritar">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="${fav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </button>
           <span class="badge-console">${r.console}</span>
           <div style="min-width: 0;">
             <div class="rom-title-text" title="${r.title}">${r.title}</div>
@@ -108,8 +123,18 @@ export function renderRomsList() {
   }
 }
 
+window.toggleFavRom = (romId, e) => {
+  e.stopPropagation();
+  const r = state.allRoms.find(x => x.id === romId);
+  if (!r) return;
+  toggleFavorite({ id: r.id, title: r.title, type: "rom", console: r.console, url: r.url });
+  if (state.romOnlyFavorites) applyRomFilters();
+  renderRomsList();
+};
+
 window.playRomWeb = (encodedUrl, consoleName, encodedTitle) => {
   const url = decodeURIComponent(encodedUrl);
   const title = decodeURIComponent(encodedTitle);
+  addRecentGame({ id: title, title, type: "rom", console: consoleName, url });
   launchWebEmulator(url, consoleName, title);
 };

@@ -7,20 +7,16 @@ const ORIGINAL_FAVICON = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 export function initCloak() {
   const cloakBtn = document.getElementById("cloakBtn");
   const panicBtn = document.getElementById("panicBtn");
+  const blankBtn = document.getElementById("blankBtn");
 
   if (cloakBtn) cloakBtn.onclick = toggleCloak;
   if (panicBtn) panicBtn.onclick = triggerPanic;
+  if (blankBtn) blankBtn.onclick = openAboutBlank;
 
   window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      const modal = document.getElementById("theaterModal");
-      if (modal && modal.classList.contains("active")) {
-        modal.classList.remove("active");
-        const body = document.getElementById("theaterBody");
-        if (body) body.innerHTML = "";
-      } else {
-        triggerPanic();
-      }
+    // Panic Key shortcuts: `~` (backtick) or Alt+Q
+    if (e.key === "`" || (e.altKey && e.key.toLowerCase() === "q")) {
+      triggerPanic();
     }
   });
 }
@@ -43,5 +39,28 @@ export function toggleCloak() {
 }
 
 export function triggerPanic() {
+  const modal = document.getElementById("theaterModal");
+  if (modal) {
+    modal.classList.remove("active");
+    const body = document.getElementById("theaterBody");
+    if (body) body.innerHTML = "";
+  }
   window.location.replace("https://classroom.google.com");
+}
+
+export function openAboutBlank() {
+  const win = window.open("about:blank", "_blank");
+  if (!win) return;
+  const doc = win.document;
+  doc.title = "Google Drive";
+  const iframe = doc.createElement("iframe");
+  iframe.style.position = "fixed";
+  iframe.style.inset = "0";
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.style.border = "none";
+  iframe.src = window.location.href;
+  doc.body.style.margin = "0";
+  doc.body.style.overflow = "hidden";
+  doc.body.appendChild(iframe);
 }
