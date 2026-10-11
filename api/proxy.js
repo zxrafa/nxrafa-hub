@@ -15,7 +15,7 @@ export default async function handler(request) {
   }
 
   const { searchParams } = new URL(request.url);
-  const targetUrl = searchParams.get("url");
+  let targetUrl = searchParams.get("url");
 
   if (!targetUrl) {
     return new Response("Missing url param", { status: 400 });
