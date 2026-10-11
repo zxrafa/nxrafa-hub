@@ -2,7 +2,7 @@ import { state } from "./state.js";
 
 export async function loadRomStats() {
   try {
-    const res = await fetch("./data/roms-stats.json");
+    const res = await fetch("./data/roms-stats.json?v=2.2");
     state.stats = await res.json();
     return state.stats;
   } catch (err) {
@@ -13,7 +13,7 @@ export async function loadRomStats() {
 
 export async function loadRomsData() {
   try {
-    const res = await fetch("./data/roms.json");
+    const res = await fetch("./data/roms.json?v=2.2");
     state.allRoms = await res.json();
     applyRomFilters();
     return state.allRoms;

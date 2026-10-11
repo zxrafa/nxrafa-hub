@@ -3,7 +3,7 @@ import { getIcon } from "./icons.js";
 
 export async function initPortsView() {
   try {
-    const res = await fetch("./data/webports.json");
+    const res = await fetch("./data/webports.json?v=2.2");
     state.webports = await res.json();
     updateCategoryCounts();
     applyPortFilters();
