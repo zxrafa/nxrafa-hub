@@ -929,13 +929,13 @@
     "title": "Minecraft 1.8.8",
     "slug": "minecraft",
     "desc": "Play Minecraft 1.8.8 in your browser: the 2014 Java version as EaglercraftX on WebAssembly, worlds saved on your device. Free, no download.",
-    "url": "https://wasmarcade.com/minecraft",
-    "embed": false,
-    "openExternal": true,
+    "url": "/ports/runner.html?url=https://cdn.jsdelivr.net/gh/GalacticNetwork/3kh0-assets@main/minecraft-18/index.html",
+    "embed": true,
+    "openExternal": false,
     "sources": [
       {
-        "name": "Principal",
-        "url": "https://wasmarcade.com/minecraft"
+        "name": "Eaglercraft 1.8.8 (Nativo)",
+        "url": "/ports/runner.html?url=https://cdn.jsdelivr.net/gh/GalacticNetwork/3kh0-assets@main/minecraft-18/index.html"
       }
     ],
     "cover": "/covers/minecraft.jpg",
@@ -6196,5 +6196,1108 @@
     ],
     "rating": 4.6,
     "source": "WASM WebPort"
+  },
+  {
+    "id": "epic-subway-surfers",
+    "title": "Subway Surfers",
+    "slug": "subway-surfers",
+    "desc": "O clássico runner de metrô completo em WebGL nativo com física suave e 60 FPS.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fsubway-surfers-ny%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fsubway-surfers-ny%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/GalacticNetwork/3kh0-assets@main/subway-surfers-ny/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/subwaysurfers/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-drive-mad",
+    "title": "Drive Mad",
+    "slug": "drive-mad",
+    "desc": "Dirija através de obstáculos insanos com física de suspensão realista.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fdrivemad%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fdrivemad%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/drivemad/index.html"
+      }
+    ],
+    "cover": "/covers/drive-mad.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-slope",
+    "title": "Slope",
+    "slug": "slope",
+    "desc": "Desça ladeiras em alta velocidade desviando de blocos no clássico 3D de reflexo.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fslope%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fslope%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/slope/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/slope/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.8",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-1v1-lol",
+    "title": "1v1.LOL",
+    "slug": "1v1-lol",
+    "desc": "Construção tática e tiroteio estilo battle royale rápido direto no navegador.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2F1v1lol%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2F1v1lol%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/1v1lol/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/1v1lol/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-bitlife",
+    "title": "BitLife",
+    "slug": "bitlife",
+    "desc": "Simulador de vida interativo com escolhas de carreira, relacionamentos e destino.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbitlife%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbitlife%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/bitlife/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/bitlife/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.6",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-cookie-clicker",
+    "title": "Cookie Clicker",
+    "slug": "cookie-clicker",
+    "desc": "O clássico incremental com upgrades, fábricas, vovós e trilhões de biscoitos.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fcookieclicker%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fcookieclicker%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/cookieclicker/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/cookieclicker/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.8",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-crossy-road",
+    "title": "Crossy Road",
+    "slug": "crossy-road",
+    "desc": "Atravesse rodovias, trilhos e rios desviando do trânsito na estética voxel clássica.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fcrossyroad%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fcrossyroad%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/crossyroad/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/crossyroad/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-retro-bowl",
+    "title": "Retro Bowl",
+    "slug": "retro-bowl",
+    "desc": "Gerenciamento e futebol americano retrô com tática profunda e jogabilidade arcade.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fretrobowl%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fretrobowl%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/retrobowl/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/retrobowl/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.8",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-bad-ice-cream",
+    "title": "Bad Ice Cream",
+    "slug": "bad-ice-cream",
+    "desc": "Crie e quebre blocos de gelo para pegar todas as frutas sem ser pego.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbadicecream%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbadicecream%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/badicecream/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/badicecream/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-bad-ice-cream-2",
+    "title": "Bad Ice Cream 2",
+    "slug": "bad-ice-cream-2",
+    "desc": "Segunda edição com novos monstros de gelo, sabores e labirintos congelados.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbadicecream2%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbadicecream2%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/badicecream2/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/badicecream2/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-bad-ice-cream-3",
+    "title": "Bad Ice Cream 3",
+    "slug": "bad-ice-cream-3",
+    "desc": "Terceira temporada com frutas exóticas, fumaça, fogo e desafios gelados.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbadicecream3%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbadicecream3%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/badicecream3/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/badicecream3/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.6",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-basket-random",
+    "title": "Basket Random",
+    "slug": "basket-random",
+    "desc": "Basquete com física cômica de um toque para 1 ou 2 jogadores.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbasketrandom%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbasketrandom%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/basketrandom/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/basketrandom/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-basketball-stars",
+    "title": "Basketball Stars",
+    "slug": "basketball-stars",
+    "desc": "Disputas 1x1 e 2x2 de enterradas e arremessos precisos de três pontos.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbasketball-stars%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbasketball-stars%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/basketball-stars/index.html"
+      }
+    ],
+    "cover": "/covers/basketball-stars.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-boxing-random",
+    "title": "Boxing Random",
+    "slug": "boxing-random",
+    "desc": "Boxe arcade caótico com socos acrobáticos e arenas que mudam a cada rodada.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fboxingrandom%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fboxingrandom%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/boxingrandom/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/boxingrandom/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.8",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-getaway-shootout",
+    "title": "Getaway Shootout",
+    "slug": "getaway-shootout",
+    "desc": "Pule e atire para ser o primeiro a alcançar o veículo de fuga.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fgetaway-shootout%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fgetaway-shootout%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/GalacticNetwork/3kh0-assets@main/getaway-shootout/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/getawayshootout/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-rooftop-snipers",
+    "title": "Rooftop Snipers",
+    "slug": "rooftop-snipers",
+    "desc": "Duelos de precisão no topo de arranha-céus onde o objetivo é derrubar o oponente.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Frooftopsnipers%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Frooftopsnipers%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/rooftopsnipers/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/rooftopsnipers/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-smash-karts",
+    "title": "Smash Karts",
+    "slug": "smash-karts",
+    "desc": "Batalhas 3D de karts com foguetes, minas e metralhadoras em multiplayer frenético.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fsmashkarts%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fsmashkarts%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/GalacticNetwork/3kh0-assets@main/smashkarts/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/smashkarts/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-snow-rider-3d",
+    "title": "Snow Rider 3D",
+    "slug": "snow-rider-3d",
+    "desc": "Desça montanhas de neve em um trenó 3D esquivando de pinheiros e rochas.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fsnowrider3d%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fsnowrider3d%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/snowrider3d/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/snowrider3d/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.8",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-paper-io-2",
+    "title": "Paper.io 2",
+    "slug": "paper-io-2",
+    "desc": "Conquiste o mapa traçando áreas e cortando as linhas dos adversários.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fpaperio2%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fpaperio2%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/GalacticNetwork/3kh0-assets@main/paperio2/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/paperio2/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-duck-life-1",
+    "title": "Duck Life 1",
+    "slug": "duck-life-1",
+    "desc": "Treine seu patinho em corrida, natação e voo para vencer o campeonato da fazenda.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fducklife1%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fducklife1%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/ducklife1/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/ducklife1/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-duck-life-4",
+    "title": "Duck Life 4",
+    "slug": "duck-life-4",
+    "desc": "A aventura definitiva de Duck Life com 6 mundos de torneios e evolução.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fducklife4%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fducklife4%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/ducklife4/index.html"
+      }
+    ],
+    "cover": "/covers/duck-life-4.png",
+    "categories": [
+      "Todos",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-cut-the-rope",
+    "title": "Cut The Rope",
+    "slug": "cut-the-rope",
+    "desc": "Corte as cordas na hora certa para alimentar o monstrinho Om Nom com doces.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fcuttherope%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fcuttherope%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/cuttherope/index.html"
+      }
+    ],
+    "cover": "/covers/cut-the-rope.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-doodle-jump",
+    "title": "Doodle Jump",
+    "slug": "doodle-jump",
+    "desc": "Pule sem parar em plataformas espaciais esquivando de monstros e buracos negros.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fdoodle-jump%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fdoodle-jump%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/GalacticNetwork/3kh0-assets@main/doodle-jump/index.html"
+      }
+    ],
+    "cover": "/covers/doodle-jump.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-burrito-bison-launcha-libre",
+    "title": "Burrito Bison: Launcha Libre",
+    "slug": "burrito-bison-launcha-libre",
+    "desc": "Lance o campeão de luta livre para esmagar doces e fugir de Candy Land.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fburritobison%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fburritobison%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/burritobison/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/burritobison/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-dadish",
+    "title": "Dadish",
+    "slug": "dadish",
+    "desc": "Ajude o pai rabanete a encontrar todos os seus filhos rabanetes fujões.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fdadish%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fdadish%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/dadish/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/dadish/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.8",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-ovo",
+    "title": "OvO",
+    "slug": "ovo",
+    "desc": "Plataforma de parkour ultra veloz com wall jumps, deslizes e mergulhos acrobáticos.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fovo%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fovo%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/ovo/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/ovo/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-moto-x3m",
+    "title": "Moto X3M",
+    "slug": "moto-x3m",
+    "desc": "Supere pistas cheias de serras circulares, dinamites e loops em alta velocidade.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fmotox3m%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fmotox3m%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/motox3m/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/motox3m/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-moto-x3m-winter",
+    "title": "Moto X3M Winter",
+    "slug": "moto-x3m-winter",
+    "desc": "Edição de inverno de Moto X3M com pistas de gelo e pinheiros explosivos.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fmotox3m-winter%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fmotox3m-winter%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/motox3m-winter/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/motox3m-winter/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Ação & FPS"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-moto-x3m-pool-party",
+    "title": "Moto X3M Pool Party",
+    "slug": "moto-x3m-pool-party",
+    "desc": "Parque aquático radical com toboáguas explosivos e saltos mortais.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fmotox3m-pool%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fmotox3m-pool%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/GalacticNetwork/3kh0-assets@main/motox3m-pool/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/motox3m-poolparty/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Ação & FPS"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-drift-hunters",
+    "title": "Drift Hunters",
+    "slug": "drift-hunters",
+    "desc": "Simulador 3D de drift com personalização de suspensão, turbo e pistas livres.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fdrifthunters%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fdrifthunters%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/drifthunters/index.html"
+      }
+    ],
+    "cover": "/covers/drift-hunters.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-madalin-stunt-cars-2",
+    "title": "Madalin Stunt Cars 2",
+    "slug": "madalin-stunt-cars-2",
+    "desc": "Supercarros velozes executando acrobacias insanas em pistas com loopings 3D.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fmadalin-stunt-cars-2%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FGalacticNetwork%2F3kh0-assets%40main%2Fmadalin-stunt-cars-2%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/GalacticNetwork/3kh0-assets@main/madalin-stunt-cars-2/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/madalinstuntcars2/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.6",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-happy-wheels",
+    "title": "Happy Wheels",
+    "slug": "happy-wheels",
+    "desc": "O lendário jogo de física com veículos inusitados e armadilhas hilárias.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fhappywheels%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fhappywheels%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/happywheels/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/happywheels/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Terror & Suspense",
+      "Ação & FPS"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-bad-time-simulator",
+    "title": "Bad Time Simulator (Sans / Undertale)",
+    "slug": "bad-time-simulator",
+    "desc": "A icônica batalha contra Sans de Undertale recriada em HTML5 de precisão.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbadtimesimulator%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbadtimesimulator%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/badtimesimulator/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/badtimesimulator/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-bloons-td-5",
+    "title": "Bloons Tower Defense 5",
+    "slug": "bloons-td-5",
+    "desc": "Construa torres de macacos atiradores de dardos para estourar todos os balões.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbtd5%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fbtd5%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/btd5/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/btd5/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-cluster-rush",
+    "title": "Cluster Rush",
+    "slug": "cluster-rush",
+    "desc": "Pule de caminhão em caminhão em alta velocidade sem cair na pista.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fcluster-rush%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fcluster-rush%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/cluster-rush/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/cluster-rush/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-temple-run-2",
+    "title": "Temple Run 2",
+    "slug": "temple-run-2",
+    "desc": "Fuja do monstro do templo através de tirolesas, minas e precipícios traiçoeiros.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Ftemplerun2%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Ftemplerun2%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/templerun2/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/templerun2/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.8",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-vex-6",
+    "title": "Vex 6",
+    "slug": "vex-6",
+    "desc": "Plataforma de stickman com serras móveis, canhões e precisão de timing.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fvex6%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fvex6%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/vex6/index.html"
+      }
+    ],
+    "cover": "/covers/vex-6.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-vex-7",
+    "title": "Vex 7",
+    "slug": "vex-7",
+    "desc": "A edição mais recente de Vex com novos blocos de gravidade e desafios secretos.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fvex7%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fvex7%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/vex7/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/vex7/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Ação & FPS"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-worlds-hardest-game",
+    "title": "The World's Hardest Game",
+    "slug": "worlds-hardest-game",
+    "desc": "O jogo mais difícil do mundo: conduza o quadrado vermelho desviando das esferas azuis.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fworldshardestgame%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fworldshardestgame%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/worldshardestgame/index.html"
+      }
+    ],
+    "cover": "/covers/worlds-hardest-game.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.9",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-adofai",
+    "title": "A Dance of Fire and Ice (ADOFAI)",
+    "slug": "adofai",
+    "desc": "Jogo de ritmo hipnótico de dois orbes orbitais com timing rítmico perfeito.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fadofai%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Fadofai%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/adofai/index.html"
+      }
+    ],
+    "cover": "/covers/adofai.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.6",
+    "source": "Selenite Unblocked"
+  },
+  {
+    "id": "epic-friday-night-funkin",
+    "title": "Friday Night Funkin'",
+    "slug": "friday-night-funkin",
+    "desc": "Batalhas musicais de ritmo com Boyfriend, Girlfriend, Daddy Dearest e Pico.",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Ffridaynightfunkin%2Findex.html",
+    "embed": true,
+    "openExternal": false,
+    "sources": [
+      {
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fselenite-cc%2Fselenite-old%40main%2Ffridaynightfunkin%2Findex.html"
+      },
+      {
+        "name": "jsDelivr Direto",
+        "url": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/fridaynightfunkin/index.html"
+      }
+    ],
+    "cover": "https://cdn.jsdelivr.net/gh/selenite-cc/selenite-old@main/fridaynightfunkin/icons/icon-256.png",
+    "categories": [
+      "Todos",
+      "Populares",
+      "Indie & Sandbox"
+    ],
+    "rating": "4.7",
+    "source": "Selenite Unblocked"
   }
 ]

@@ -170,6 +170,16 @@ server.listen(PORT, async () => {
     await page.click("#theaterCloseBtn");
     await page.waitForTimeout(300);
 
+    // 3d. Test Search 'Subway Surfers' & Verify Native Runner
+    await page.fill("#portSearch", "Subway Surfers");
+    await page.waitForTimeout(400);
+    await page.click('#portsGridContainer .port-card .btn-play');
+    await page.waitForTimeout(1000);
+    const subwaySrc = await page.evaluate(() => document.querySelector("#theaterBody iframe")?.src);
+    console.log("Subway Surfers Theater Iframe Src (Native Runner):", subwaySrc);
+    await page.click("#theaterCloseBtn");
+    await page.waitForTimeout(300);
+
     // 4. Test Favorites on a Port
     await page.fill("#portSearch", "Celeste");
     await page.waitForTimeout(300);
