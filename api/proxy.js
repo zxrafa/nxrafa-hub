@@ -22,6 +22,12 @@ export default async function handler(request) {
   }
 
   try {
+    while (targetUrl.includes("%25")) {
+      targetUrl = decodeURIComponent(targetUrl);
+    }
+  } catch (e) {}
+
+  try {
     const upstream = await fetch(targetUrl, {
       headers: {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",

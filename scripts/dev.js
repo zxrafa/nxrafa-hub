@@ -33,12 +33,18 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    const targetUrl = parsed.searchParams.get("url");
+    let targetUrl = parsed.searchParams.get("url");
     if (!targetUrl) {
       res.writeHead(400, { "Content-Type": "text/plain" });
       res.end("Missing url parameter");
       return;
     }
+
+    try {
+      while (targetUrl.includes("%25")) {
+        targetUrl = decodeURIComponent(targetUrl);
+      }
+    } catch (e) {}
 
     try {
       const upstream = await fetch(targetUrl, {

@@ -130,7 +130,7 @@ window.launchPortIframe = (encodedUrl, encodedTitle) => {
   if (coreBadge) coreBadge.textContent = "WEB PORT";
 
   modalBody.innerHTML = `
-    <iframe src="${url}" sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups allow-modals" allow="autoplay; fullscreen; gamepad; focus-without-user-activation *" allowfullscreen></iframe>
+    <iframe src="${url}" style="width:100%;height:100%;border:0;" allow="autoplay; fullscreen; gamepad; pointer-lock *" allowfullscreen></iframe>
   `;
 
   modal.classList.add("active");

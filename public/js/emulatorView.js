@@ -94,63 +94,10 @@ export function launchWebEmulator(gameUrl, platformOrCore, title, isLocal = fals
   if (modalTitle) modalTitle.textContent = title;
   if (coreBadge) coreBadge.textContent = (platformOrCore || core).toUpperCase();
 
-  // Loading state
+  const runnerUrl = `/emulator.html?core=${encodeURIComponent(core)}&gameUrl=${encodeURIComponent(gameUrl)}`;
+
   modalBody.innerHTML = `
-    <div id="emulator-loader-box" class="emulator-status-box">
-      <div class="spinner"></div>
-      <div class="status-msg">Carregando núcleo WebAssembly e baixando ROM...</div>
-      <div class="status-sub">Pressione Esc a qualquer momento para sair</div>
-    </div>
-    <div id="game-frame" style="width:100%;height:100%;"></div>
+    <iframe id="emulator-runner-frame" src="${runnerUrl}" style="width:100%;height:100%;border:0;" allow="autoplay; fullscreen; gamepad; focus-without-user-activation *" allowfullscreen></iframe>
   `;
   modal.classList.add("active");
-
-  // Roteamento através do proxy para quebrar bloqueio de CORS do Archive.org
-  const resolvedGameUrl = (isLocal || gameUrl.startsWith("blob:") || gameUrl.startsWith("data:"))
-    ? gameUrl
-    : `/api/proxy?url=${encodeURIComponent(gameUrl)}`;
-
-  window.EJS_player = "#game-frame";
-  window.EJS_core = core;
-  window.EJS_gameUrl = resolvedGameUrl;
-  window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-  window.EJS_startOnLoaded = true;
-
-  window.EJS_onGameStart = () => {
-    const loader = document.getElementById("emulator-loader-box");
-    if (loader) loader.style.display = "none";
-  };
-
-  const script = document.createElement("script");
-  script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
-  script.onerror = () => renderEmulatorError(modalBody, gameUrl, platformOrCore, title);
-  modalBody.appendChild(script);
-
-  // Timeout de segurança se o core travar
-  setTimeout(() => {
-    const loader = document.getElementById("emulator-loader-box");
-    if (loader && loader.style.display !== "none") {
-      const canvas = document.querySelector("#game-frame canvas");
-      if (!canvas) renderEmulatorError(modalBody, gameUrl, platformOrCore, title);
-    }
-  }, 12000);
-}
-
-function renderEmulatorError(container, url, consoleName, title) {
-  container.innerHTML = `
-    <div class="emulator-status-box error-state">
-      <div style="font-size: 24px; color: #ef4444; margin-bottom: 8px;">Falha ao Iniciar Emulador</div>
-      <p style="color: var(--text-dim); max-width: 480px; font-size: 14px; margin-bottom: 20px;">
-        Não foi possível carregar a ROM no navegador. O servidor de origem pode ter bloqueado o stream ou este arquivo precisa ser rodado localmente.
-      </p>
-      <div style="display: flex; gap: 10px;">
-        <button class="btn-action btn-play" onclick="window.playRomWeb('${encodeURIComponent(url)}', '${consoleName}', '${encodeURIComponent(title)}')">
-          ${getIcon("refresh")} Tentar Novamente
-        </button>
-        <a class="btn-action btn-download" href="${url}" download target="_blank" rel="noopener">
-          ${getIcon("download")} Baixar ROM
-        </a>
-      </div>
-    </div>
-  `;
 }
