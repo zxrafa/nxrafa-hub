@@ -31,11 +31,7 @@ export const CONSOLE_CORES = {
   GBC: "gb",
   N64: "n64",
   PS1: "psx",
-  NDS: "nds",
-  PSP: "ppsspp",
-  Saturn: "yabause",
-  Arcade: "mame2003_plus",
-  Atari2600: "stella2014"
+  NDS: "nds"
 };
 
 export const EXTENSION_CORES = {
@@ -52,10 +48,7 @@ export const EXTENSION_CORES = {
   n64: "n64",
   v64: "n64",
   pbp: "psx",
-  nds: "nds",
-  cso: "ppsspp",
-  iso: "ppsspp",
-  a26: "stella2014"
+  nds: "nds"
 };
 
 export const REGION_NAMES = {

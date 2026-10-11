@@ -55,10 +55,13 @@ export function initRomsView() {
   }
 }
 
+const COMPATIBLE_CONSOLES = new Set(["SNES", "GBA", "NES", "Genesis", "GB", "GBC", "N64", "PS1", "NDS"]);
+
 export function isEmulatorCompatible(rom) {
-  if (CONSOLE_CORES[rom.console]) return true;
-  const ext = (rom.file || rom.url || "").split(".").pop().toLowerCase();
-  return !!EXTENSION_CORES[ext];
+  if (!COMPATIBLE_CONSOLES.has(rom.console)) return false;
+  const ext = (rom.file || rom.url || "").split(".").pop().toLowerCase().split("?")[0];
+  if (ext === "7z" || ext === "iso" || ext === "rvz" || ext === "gcm" || ext === "wbfs" || ext === "bin") return false;
+  return !!EXTENSION_CORES[ext] || !!CONSOLE_CORES[rom.console];
 }
 
 export function renderRomsList() {

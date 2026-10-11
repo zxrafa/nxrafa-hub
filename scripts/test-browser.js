@@ -150,6 +150,26 @@ server.listen(PORT, async () => {
     await page.click("#theaterCloseBtn");
     await page.waitForTimeout(300);
 
+    // 3b. Test Search 'Deltarune' & Verify Clean Port (No Itch.io block)
+    await page.fill("#portSearch", "Deltarune");
+    await page.waitForTimeout(400);
+    await page.click('#portsGridContainer .port-card .btn-play');
+    await page.waitForTimeout(1000);
+    const deltaruneSrc = await page.evaluate(() => document.querySelector("#theaterBody iframe")?.src);
+    console.log("Deltarune Theater Iframe Src (Clean GitHub Pages):", deltaruneSrc);
+    await page.click("#theaterCloseBtn");
+    await page.waitForTimeout(300);
+
+    // 3c. Test Search 'Bendy' & Verify Native Runner
+    await page.fill("#portSearch", "Bendy");
+    await page.waitForTimeout(400);
+    await page.click('#portsGridContainer .port-card .btn-play');
+    await page.waitForTimeout(1000);
+    const bendySrc = await page.evaluate(() => document.querySelector("#theaterBody iframe")?.src);
+    console.log("Bendy Theater Iframe Src (Native Runner):", bendySrc);
+    await page.click("#theaterCloseBtn");
+    await page.waitForTimeout(300);
+
     // 4. Test Favorites on a Port
     await page.fill("#portSearch", "Celeste");
     await page.waitForTimeout(300);
@@ -172,14 +192,14 @@ server.listen(PORT, async () => {
     });
     console.log("Recent Games Section on Home:", JSON.stringify(recentGames, null, 2));
 
-    // 6. Test Switch to Emulators Tab and Check New Cores
+    // 6. Test Switch to Emulators Tab and Check Cores
     await page.click('button[data-tab="emulators"]');
     await page.waitForTimeout(500);
     const coreOptions = await page.evaluate(() => {
       const sel = document.getElementById("localCoreSelect");
       return sel ? Array.from(sel.options).map(o => o.value) : [];
     });
-    console.log("Local Core Select options (including PSP, Saturn, MAME, Atari):", coreOptions);
+    console.log("Local Core Select options (only cores with roms):", coreOptions);
 
     console.log("Launching Super Mario World in Emulator...");
     await page.click('#classicsGrid .port-card:first-child .btn-play');

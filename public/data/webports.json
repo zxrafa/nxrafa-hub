@@ -1046,10 +1046,14 @@
     "title": "Cuphead",
     "slug": "cuphead",
     "desc": "Play Cuphead in your browser: the 2017 run and gun with hand-drawn boss fights, ported to the web. No download or install.",
-    "url": "https://wasm.rip/files/cuphead/index.html",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fcuphead%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
+      {
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fcuphead%40latest%2Findex.html"
+      },
       {
         "name": "Principal",
         "url": "https://wasm.rip/files/cuphead/index.html"
@@ -1139,10 +1143,14 @@
     "title": "PEAK",
     "slug": "peak",
     "desc": "Play PEAK in your browser: the 2025 climbing game where one slip ends the run, ported to the web. No download or install.",
-    "url": "/peak.html",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fpeaks-of-yore%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
+      {
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fpeaks-of-yore%40latest%2Findex.html"
+      },
       {
         "name": "Klavyer Hub (Controles Mobile)",
         "url": "/peak.html",
@@ -1215,10 +1223,14 @@
     "title": "Bendy and the Ink Machine",
     "slug": "bendy",
     "desc": "Play Bendy and the Ink Machine in your browser: the 2017 cartoon-studio horror game ported to the web. No download or install.",
-    "url": "https://wasm.rip/files/BATIM/index.html",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fbendy-and-the-ink-machine%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
+      {
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fbendy-and-the-ink-machine%40latest%2Findex.html"
+      },
       {
         "name": "Principal",
         "url": "https://wasm.rip/files/BATIM/index.html"
@@ -1239,10 +1251,14 @@
     "title": "MiSide",
     "slug": "miside",
     "desc": "Play MiSide in your browser: the 2024 horror story game where you get pulled inside the game, ported to the web. No download.",
-    "url": "https://wasm.rip/files/miside/miside.html",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fmiside%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
+      {
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fmiside%40latest%2Findex.html"
+      },
       {
         "name": "Principal",
         "url": "https://wasm.rip/files/miside/miside.html"
@@ -1332,10 +1348,14 @@
     "title": "Brotato Paws n' Claws",
     "slug": "brotato",
     "desc": "Play Brotato in your browser: the 2023 arena roguelite with a six-gun potato, ported to the web. No download or install.",
-    "url": "https://wasm.rip/files/bpac/index.html",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FBlueGameMC%2FBrotatoWeb%40main%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
+      {
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FBlueGameMC%2FBrotatoWeb%40main%2Findex.html"
+      },
       {
         "name": "Principal",
         "url": "https://wasm.rip/files/bpac/index.html"
@@ -1473,10 +1493,14 @@
     "title": "Granny 3",
     "slug": "granny-3",
     "desc": "Play Granny 3 in your browser: escape Granny and Grandpa's house in five days. The horror game ported to the web, no download.",
-    "url": "https://wasm.rip/files/granny/granny3.html",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fgranny%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
+      {
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fgranny%40latest%2Findex.html"
+      },
       {
         "name": "Principal",
         "url": "https://wasm.rip/files/granny/granny3.html"
@@ -1497,10 +1521,14 @@
     "title": "How to Fish",
     "slug": "how-to-fish",
     "desc": "Play How to Fish in your browser: a physics fishing game on a tiny island you crashed into, ported to the web. No download.",
-    "url": "https://wasm.rip/files/HowToFish/HowToFish.html",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffish%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
+      {
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffish%40latest%2Findex.html"
+      },
       {
         "name": "Principal",
         "url": "https://wasm.rip/files/HowToFish/HowToFish.html"
@@ -1916,13 +1944,13 @@
     "title": "-3",
     "slug": "3",
     "desc": "Port oficial em WebAssembly de -3.",
-    "url": "https://gn-math.dev/?id=816",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F816%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=816"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F816%2Findex.html"
       }
     ],
     "cover": "",
@@ -1939,13 +1967,13 @@
     "title": "20 Minutes Till Dawn",
     "slug": "20-minutes-till-dawn",
     "desc": "Port oficial em WebAssembly de 20 Minutes Till Dawn.",
-    "url": "https://gn-math.dev/?id=819",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2F20-minutes%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=819"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2F20-minutes%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -1962,13 +1990,13 @@
     "title": "A Bite at Freddy's",
     "slug": "a-bite-at-freddy-s",
     "desc": "Port oficial em WebAssembly de A Bite at Freddy's.",
-    "url": "https://gn-math.dev/?id=258",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F258%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=258"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F258%2Findex.html"
       }
     ],
     "cover": "",
@@ -1985,13 +2013,13 @@
     "title": "A Difficult Game About Climbing",
     "slug": "a-difficult-game-about-climbing",
     "desc": "Port oficial em WebAssembly de A Difficult Game About Climbing.",
-    "url": "https://gn-math.dev/?id=672",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fadgac%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=672"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fadgac%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -2009,10 +2037,14 @@
     "title": "Animal Crossing",
     "slug": "animal-crossing",
     "desc": "Port oficial em WebAssembly de Animal Crossing.",
-    "url": "https://retrogamescenter.ru/ports/ac-webport-main/index.html",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fac-gamecube%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
+      {
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fac-gamecube%40latest%2Findex.html"
+      },
       {
         "name": "WASM Play",
         "url": "https://retrogamescenter.ru/ports/ac-webport-main/index.html"
@@ -2032,13 +2064,13 @@
     "title": "Animal Crossing (GAMECUBE)",
     "slug": "animal-crossing-gamecube",
     "desc": "Port oficial em WebAssembly de Animal Crossing (GAMECUBE).",
-    "url": "https://gn-math.dev/?id=828",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fac-gamecube%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=828"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fac-gamecube%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -2055,13 +2087,13 @@
     "title": "Antonblast",
     "slug": "antonblast",
     "desc": "Port oficial em WebAssembly de Antonblast.",
-    "url": "https://gn-math.dev/?id=711",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fantonblast%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=711"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fantonblast%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -2078,13 +2110,13 @@
     "title": "Apes vs Helium",
     "slug": "apes-vs-helium",
     "desc": "Port oficial em WebAssembly de Apes vs Helium.",
-    "url": "https://gn-math.dev/?id=783",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F783%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=783"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F783%2Findex.html"
       }
     ],
     "cover": "",
@@ -2101,13 +2133,13 @@
     "title": "Arthur's Nightmare",
     "slug": "arthur-s-nightmare",
     "desc": "Port oficial em WebAssembly de Arthur's Nightmare.",
-    "url": "https://gn-math.dev/?id=645",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F645%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=645"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F645%2Findex.html"
       }
     ],
     "cover": "",
@@ -2124,13 +2156,13 @@
     "title": "Bad Parenting 1",
     "slug": "bad-parenting-1",
     "desc": "Port oficial em WebAssembly de Bad Parenting 1.",
-    "url": "https://gn-math.dev/?id=166",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F166%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=166"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F166%2Findex.html"
       }
     ],
     "cover": "",
@@ -2147,13 +2179,13 @@
     "title": "Bad Piggies",
     "slug": "bad-piggies",
     "desc": "Port oficial em WebAssembly de Bad Piggies.",
-    "url": "https://gn-math.dev/?id=752",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F752%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=752"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F752%2Findex.html"
       }
     ],
     "cover": "",
@@ -2216,13 +2248,13 @@
     "title": "Bendy and the Ink Machine: ALL CHAPTERS",
     "slug": "bendy-and-the-ink-machine-all-chapters",
     "desc": "Port oficial em WebAssembly de Bendy and the Ink Machine: ALL CHAPTERS.",
-    "url": "https://gn-math.dev/?id=803",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fbendy-and-the-ink-machine%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=803"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fbendy-and-the-ink-machine%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -2239,13 +2271,13 @@
     "title": "Brotato",
     "slug": "brotato",
     "desc": "Port oficial em WebAssembly de Brotato.",
-    "url": "https://gn-math.dev/?id=723",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FBlueGameMC%2FBrotatoWeb%40main%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=723"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FBlueGameMC%2FBrotatoWeb%40main%2Findex.html"
       }
     ],
     "cover": "",
@@ -2263,13 +2295,13 @@
     "title": "Buster Jam",
     "slug": "buster-jam",
     "desc": "Port oficial em WebAssembly de Buster Jam.",
-    "url": "https://gn-math.dev/?id=646",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fbuster-jam%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=646"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fbuster-jam%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -2332,13 +2364,13 @@
     "title": "CaseOh's Basics in Eating and Fast Food",
     "slug": "caseoh-s-basics-in-eating-and-fast-food",
     "desc": "Port oficial em WebAssembly de CaseOh's Basics in Eating and Fast Food.",
-    "url": "https://gn-math.dev/?id=758",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F758%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=758"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F758%2Findex.html"
       }
     ],
     "cover": "",
@@ -2390,10 +2422,6 @@
       {
         "name": "jsDelivr WebAssembly CDN",
         "url": "https://cdn.jsdelivr.net/gh/web-ports/celeste@4f043a5ce121b74dc54ce56d74f213a2eeea6b4e/index.html"
-      },
-      {
-        "name": "gn-math Mirror",
-        "url": "https://gn-math.dev/?id=623"
       }
     ],
     "cover": "/covers/celeste.jpg",
@@ -2433,13 +2461,13 @@
     "title": "Christmas Massacre",
     "slug": "christmas-massacre",
     "desc": "Port oficial em WebAssembly de Christmas Massacre.",
-    "url": "https://gn-math.dev/?id=734",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fchristmas-massacre%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=734"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fchristmas-massacre%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -2479,13 +2507,13 @@
     "title": "Clover Pit",
     "slug": "clover-pit",
     "desc": "Port oficial em WebAssembly de Clover Pit.",
-    "url": "https://gn-math.dev/?id=716",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fclover-pit%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=716"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fclover-pit%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -2640,13 +2668,13 @@
     "title": "Crazy Cattle 3D",
     "slug": "crazy-cattle-3d",
     "desc": "Port oficial em WebAssembly de Crazy Cattle 3D.",
-    "url": "https://gn-math.dev/?id=164",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F164%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=164"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F164%2Findex.html"
       }
     ],
     "cover": "",
@@ -2663,13 +2691,13 @@
     "title": "Cruelty Squad",
     "slug": "cruelty-squad",
     "desc": "Port oficial em WebAssembly de Cruelty Squad.",
-    "url": "https://gn-math.dev/?id=825",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fcruelty-squad%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=825"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fcruelty-squad%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -2686,13 +2714,17 @@
     "title": "Deltarune Chapters 1-4",
     "slug": "deltarune-chapters-1-4",
     "desc": "Port oficial em WebAssembly de Deltarune Chapters 1-4.",
-    "url": "https://aukak.itch.io/deltarune",
+    "url": "https://billy126.github.io/Deltarune-Web-Port-Html5-/",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://aukak.itch.io/deltarune"
+        "name": "Principal (Web Port Nativo)",
+        "url": "https://billy126.github.io/Deltarune-Web-Port-Html5-/"
+      },
+      {
+        "name": "Espelho 2",
+        "url": "https://levib007-jpg.github.io/Deltarune/"
       }
     ],
     "cover": "",
@@ -2709,13 +2741,13 @@
     "title": "Deltatraveler",
     "slug": "deltatraveler",
     "desc": "Port oficial em WebAssembly de Deltatraveler.",
-    "url": "https://gn-math.dev/?id=560",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F560%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=560"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F560%2Findex.html"
       }
     ],
     "cover": "",
@@ -2778,13 +2810,13 @@
     "title": "Doom 3",
     "slug": "doom-3",
     "desc": "Port oficial em WebAssembly de Doom 3.",
-    "url": "https://gn-math.dev/?id=626",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fdoom-3%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=626"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fdoom-3%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -2870,13 +2902,13 @@
     "title": "Duck Life 8",
     "slug": "duck-life-8",
     "desc": "Port oficial em WebAssembly de Duck Life 8.",
-    "url": "https://gn-math.dev/?id=695",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fduck-8%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=695"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fduck-8%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -3008,13 +3040,13 @@
     "title": "Endoparasitic",
     "slug": "endoparasitic",
     "desc": "Port oficial em WebAssembly de Endoparasitic.",
-    "url": "https://gn-math.dev/?id=286",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F286%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=286"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F286%2Findex.html"
       }
     ],
     "cover": "",
@@ -3031,13 +3063,13 @@
     "title": "Endoparasitic 2",
     "slug": "endoparasitic-2",
     "desc": "Port oficial em WebAssembly de Endoparasitic 2.",
-    "url": "https://gn-math.dev/?id=724",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F724%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=724"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F724%2Findex.html"
       }
     ],
     "cover": "",
@@ -3054,13 +3086,13 @@
     "title": "Fallout",
     "slug": "fallout",
     "desc": "Port oficial em WebAssembly de Fallout.",
-    "url": "https://gn-math.dev/?id=585",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F585%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=585"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F585%2Findex.html"
       }
     ],
     "cover": "",
@@ -3100,13 +3132,13 @@
     "title": "Fear & Hunger",
     "slug": "fear-hunger",
     "desc": "Port oficial em WebAssembly de Fear & Hunger.",
-    "url": "https://gn-math.dev/?id=706",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffear-and-hunger%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=706"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffear-and-hunger%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -3123,13 +3155,13 @@
     "title": "Fear & Hunger 2: Termina",
     "slug": "fear-hunger-2-termina",
     "desc": "Port oficial em WebAssembly de Fear & Hunger 2: Termina.",
-    "url": "https://gn-math.dev/?id=794",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffear-and-hunger-2%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=794"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffear-and-hunger-2%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -3146,13 +3178,13 @@
     "title": "Fears to Fathom: Home Alone",
     "slug": "fears-to-fathom-home-alone",
     "desc": "Port oficial em WebAssembly de Fears to Fathom: Home Alone.",
-    "url": "https://gn-math.dev/?id=460",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F460%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=460"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F460%2Findex.html"
       }
     ],
     "cover": "",
@@ -3169,10 +3201,14 @@
     "title": "Feed & Grow Fish",
     "slug": "feed-grow-fish",
     "desc": "Port oficial em WebAssembly de Feed & Grow Fish.",
-    "url": "https://reeyukifish.pages.dev/",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffish%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
+      {
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffish%40latest%2Findex.html"
+      },
       {
         "name": "WASM Play",
         "url": "https://reeyukifish.pages.dev/"
@@ -3192,13 +3228,13 @@
     "title": "Fih",
     "slug": "fih",
     "desc": "Port oficial em WebAssembly de Fih.",
-    "url": "https://gn-math.dev/?id=797",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F797%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=797"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F797%2Findex.html"
       }
     ],
     "cover": "",
@@ -3215,13 +3251,13 @@
     "title": "FISH",
     "slug": "fish",
     "desc": "Port oficial em WebAssembly de FISH.",
-    "url": "https://gn-math.dev/?id=761",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffish%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=761"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffish%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -3238,13 +3274,13 @@
     "title": "Five Nights at Candy's",
     "slug": "five-nights-at-candy-s",
     "desc": "Port oficial em WebAssembly de Five Nights at Candy's.",
-    "url": "https://gn-math.dev/?id=503",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffnac%40main%2F1%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=503"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffnac%40main%2F1%2Findex.html"
       }
     ],
     "cover": "",
@@ -3261,13 +3297,13 @@
     "title": "Five Nights at Candy's 2",
     "slug": "five-nights-at-candy-s-2",
     "desc": "Port oficial em WebAssembly de Five Nights at Candy's 2.",
-    "url": "https://gn-math.dev/?id=504",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffnac%40main%2F2%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=504"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffnac%40main%2F2%2Findex.html"
       }
     ],
     "cover": "",
@@ -3284,13 +3320,13 @@
     "title": "Five Nights at Epstein's",
     "slug": "five-nights-at-epstein-s",
     "desc": "Port oficial em WebAssembly de Five Nights at Epstein's.",
-    "url": "https://gn-math.dev/?id=710",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffnae%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=710"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffnae%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -3307,13 +3343,13 @@
     "title": "Five Nights at Freddy's",
     "slug": "five-nights-at-freddy-s",
     "desc": "Port oficial em WebAssembly de Five Nights at Freddy's.",
-    "url": "https://gn-math.dev/?id=38",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2F1%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=38"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2F1%2Findex.html"
       }
     ],
     "cover": "",
@@ -3330,13 +3366,13 @@
     "title": "Five Nights at Freddy's 2",
     "slug": "five-nights-at-freddy-s-2",
     "desc": "Port oficial em WebAssembly de Five Nights at Freddy's 2.",
-    "url": "https://gn-math.dev/?id=39",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2F2%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=39"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2F2%2Findex.html"
       }
     ],
     "cover": "",
@@ -3353,13 +3389,13 @@
     "title": "Five Nights at Freddy's 3",
     "slug": "five-nights-at-freddy-s-3",
     "desc": "Port oficial em WebAssembly de Five Nights at Freddy's 3.",
-    "url": "https://gn-math.dev/?id=40",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2F3%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=40"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2F3%2Findex.html"
       }
     ],
     "cover": "",
@@ -3376,13 +3412,13 @@
     "title": "Five Nights at Freddy's 4",
     "slug": "five-nights-at-freddy-s-4",
     "desc": "Port oficial em WebAssembly de Five Nights at Freddy's 4.",
-    "url": "https://gn-math.dev/?id=41",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2F4%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=41"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2F4%2Findex.html"
       }
     ],
     "cover": "",
@@ -3399,13 +3435,13 @@
     "title": "Five Nights at Freddy's 4: Halloween",
     "slug": "five-nights-at-freddy-s-4-halloween",
     "desc": "Port oficial em WebAssembly de Five Nights at Freddy's 4: Halloween.",
-    "url": "https://gn-math.dev/?id=428",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2F4%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=428"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2F4%2Findex.html"
       }
     ],
     "cover": "",
@@ -3422,13 +3458,13 @@
     "title": "Five Nights at Freddy's World: Refreshed",
     "slug": "five-nights-at-freddy-s-world-refreshed",
     "desc": "Port oficial em WebAssembly de Five Nights at Freddy's World: Refreshed.",
-    "url": "https://gn-math.dev/?id=704",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffnaf-world-refreshed%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=704"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ffnaf-world-refreshed%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -3445,13 +3481,13 @@
     "title": "Five Nights at Freddy's: Pizza Simulator",
     "slug": "five-nights-at-freddy-s-pizza-simulator",
     "desc": "Port oficial em WebAssembly de Five Nights at Freddy's: Pizza Simulator.",
-    "url": "https://gn-math.dev/?id=191",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2Fps%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=191"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2Fps%2Findex.html"
       }
     ],
     "cover": "",
@@ -3468,13 +3504,13 @@
     "title": "Five Nights at Freddy's: Sister Location",
     "slug": "five-nights-at-freddy-s-sister-location",
     "desc": "Port oficial em WebAssembly de Five Nights at Freddy's: Sister Location.",
-    "url": "https://gn-math.dev/?id=185",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2Fsl%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=185"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2Fsl%2Findex.html"
       }
     ],
     "cover": "",
@@ -3491,13 +3527,13 @@
     "title": "Five Nights at Freddy's: Ultimate Custom Night",
     "slug": "five-nights-at-freddy-s-ultimate-custom-night",
     "desc": "Port oficial em WebAssembly de Five Nights at Freddy's: Ultimate Custom Night.",
-    "url": "https://gn-math.dev/?id=192",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2Fucn%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=192"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2Fucn%2Findex.html"
       }
     ],
     "cover": "",
@@ -3514,13 +3550,13 @@
     "title": "Five Nights at Freddy's: World",
     "slug": "five-nights-at-freddy-s-world",
     "desc": "Port oficial em WebAssembly de Five Nights at Freddy's: World.",
-    "url": "https://gn-math.dev/?id=190",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2Fw%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=190"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Firv77%2Fhd_fnaf%40main%2Fw%2Findex.html"
       }
     ],
     "cover": "",
@@ -3537,13 +3573,13 @@
     "title": "Five Nights at Frickbear's 3",
     "slug": "five-nights-at-frickbear-s-3",
     "desc": "Port oficial em WebAssembly de Five Nights at Frickbear's 3.",
-    "url": "https://gn-math.dev/?id=813",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F813%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=813"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F813%2Findex.html"
       }
     ],
     "cover": "",
@@ -3560,13 +3596,13 @@
     "title": "Five Nights at Last Breath",
     "slug": "five-nights-at-last-breath",
     "desc": "Port oficial em WebAssembly de Five Nights at Last Breath.",
-    "url": "https://gn-math.dev/?id=750",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F750%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=750"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F750%2Findex.html"
       }
     ],
     "cover": "",
@@ -3583,13 +3619,13 @@
     "title": "Flying Gorilla 3D",
     "slug": "flying-gorilla-3d",
     "desc": "Port oficial em WebAssembly de Flying Gorilla 3D.",
-    "url": "https://gn-math.dev/?id=763",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fflying-gorilla%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=763"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fflying-gorilla%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -3606,13 +3642,13 @@
     "title": "Fundamental Paper Novel",
     "slug": "fundamental-paper-novel",
     "desc": "Port oficial em WebAssembly de Fundamental Paper Novel.",
-    "url": "https://gn-math.dev/?id=746",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F746%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=746"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F746%2Findex.html"
       }
     ],
     "cover": "",
@@ -3629,13 +3665,13 @@
     "title": "Fused 240",
     "slug": "fused-240",
     "desc": "Port oficial em WebAssembly de Fused 240.",
-    "url": "https://gn-math.dev/?id=722",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F722%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=722"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F722%2Findex.html"
       }
     ],
     "cover": "",
@@ -3652,13 +3688,13 @@
     "title": "Gabriel's Awesome Schoolhouse (GASH)",
     "slug": "gabriel-s-awesome-schoolhouse-gash",
     "desc": "Port oficial em WebAssembly de Gabriel's Awesome Schoolhouse (GASH).",
-    "url": "https://gn-math.dev/?id=784",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fgash%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=784"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fgash%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -3675,13 +3711,13 @@
     "title": "Geometry Dash",
     "slug": "geometry-dash",
     "desc": "Port oficial em WebAssembly de Geometry Dash.",
-    "url": "https://gn-math.dev/?id=785",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F785%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=785"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F785%2Findex.html"
       }
     ],
     "cover": "",
@@ -3698,13 +3734,13 @@
     "title": "Getting Over It with Bennett Foddy",
     "slug": "getting-over-it-with-bennett-foddy",
     "desc": "Port oficial em WebAssembly de Getting Over It with Bennett Foddy.",
-    "url": "https://gn-math.dev/?id=557",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F557%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=557"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F557%2Findex.html"
       }
     ],
     "cover": "",
@@ -3744,13 +3780,13 @@
     "title": "Gorilla Tag",
     "slug": "gorilla-tag",
     "desc": "Port oficial em WebAssembly de Gorilla Tag.",
-    "url": "https://gn-math.dev/?id=668",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fgorilla-tag%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=668"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fgorilla-tag%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -3767,13 +3803,13 @@
     "title": "Granny",
     "slug": "granny",
     "desc": "Port oficial em WebAssembly de Granny.",
-    "url": "https://gn-math.dev/?id=90",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fgranny%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=90"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fgranny%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -3813,13 +3849,13 @@
     "title": "Half Life",
     "slug": "half-life",
     "desc": "Port oficial em WebAssembly de Half Life.",
-    "url": "https://gn-math.dev/?id=262",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F262%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=262"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F262%2Findex.html"
       }
     ],
     "cover": "",
@@ -3859,13 +3895,13 @@
     "title": "Half Life: Opposing Force",
     "slug": "half-life-opposing-force",
     "desc": "Port oficial em WebAssembly de Half Life: Opposing Force.",
-    "url": "https://gn-math.dev/?id=693",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F693%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=693"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F693%2Findex.html"
       }
     ],
     "cover": "",
@@ -3974,13 +4010,13 @@
     "title": "Hollow Knight",
     "slug": "hollow-knight",
     "desc": "Port oficial em WebAssembly de Hollow Knight.",
-    "url": "https://gn-math.dev/?id=468",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fhollow-knight%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=468"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fhollow-knight%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -3997,13 +4033,13 @@
     "title": "Hollow Knight: Silksong",
     "slug": "hollow-knight-silksong",
     "desc": "Port oficial em WebAssembly de Hollow Knight: Silksong.",
-    "url": "https://gn-math.dev/?id=771",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fhollow-knight-silksong%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=771"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fhollow-knight-silksong%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4020,13 +4056,13 @@
     "title": "I Wanna Be The Guy",
     "slug": "i-wanna-be-the-guy",
     "desc": "Port oficial em WebAssembly de I Wanna Be The Guy.",
-    "url": "https://gn-math.dev/?id=834",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F834%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=834"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F834%2Findex.html"
       }
     ],
     "cover": "",
@@ -4043,13 +4079,13 @@
     "title": "In Stars and Time",
     "slug": "in-stars-and-time",
     "desc": "Port oficial em WebAssembly de In Stars and Time.",
-    "url": "https://gn-math.dev/?id=667",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fin-stars-and-time%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=667"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fin-stars-and-time%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4066,13 +4102,13 @@
     "title": "Iron Lung",
     "slug": "iron-lung",
     "desc": "Port oficial em WebAssembly de Iron Lung.",
-    "url": "https://gn-math.dev/?id=705",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Firon-lung%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=705"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Firon-lung%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4089,13 +4125,13 @@
     "title": "Jeffrey Epstein Basics In Education And Kidnapping",
     "slug": "jeffrey-epstein-basics-in-education-and-kidnapping",
     "desc": "Port oficial em WebAssembly de Jeffrey Epstein Basics In Education And Kidnapping.",
-    "url": "https://gn-math.dev/?id=751",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F751%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=751"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F751%2Findex.html"
       }
     ],
     "cover": "",
@@ -4112,13 +4148,13 @@
     "title": "Jumbo Mario",
     "slug": "jumbo-mario",
     "desc": "Port oficial em WebAssembly de Jumbo Mario.",
-    "url": "https://gn-math.dev/?id=712",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fjumbo-mario%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=712"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fjumbo-mario%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4136,13 +4172,13 @@
     "title": "Just Shapes & Beats",
     "slug": "just-shapes-beats",
     "desc": "Port oficial em WebAssembly de Just Shapes & Beats.",
-    "url": "https://gn-math.dev/?id=826",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fjsab%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=826"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fjsab%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4182,13 +4218,13 @@
     "title": "Kindergarten",
     "slug": "kindergarten",
     "desc": "Port oficial em WebAssembly de Kindergarten.",
-    "url": "https://gn-math.dev/?id=445",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F445%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=445"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F445%2Findex.html"
       }
     ],
     "cover": "",
@@ -4205,13 +4241,13 @@
     "title": "Kindergarten 2",
     "slug": "kindergarten-2",
     "desc": "Port oficial em WebAssembly de Kindergarten 2.",
-    "url": "https://gn-math.dev/?id=446",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F446%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=446"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F446%2Findex.html"
       }
     ],
     "cover": "",
@@ -4228,13 +4264,13 @@
     "title": "Kindergarten 3",
     "slug": "kindergarten-3",
     "desc": "Port oficial em WebAssembly de Kindergarten 3.",
-    "url": "https://gn-math.dev/?id=501",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F501%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=501"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F501%2Findex.html"
       }
     ],
     "cover": "",
@@ -4251,13 +4287,13 @@
     "title": "Kirby ~ Soft & Wet",
     "slug": "kirby-soft-wet",
     "desc": "Port oficial em WebAssembly de Kirby ~ Soft & Wet.",
-    "url": "https://gn-math.dev/?id=692",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F692%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=692"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F692%2Findex.html"
       }
     ],
     "cover": "",
@@ -4297,13 +4333,13 @@
     "title": "La Madriguera (Lazy Bear Game)",
     "slug": "la-madriguera-lazy-bear-game",
     "desc": "Port oficial em WebAssembly de La Madriguera (Lazy Bear Game).",
-    "url": "https://gn-math.dev/?id=843",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fla-madriguera%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=843"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fla-madriguera%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4320,13 +4356,13 @@
     "title": "Lethal Ape",
     "slug": "lethal-ape",
     "desc": "Port oficial em WebAssembly de Lethal Ape.",
-    "url": "https://gn-math.dev/?id=793",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Flethal-ape%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=793"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Flethal-ape%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4343,13 +4379,13 @@
     "title": "Look Outside",
     "slug": "look-outside",
     "desc": "Port oficial em WebAssembly de Look Outside.",
-    "url": "https://gn-math.dev/?id=649",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Flook-outside%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=649"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Flook-outside%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4366,13 +4402,13 @@
     "title": "Midnight Shift",
     "slug": "midnight-shift",
     "desc": "Port oficial em WebAssembly de Midnight Shift.",
-    "url": "https://gn-math.dev/?id=658",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F658%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=658"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F658%2Findex.html"
       }
     ],
     "cover": "",
@@ -4389,13 +4425,13 @@
     "title": "Milk inside a bag of milk inside a bag of milk",
     "slug": "milk-inside-a-bag-of-milk-inside-a-bag-of-milk",
     "desc": "Port oficial em WebAssembly de Milk inside a bag of milk inside a bag of milk.",
-    "url": "https://gn-math.dev/?id=650",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fmilk-bag-games%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=650"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fmilk-bag-games%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4412,13 +4448,13 @@
     "title": "Milk outside a bag of milk outside a bag of milk",
     "slug": "milk-outside-a-bag-of-milk-outside-a-bag-of-milk",
     "desc": "Port oficial em WebAssembly de Milk outside a bag of milk outside a bag of milk.",
-    "url": "https://gn-math.dev/?id=651",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fmilk-bag-games%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=651"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fmilk-bag-games%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4435,13 +4471,13 @@
     "title": "Mindwave",
     "slug": "mindwave",
     "desc": "Port oficial em WebAssembly de Mindwave.",
-    "url": "https://gn-math.dev/?id=648",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fmindwave%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=648"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fmindwave%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4481,13 +4517,13 @@
     "title": "Minecraft Pocket Edition",
     "slug": "minecraft-pocket-edition",
     "desc": "Port oficial em WebAssembly de Minecraft Pocket Edition.",
-    "url": "https://gn-math.dev/?id=754",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F754%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=754"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F754%2Findex.html"
       }
     ],
     "cover": "",
@@ -4504,13 +4540,13 @@
     "title": "My Talking Baby Hippo",
     "slug": "my-talking-baby-hippo",
     "desc": "Port oficial em WebAssembly de My Talking Baby Hippo.",
-    "url": "https://gn-math.dev/?id=840",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ftalking-hippo%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=840"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ftalking-hippo%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4573,13 +4609,13 @@
     "title": "Needy Streamer Overload",
     "slug": "needy-streamer-overload",
     "desc": "Port oficial em WebAssembly de Needy Streamer Overload.",
-    "url": "https://gn-math.dev/?id=708",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fneedy-streamer-overload%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=708"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fneedy-streamer-overload%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4619,13 +4655,13 @@
     "title": "Nubby's Number Factory",
     "slug": "nubby-s-number-factory",
     "desc": "Port oficial em WebAssembly de Nubby's Number Factory.",
-    "url": "https://gn-math.dev/?id=517",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F517%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=517"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F517%2Findex.html"
       }
     ],
     "cover": "",
@@ -4642,13 +4678,13 @@
     "title": "Oneshot (Legacy)",
     "slug": "oneshot-legacy",
     "desc": "Port oficial em WebAssembly de Oneshot (Legacy).",
-    "url": "https://gn-math.dev/?id=622",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F622%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=622"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F622%2Findex.html"
       }
     ],
     "cover": "",
@@ -4665,13 +4701,13 @@
     "title": "Overburden",
     "slug": "overburden",
     "desc": "Port oficial em WebAssembly de Overburden.",
-    "url": "https://gn-math.dev/?id=760",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F760%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=760"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F760%2Findex.html"
       }
     ],
     "cover": "",
@@ -4688,13 +4724,13 @@
     "title": "Peaks of Yore",
     "slug": "peaks-of-yore",
     "desc": "Port oficial em WebAssembly de Peaks of Yore.",
-    "url": "https://gn-math.dev/?id=717",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fpeaks-of-yore%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=717"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fpeaks-of-yore%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4734,13 +4770,13 @@
     "title": "Pizza Tower: Scoutdigo",
     "slug": "pizza-tower-scoutdigo",
     "desc": "Port oficial em WebAssembly de Pizza Tower: Scoutdigo.",
-    "url": "https://gn-math.dev/?id=628",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fscoutdingo%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=628"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fscoutdingo%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4757,13 +4793,13 @@
     "title": "Plants vs Zombies: GOTY Edition",
     "slug": "plants-vs-zombies-goty-edition",
     "desc": "Port oficial em WebAssembly de Plants vs Zombies: GOTY Edition.",
-    "url": "https://gn-math.dev/?id=842",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fpvz%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=842"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fpvz%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4803,13 +4839,13 @@
     "title": "Power Hover",
     "slug": "power-hover",
     "desc": "Port oficial em WebAssembly de Power Hover.",
-    "url": "https://gn-math.dev/?id=743",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fpower-hover%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=743"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fpower-hover%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -4964,13 +5000,13 @@
     "title": "Raldi's Crackhouse",
     "slug": "raldi-s-crackhouse",
     "desc": "Port oficial em WebAssembly de Raldi's Crackhouse.",
-    "url": "https://gn-math.dev/?id=670",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fraldi%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=670"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fraldi%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -5010,13 +5046,13 @@
     "title": "RE:RUN",
     "slug": "re-run",
     "desc": "Port oficial em WebAssembly de RE:RUN.",
-    "url": "https://gn-math.dev/?id=260",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F260%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=260"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F260%2Findex.html"
       }
     ],
     "cover": "",
@@ -5148,13 +5184,13 @@
     "title": "S.P.L.I.T",
     "slug": "s-p-l-i-t",
     "desc": "Port oficial em WebAssembly de S.P.L.I.T.",
-    "url": "https://gn-math.dev/?id=839",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F839%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=839"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F839%2Findex.html"
       }
     ],
     "cover": "",
@@ -5171,13 +5207,13 @@
     "title": "Saihate Station (さいはて駅)",
     "slug": "saihate-station",
     "desc": "Port oficial em WebAssembly de Saihate Station (さいはて駅).",
-    "url": "https://gn-math.dev/?id=737",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fsaihate-station%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=737"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fsaihate-station%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -5194,13 +5230,13 @@
     "title": "Scampton The Great",
     "slug": "scampton-the-great",
     "desc": "Port oficial em WebAssembly de Scampton The Great.",
-    "url": "https://gn-math.dev/?id=802",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F802%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=802"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F802%2Findex.html"
       }
     ],
     "cover": "",
@@ -5217,13 +5253,13 @@
     "title": "Shift at Midnight",
     "slug": "shift-at-midnight",
     "desc": "Port oficial em WebAssembly de Shift at Midnight.",
-    "url": "https://gn-math.dev/?id=721",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F721%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=721"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F721%2Findex.html"
       }
     ],
     "cover": "",
@@ -5263,13 +5299,13 @@
     "title": "Slender: The 8 Pages",
     "slug": "slender-the-8-pages",
     "desc": "Port oficial em WebAssembly de Slender: The 8 Pages.",
-    "url": "https://gn-math.dev/?id=451",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F451%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=451"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F451%2Findex.html"
       }
     ],
     "cover": "",
@@ -5286,13 +5322,13 @@
     "title": "Slendytubbies 1",
     "slug": "slendytubbies-1",
     "desc": "Port oficial em WebAssembly de Slendytubbies 1.",
-    "url": "https://gn-math.dev/?id=796",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fslendytubbies%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=796"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fslendytubbies%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -5309,13 +5345,13 @@
     "title": "Slendytubbies 2",
     "slug": "slendytubbies-2",
     "desc": "Port oficial em WebAssembly de Slendytubbies 2.",
-    "url": "https://gn-math.dev/?id=806",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fslendytubbies%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=806"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fslendytubbies%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -5332,13 +5368,13 @@
     "title": "Slendytubbies 2D",
     "slug": "slendytubbies-2d",
     "desc": "Port oficial em WebAssembly de Slendytubbies 2D.",
-    "url": "https://gn-math.dev/?id=807",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fslendytubbies%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=807"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fslendytubbies%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -5355,13 +5391,13 @@
     "title": "Slime Rancher",
     "slug": "slime-rancher",
     "desc": "Port oficial em WebAssembly de Slime Rancher.",
-    "url": "https://gn-math.dev/?id=591",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fslime-ranchers%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=591"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fslime-ranchers%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -5378,13 +5414,13 @@
     "title": "Sonic CD",
     "slug": "sonic-cd",
     "desc": "Port oficial em WebAssembly de Sonic CD.",
-    "url": "https://gn-math.dev/?id=589",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F589%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=589"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F589%2Findex.html"
       }
     ],
     "cover": "",
@@ -5402,13 +5438,13 @@
     "title": "Sonic Mania",
     "slug": "sonic-mania",
     "desc": "Port oficial em WebAssembly de Sonic Mania.",
-    "url": "https://gn-math.dev/?id=590",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F590%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=590"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F590%2Findex.html"
       }
     ],
     "cover": "",
@@ -5426,13 +5462,13 @@
     "title": "Sonic.EXE (ORIGINAL)",
     "slug": "sonic-exe-original",
     "desc": "Port oficial em WebAssembly de Sonic.EXE (ORIGINAL).",
-    "url": "https://gn-math.dev/?id=606",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F606%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=606"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F606%2Findex.html"
       }
     ],
     "cover": "",
@@ -5473,13 +5509,13 @@
     "title": "Spaceflight Simulator",
     "slug": "spaceflight-simulator",
     "desc": "Port oficial em WebAssembly de Spaceflight Simulator.",
-    "url": "https://gn-math.dev/?id=808",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fspaceflight-simulator%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=808"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fspaceflight-simulator%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -5565,13 +5601,13 @@
     "title": "Stick with It",
     "slug": "stick-with-it",
     "desc": "Port oficial em WebAssembly de Stick with It.",
-    "url": "https://gn-math.dev/?id=502",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F502%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=502"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F502%2Findex.html"
       }
     ],
     "cover": "",
@@ -5588,13 +5624,13 @@
     "title": "Super Mario 64",
     "slug": "super-mario-64",
     "desc": "Port oficial em WebAssembly de Super Mario 64.",
-    "url": "https://gn-math.dev/?id=588",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F588%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=588"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F588%2Findex.html"
       }
     ],
     "cover": "",
@@ -5636,13 +5672,13 @@
     "title": "Super Mario Bros. Remastered",
     "slug": "super-mario-bros-remastered",
     "desc": "Port oficial em WebAssembly de Super Mario Bros. Remastered.",
-    "url": "https://gn-math.dev/?id=736",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F736%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=736"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F736%2Findex.html"
       }
     ],
     "cover": "",
@@ -5729,13 +5765,13 @@
     "title": "Terraria",
     "slug": "terraria",
     "desc": "Port oficial em WebAssembly de Terraria.",
-    "url": "https://gn-math.dev/?id=669",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fterraria%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=669"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fterraria%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -5752,13 +5788,13 @@
     "title": "The Man In The Window",
     "slug": "the-man-in-the-window",
     "desc": "Port oficial em WebAssembly de The Man In The Window.",
-    "url": "https://gn-math.dev/?id=459",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F459%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=459"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F459%2Findex.html"
       }
     ],
     "cover": "",
@@ -5798,13 +5834,13 @@
     "title": "Totally Accurate Battle Simulator (TABS)",
     "slug": "totally-accurate-battle-simulator-tabs",
     "desc": "Port oficial em WebAssembly de Totally Accurate Battle Simulator (TABS).",
-    "url": "https://gn-math.dev/?id=827",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ftabs%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=827"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Ftabs%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -5821,13 +5857,13 @@
     "title": "Touhou Mother",
     "slug": "touhou-mother",
     "desc": "Port oficial em WebAssembly de Touhou Mother.",
-    "url": "https://gn-math.dev/?id=523",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F523%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=523"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F523%2Findex.html"
       }
     ],
     "cover": "",
@@ -5844,13 +5880,13 @@
     "title": "t³ (T cubed)",
     "slug": "t-t-cubed",
     "desc": "Port oficial em WebAssembly de t³ (T cubed).",
-    "url": "https://gn-math.dev/?id=818",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F818%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=818"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F818%2Findex.html"
       }
     ],
     "cover": "",
@@ -5867,13 +5903,13 @@
     "title": "ULTRAKILL",
     "slug": "ultrakill",
     "desc": "Port oficial em WebAssembly de ULTRAKILL.",
-    "url": "https://gn-math.dev/?id=196",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F196%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=196"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F196%2Findex.html"
       }
     ],
     "cover": "",
@@ -5890,13 +5926,13 @@
     "title": "Ultrapool",
     "slug": "ultrapool",
     "desc": "Port oficial em WebAssembly de Ultrapool.",
-    "url": "https://gn-math.dev/?id=757",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F757%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=757"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F757%2Findex.html"
       }
     ],
     "cover": "",
@@ -5913,13 +5949,13 @@
     "title": "Untitled Goose Game",
     "slug": "untitled-goose-game",
     "desc": "Port oficial em WebAssembly de Untitled Goose Game.",
-    "url": "https://gn-math.dev/?id=718",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Funtitled-goose-game%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=718"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Funtitled-goose-game%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -5936,13 +5972,13 @@
     "title": "UvuvwevwevweOnyetenvewveUgwemubwemOssas",
     "slug": "uvuvwevwevweonyetenvewveugwemubwemossas",
     "desc": "Port oficial em WebAssembly de UvuvwevwevweOnyetenvewveUgwemubwemOssas.",
-    "url": "https://gn-math.dev/?id=795",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F795%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=795"
+        "name": "Nativo (Runner Limpo)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Ffreebuisness%2Fassets%40main%2F795%2Findex.html"
       }
     ],
     "cover": "",
@@ -6051,13 +6087,13 @@
     "title": "Who's Your Daddy?",
     "slug": "who-s-your-daddy",
     "desc": "Port oficial em WebAssembly de Who's Your Daddy?.",
-    "url": "https://gn-math.dev/?id=791",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fdaddygame%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=791"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fdaddygame%40latest%2Findex.html"
       }
     ],
     "cover": "",
@@ -6143,13 +6179,13 @@
     "title": "Your Only Move is Hustle",
     "slug": "your-only-move-is-hustle",
     "desc": "Port oficial em WebAssembly de Your Only Move is Hustle.",
-    "url": "https://gn-math.dev/?id=776",
+    "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fyomi-hustle%40latest%2Findex.html",
     "embed": true,
     "openExternal": false,
     "sources": [
       {
-        "name": "WASM Play",
-        "url": "https://gn-math.dev/?id=776"
+        "name": "Nativo (CDN Alta Velocidade)",
+        "url": "/ports/runner.html?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fweb-ports%2Fyomi-hustle%40latest%2Findex.html"
       }
     ],
     "cover": "",

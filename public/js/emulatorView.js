@@ -9,9 +9,7 @@ export const FEATURED_CLASSICS = [
   { title: "Sonic The Hedgehog 2", console: "Genesis", url: "/roms/sonic-2.md" },
   { title: "Super Mario Bros.", console: "NES", url: "/roms/super-mario-bros.nes" },
   { title: "Pokemon - Red Version", console: "GB", url: "/roms/pokemon-red.gb" },
-  { title: "Pokemon - Crystal Version", console: "GBC", url: "/roms/pokemon-crystal.gbc" },
-  { title: "Castlevania: Symphony of the Night", console: "PS1", url: "https://archive.org/download/psx-treyner-pbp/PBP%2FCastlevania%20-%20Symphony%20Of%20The%20Night.PBP" },
-  { title: "Mario Kart DS", console: "NDS", url: "https://archive.org/download/6108-pokemon-version-blanche-2-f-frie-nds/0168%20-%20Mario%20Kart%20DS%20(U)(SCZ).nds" }
+  { title: "Pokemon - Crystal Version", console: "GBC", url: "/roms/pokemon-crystal.gbc" }
 ];
 
 export function initEmulatorView() {
