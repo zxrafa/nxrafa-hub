@@ -3,40 +3,57 @@ export const state = {
   activeConsole: "all",
   activeRegion: "all",
   activeSearch: "",
-  activePortCat: "all",
+  
+  activePortCat: "Todos",
   activePortSearch: "",
   
   allRoms: [],
   filteredRoms: [],
   displayedRoms: [],
-  
   romPage: 1,
   romPageSize: 48,
   
   stats: {},
   webports: [],
-  filterPorts: [],
+  filteredPorts: [],
   
   isCloaked: false
 };
 
 export const CONSOLE_CORES = {
-  GBA: "gba",
   SNES: "snes",
+  GBA: "gba",
   NES: "nes",
-  N64: "n64",
   Genesis: "segaMD",
   GB: "gb",
   GBC: "gbc",
+  N64: "n64",
   PS1: "psx",
   NDS: "nds"
 };
 
-export const REGION_FLAGS = {
-  USA: "🇺🇸",
-  Europe: "🇪🇺",
-  Japan: "🇯🇵",
-  Brazil: "🇧🇷",
-  World: "🌐",
-  Global: "🌐"
+export const EXTENSION_CORES = {
+  smc: "snes",
+  sfc: "snes",
+  gba: "gba",
+  nes: "nes",
+  gen: "segaMD",
+  md: "segaMD",
+  smd: "segaMD",
+  gb: "gb",
+  gbc: "gbc",
+  z64: "n64",
+  n64: "n64",
+  v64: "n64",
+  pbp: "psx",
+  nds: "nds"
+};
+
+export const REGION_NAMES = {
+  USA: "USA",
+  Europe: "Europa",
+  Japan: "Japão",
+  Brazil: "Brasil",
+  World: "Global",
+  Global: "Global"
 };

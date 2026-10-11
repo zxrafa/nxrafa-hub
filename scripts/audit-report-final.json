@@ -1,0 +1,259 @@
+{
+  "beforeCount": 77,
+  "inxanityLoaded": 77,
+  "carterLoaded": 184,
+  "totalNow": 261,
+  "openNewTab": [
+    {
+      "title": "GTA Vice City",
+      "reason": "Usa wasmarcade.com (X-Frame-Options: sameorigin). Configurado para abrir em nova aba limpa."
+    },
+    {
+      "title": "GTA III",
+      "reason": "Usa wasmarcade.com (X-Frame-Options: sameorigin). Configurado para abrir em nova aba limpa."
+    },
+    {
+      "title": "The Simpsons: Hit & Run",
+      "reason": "Usa wasmarcade.com (X-Frame-Options: sameorigin). Configurado para abrir em nova aba limpa."
+    },
+    {
+      "title": "Minecraft 1.8.8",
+      "reason": "Usa wasmarcade.com (X-Frame-Options: sameorigin). Configurado para abrir em nova aba limpa."
+    },
+    {
+      "title": "Flash Games (878)",
+      "reason": "Usa wasmarcade.com (X-Frame-Options: sameorigin). Configurado para abrir em nova aba limpa."
+    },
+    {
+      "title": "Arcade Classics (227)",
+      "reason": "Usa wasmarcade.com (X-Frame-Options: sameorigin). Configurado para abrir em nova aba limpa."
+    }
+  ],
+  "brokenList": [
+    {
+      "title": "Amanda The Adventurer",
+      "url": "https://gn-math.github.io/web-port/amanda-the-adventurer/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Andy's Apple Farm",
+      "url": "https://gn-math.github.io/web-port/andys-apple-farm/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Baldi's Basics Classic Remastered",
+      "url": "https://gn-math.github.io/web-port/baldi-remaster/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Baldi's Basics Plus",
+      "url": "https://gn-math.github.io/web-port/baldi-plus/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Bendy and The Ink Machine (3)",
+      "url": "https://gn-math.github.io/web-port/bendy/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "BERGENTRUCK 201x",
+      "url": "https://gn-math.github.io/web-port/bergentruck/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "BLOODMONEY!",
+      "url": "https://gn-math.github.io/web-port/bloodmoney/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Buckshot Roulette",
+      "url": "https://gn-math.github.io/web-port/buckshot-roulette/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Class of '09",
+      "url": "https://gn-math.github.io/web-port/class-of-09/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Dead Plate",
+      "url": "https://gn-math.github.io/web-port/dead-plate/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Deadseat",
+      "url": "https://gn-math.github.io/web-port/deadseat/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Deltarune",
+      "url": "https://gn-math.github.io/web-port/deltatraveler/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Do NOT Take This Cat Home",
+      "url": "https://gn-math.github.io/web-port/donottakethiscathome/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Fears To Fathom",
+      "url": "https://gn-math.github.io/web-port/fears-to-fathom/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "FNAF",
+      "url": "https://gn-math.github.io/web-port/fnaf/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Getting Over It",
+      "url": "https://gn-math.github.io/web-port/getting-over-it/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Happy Sheepies",
+      "url": "https://gn-math.github.io/web-port/happy-sheepies/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Hotline Miami",
+      "url": "https://gn-math.github.io/web-port/hotline-miami/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Human Expenditure Program",
+      "url": "https://gn-math.github.io/web-port/human-expenditure-program/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Jelly Drift",
+      "url": "https://gn-math.github.io/web-port/jelly-drift/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Karlson",
+      "url": "https://gn-math.github.io/web-port/karlson/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Kindergarten 1 & 2",
+      "url": "https://gn-math.github.io/web-port/kindergarten/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Lacey's Flash Games",
+      "url": "https://gn-math.github.io/web-port/laceys-flash-games/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Milkman Karlson",
+      "url": "https://gn-math.github.io/web-port/milkman-karlson/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Minesweeper Plus",
+      "url": "https://gn-math.github.io/web-port/minesweeperplus/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "OMORI",
+      "url": "https://gn-math.github.io/web-port/omori-fixed/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "People Playground",
+      "url": "https://gn-math.github.io/web-port/people-playground/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Pizza Tower",
+      "url": "https://gn-math.github.io/web-port/pizza-tower/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "R.E.P.O",
+      "url": "https://gn-math.github.io/web-port/repo/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "RAFT",
+      "url": "https://gn-math.github.io/web-port/raft/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Schoolboy Runaway",
+      "url": "https://gn-math.github.io/web-port/schoolboy-runaway/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Slender: The Eight Pages",
+      "url": "https://gn-math.github.io/web-port/slender/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "SONIC.EXE",
+      "url": "https://gn-math.github.io/web-port/sonic.exe/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Speed Stars",
+      "url": "https://gn-math.github.io/web-port/speed-stars/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Tattletail",
+      "url": "https://gn-math.github.io/web-port/tattletail/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "That's Not My Neighbor",
+      "url": "https://gn-math.github.io/web-port/thats-not-my-neighbor/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "The Deadseat",
+      "url": "https://gn-math.github.io/web-port/deadseat/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "The Man From the Window",
+      "url": "https://gn-math.github.io/web-port/the-man-in-the-window/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Ultrakill Prelude",
+      "url": "https://gn-math.github.io/web-port/ultrakill/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Undertale",
+      "url": "https://gn-math.github.io/web-port/undertale/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Undertale Yellow",
+      "url": "https://gn-math.github.io/web-port/undertale-yellow/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Webfishing",
+      "url": "https://gn-math.github.io/web-port/web-fishing/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Witch's Heart",
+      "url": "https://gn-math.github.io/web-port/witch-heart/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Yandere Simulator",
+      "url": "https://gn-math.github.io/web-port/yandere-simulator/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    },
+    {
+      "title": "Yume Nikki",
+      "url": "https://gn-math.github.io/web-port/yume-nikki/",
+      "reason": "Repositório gn-math.github.io offline (HTTP 404)"
+    }
+  ]
+}

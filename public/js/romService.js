@@ -18,7 +18,7 @@ export async function loadRomsData() {
     applyRomFilters();
     return state.allRoms;
   } catch (err) {
-    console.error("Erro roms data:", err);
+    console.error("Erro roms:", err);
     return [];
   }
 }
@@ -33,7 +33,7 @@ export function applyRomFilters() {
     const matchRegion = rTarget === "all" || item.region === rTarget;
     const matchQuery = !query || 
       item.title.toLowerCase().includes(query) || 
-      item.file.toLowerCase().includes(query);
+      (item.file && item.file.toLowerCase().includes(query));
 
     return matchConsole && matchRegion && matchQuery;
   });

@@ -1,9 +1,11 @@
 import { state } from "./state.js";
+import { getIcon } from "./icons.js";
 
 export async function initPortsView() {
   try {
     const res = await fetch("./data/webports.json");
     state.webports = await res.json();
+    updateCategoryCounts();
     applyPortFilters();
     renderPortsList();
   } catch (err) {
@@ -34,13 +36,29 @@ export async function initPortsView() {
   });
 }
 
+function updateCategoryCounts() {
+  const counts = {};
+  for (const p of state.webports) {
+    for (const cat of (p.categories || [])) {
+      counts[cat] = (counts[cat] || 0) + 1;
+    }
+  }
+
+  document.querySelectorAll(".port-cat-chip").forEach((chip) => {
+    const cat = chip.dataset.cat;
+    const count = cat === "Todos" ? state.webports.length : (counts[cat] || 0);
+    const badge = chip.querySelector(".chip-badge");
+    if (badge) badge.textContent = count;
+  });
+}
+
 export function applyPortFilters() {
   const query = state.activePortSearch.trim().toLowerCase();
   const cat = state.activePortCat;
 
-  state.filterPorts = state.webports.filter((p) => {
-    const matchCat = cat === "all" || p.category.toLowerCase().includes(cat.toLowerCase()) || p.source.toLowerCase().includes(cat.toLowerCase());
-    const matchQuery = !query || p.title.toLowerCase().includes(query);
+  state.filteredPorts = state.webports.filter((p) => {
+    const matchCat = cat === "Todos" || (p.categories && p.categories.includes(cat));
+    const matchQuery = !query || p.title.toLowerCase().includes(query) || (p.desc && p.desc.toLowerCase().includes(query));
     return matchCat && matchQuery;
   });
 }
@@ -52,31 +70,49 @@ export function renderPortsList() {
   if (!container) return;
 
   if (countEl) {
-    countEl.textContent = `${state.filterPorts.length} jogos disponíveis`;
+    countEl.textContent = `${state.filteredPorts.length} jogos disponíveis`;
   }
 
-  if (state.filterPorts.length === 0) {
-    container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 48px; color: var(--text-dim);">Nenhum jogo webportado encontrado.</div>`;
+  if (state.filteredPorts.length === 0) {
+    container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 48px; color: var(--text-dim);">Nenhum jogo encontrado nesta categoria.</div>`;
     return;
   }
 
-  container.innerHTML = state.filterPorts.map((p) => `
-    <div class="port-card fade-in">
-      <div>
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-          <span class="chip-badge" style="background: rgba(255,255,255,0.06); padding: 3px 8px; border-radius: 6px; font-weight: 600;">
-            ${p.source}
-          </span>
-          <span style="font-size: 12px; color: #fbbf24; font-weight: 700;">★ ${p.rating}</span>
+  container.innerHTML = state.filteredPorts.map((p) => {
+    const initial = p.title.slice(0, 2).toUpperCase();
+    const isExternal = !!p.openExternal;
+
+    return `
+      <div class="port-card fade-in">
+        <div class="port-card-cover-wrap">
+          ${p.cover ? `
+            <img class="port-cover-img" src="${p.cover}" alt="${p.title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          ` : ""}
+          <div class="port-cover-fallback" style="${p.cover ? 'display: none;' : 'display: flex;'}">
+            <span class="fallback-initial">${initial}</span>
+            <span class="fallback-tag">${p.source}</span>
+          </div>
         </div>
-        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 4px;">${p.title}</h3>
-        <p style="font-size: 12px; color: var(--text-dim);">${p.category}</p>
+        <div class="port-card-content">
+          <div class="port-header-line">
+            <span class="badge-tag">${p.categories[1] || p.source}</span>
+            <span class="rating-text">★ ${p.rating}</span>
+          </div>
+          <h3 class="port-title-text" title="${p.title}">${p.title}</h3>
+          <p class="port-desc-text">${p.desc}</p>
+        </div>
+        ${isExternal ? `
+          <a class="btn-action btn-external" href="${p.url}" target="_blank" rel="noopener">
+            ${getIcon("external")} Abrir em Nova Aba
+          </a>
+        ` : `
+          <button class="btn-action btn-play" onclick="window.launchPortIframe('${encodeURIComponent(p.url)}', '${encodeURIComponent(p.title)}')">
+            ${getIcon("play")} Jogar no Navegador
+          </button>
+        `}
       </div>
-      <button class="btn-action btn-play" style="width: 100%; justify-content: center;" onclick="window.launchPortIframe('${encodeURIComponent(p.url)}', '${encodeURIComponent(p.title)}')">
-        ▶ Jogar no Navegador
-      </button>
-    </div>
-  `).join("");
+    `;
+  }).join("");
 }
 
 window.launchPortIframe = (encodedUrl, encodedTitle) => {
@@ -94,7 +130,7 @@ window.launchPortIframe = (encodedUrl, encodedTitle) => {
   if (coreBadge) coreBadge.textContent = "WEB PORT";
 
   modalBody.innerHTML = `
-    <iframe src="${url}" allow="autoplay; fullscreen; gamepad; focus-without-user-activation *" allowfullscreen></iframe>
+    <iframe src="${url}" sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups allow-modals" allow="autoplay; fullscreen; gamepad; focus-without-user-activation *" allowfullscreen></iframe>
   `;
 
   modal.classList.add("active");

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOOM (1993) - Discord Activity</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #09090b;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #fafafa;
+    }
+    #dos {
+      width: 100vw;
+      height: 100vh;
+    }
+    .header {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      z-index: 10;
+      background: rgba(18, 18, 20, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      pointer-events: none;
+    }
+    .badge {
+      background: #ef4444;
+      color: #fff;
+      font-weight: 700;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+  </style>
+  <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
+  <script src="https://v8.js-dos.com/latest/js-dos.js"></script>
+</head>
+<body>
+  <div class="header">
+    <span class="badge">DOOM 1993</span>
+    <span>60 FPS • Áudio Original • WASD / Setas • Ctrl / Espaço</span>
+  </div>
+  <div id="dos"></div>
+  <script>
+    Dos(document.getElementById("dos"), {
+      url: "https://cdn.dos.zone/custom/dos/doom.jsdos",
+      theme: "dark",
+      autoStart: true,
+      kiosk: true
+    });
+  </script>
+</body>
+</html>

@@ -1,6 +1,7 @@
-import { state, REGION_FLAGS, CONSOLE_CORES } from "./state.js";
+import { state, CONSOLE_CORES, EXTENSION_CORES, REGION_NAMES } from "./state.js";
 import { applyRomFilters, loadNextRomPage } from "./romService.js";
 import { launchWebEmulator } from "./emulatorView.js";
+import { getIcon } from "./icons.js";
 
 export function initRomsView() {
   const searchInput = document.getElementById("romSearch");
@@ -43,6 +44,12 @@ export function initRomsView() {
   }
 }
 
+export function isEmulatorCompatible(rom) {
+  if (CONSOLE_CORES[rom.console]) return true;
+  const ext = (rom.file || rom.url || "").split(".").pop().toLowerCase();
+  return !!EXTENSION_CORES[ext];
+}
+
 export function renderRomsList() {
   const container = document.getElementById("romsListContainer");
   const countEl = document.getElementById("romsCountText");
@@ -51,42 +58,44 @@ export function renderRomsList() {
   if (!container) return;
 
   if (countEl) {
-    countEl.textContent = `Mostrando ${state.displayedRoms.length.toLocaleString("pt-BR")} de ${state.filteredRoms.length.toLocaleString("pt-BR")} ROMs`;
+    countEl.textContent = `${state.displayedRoms.length.toLocaleString("pt-BR")} de ${state.filteredRoms.length.toLocaleString("pt-BR")} ROMs`;
   }
 
   if (state.displayedRoms.length === 0) {
-    container.innerHTML = `<div style="text-align: center; padding: 48px; color: var(--text-dim);">Nenhuma ROM encontrada.</div>`;
+    container.innerHTML = `<div style="text-align: center; padding: 48px; color: var(--text-dim);">Nenhuma ROM encontrada para esta busca.</div>`;
     if (loadMoreBtn) loadMoreBtn.style.display = "none";
     return;
   }
 
   container.innerHTML = state.displayedRoms.map((r) => {
-    const flag = REGION_FLAGS[r.region] || "🌐";
-    const canPlayWeb = !!CONSOLE_CORES[r.console];
+    const regionName = REGION_NAMES[r.region] || r.region;
+    const canPlay = isEmulatorCompatible(r);
 
     return `
       <div class="rom-item fade-in">
-        <div style="display: flex; align-items: center; gap: 14px; min-width: 0;">
-          <span class="chip-badge" style="background: rgba(168,85,247,0.15); color: var(--purple-accent); padding: 4px 8px; border-radius: 6px; font-weight: 700;">
-            ${r.console}
-          </span>
+        <div class="rom-info-left">
+          <span class="badge-console">${r.console}</span>
           <div style="min-width: 0;">
             <div class="rom-title-text" title="${r.title}">${r.title}</div>
             <div class="rom-meta-tag">
-              <span>${flag} ${r.region}</span>
+              <span class="region-pill">${regionName}</span>
               <span>•</span>
               <span>${r.size}</span>
             </div>
           </div>
         </div>
         <div class="btn-group">
-          ${canPlayWeb ? `
+          ${canPlay ? `
             <button class="btn-action btn-play" onclick="window.playRomWeb('${encodeURIComponent(r.url)}', '${r.console}', '${encodeURIComponent(r.title)}')">
-              ▶ Jogar Web
+              ${getIcon("play")} Jogar Web
             </button>
-          ` : ""}
+          ` : `
+            <span class="badge-unsupported" title="Sem emulador compatível no navegador para este sistema">
+              Apenas Download
+            </span>
+          `}
           <a class="btn-action btn-download" href="${r.url}" download target="_blank" rel="noopener">
-            ⬇ Baixar Direto
+            ${getIcon("download")} Baixar
           </a>
         </div>
       </div>

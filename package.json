@@ -4,8 +4,10 @@
   "description": "O hub definitivo de preservação e emulação retro na web",
   "type": "module",
   "scripts": {
+    "start": "node scripts/dev.js",
+    "dev": "node scripts/dev.js",
     "build:data": "node scripts/build-data.js",
-    "start": "npx serve public -l 3000"
+    "build:webports": "node scripts/build-webports.js"
   },
   "keywords": [
     "roms",

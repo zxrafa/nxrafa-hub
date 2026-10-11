@@ -1,0 +1,929 @@
+{
+  "working": [
+    {
+      "source": "Inxanity",
+      "title": "Pokémon Redstone",
+      "url": "https://pokemon-redstone.pages.dev/",
+      "cover": "https://www.inxanitylabs.com/assets/games/pokemon-redstone.webp",
+      "tags": [
+        "Mashup",
+        "Saves"
+      ],
+      "desc": "Play Pokémon Redstone free in your browser: a fan game where you are Minecraft's Steve, mining, crafting and catching your way through Kanto.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Taipei Rush",
+      "url": "https://www.taipei-rush.app/",
+      "cover": "https://www.inxanitylabs.com/assets/games/taipei-rush.jpg",
+      "tags": [
+        "Open world"
+      ],
+      "desc": "Play Taipei Rush free in your browser: an open-world Taipei with scooters, cars, missions and police chases. No download, no install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "LEGO Island",
+      "url": "https://isle.pizza/",
+      "cover": "https://www.inxanitylabs.com/assets/games/lego-island.jpg",
+      "tags": [
+        "Classic",
+        "1997"
+      ],
+      "desc": "Play LEGO Island in your browser: the 1997 PC classic ported to the web in full. Build cars, deliver pizza and stop the Brickster. Free, no install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "SandStorm",
+      "url": "https://sandstorm.ink/play.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/sandstorm.jpg",
+      "tags": [
+        "Shooter",
+        "Destructible"
+      ],
+      "desc": "Play SandStorm in your browser, on PC or phone: a falling-sand shooter where every grain is destructible, solo or in co-op with friends. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Redcoats",
+      "url": "https://redcoats.io/app/",
+      "cover": "https://www.inxanitylabs.com/assets/games/redcoats.jpg",
+      "tags": [
+        "Multiplayer",
+        "FPS"
+      ],
+      "desc": "Play Redcoats online in your browser: a free multiplayer musket shooter with up to 1,000 players, horses, cannons and warships. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Counter-Strike 1.6",
+      "url": "https://combatskirmish.net/quickjoin",
+      "cover": "https://www.inxanitylabs.com/assets/games/counter-strike.jpg",
+      "tags": [
+        "Multiplayer",
+        "FPS"
+      ],
+      "desc": "Play Counter-Strike 1.6 online in your browser: live multiplayer servers on Dust2, Inferno and Office, and a version with touch controls for phones. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Seedbed",
+      "url": "https://www.playseedbed.com/",
+      "cover": "https://www.inxanitylabs.com/assets/games/seedbed.jpg",
+      "tags": [
+        "Strategy"
+      ],
+      "desc": "Play Seedbed free in your browser: a solarpunk strategy game about building rail and clean energy for a century of self-governing towns.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Salty Seas",
+      "url": "https://saltyseas.io/app/",
+      "cover": "https://www.inxanitylabs.com/assets/games/salty-seas.jpg",
+      "tags": [
+        "Multiplayer",
+        "Pirates"
+      ],
+      "desc": "Play Salty Seas online in your browser: a free multiplayer pirate game. Crew a warship with friends, fire broadsides and board other players.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "The Binding of Isaac: Repentance+",
+      "url": "https://tboi.online/",
+      "cover": "https://www.inxanitylabs.com/assets/games/binding-of-isaac.jpg",
+      "tags": [
+        "Roguelite",
+        "May not load"
+      ],
+      "desc": "Play The Binding of Isaac: Repentance+ in your browser or on your phone: the full roguelike ported to the web, with touch controls and saves you can export. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "GTA V",
+      "url": "https://web.archive.org/web/20261006055917/https://playgta5.com/",
+      "cover": "https://www.inxanitylabs.com/assets/games/gta-v.jpg",
+      "tags": [
+        "Open world",
+        "May not load"
+      ],
+      "desc": "Play GTA 5 in your browser with no download: the viral web port of the 2013 Grand Theft Auto V, kept online through the Internet Archive. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Halo: Combat Evolved",
+      "url": "https://halo.exenu.co.uk/",
+      "cover": "https://www.inxanitylabs.com/assets/games/halo-ce.jpg",
+      "tags": [
+        "FPS",
+        "Classic"
+      ],
+      "desc": "Play Halo: Combat Evolved online in your browser: the 2001 classic with Halo PC multiplayer for up to 16 players, plus a second site with controller support. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Tweetcraft",
+      "url": "https://tweetcraft.jai.vin/",
+      "cover": "https://www.inxanitylabs.com/assets/games/tweetcraft.jpg",
+      "tags": [
+        "Multiplayer",
+        "Sandbox"
+      ],
+      "desc": "Play Tweetcraft free in your browser or phone: Minecraft-style building inside a tweet, with multiplayer worlds you share by posting a link.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Fortnite OG",
+      "url": "https://fortniteog.lol/",
+      "cover": "https://www.inxanitylabs.com/assets/games/fortnite-og.jpg",
+      "tags": [
+        "Battle royale",
+        "May not load"
+      ],
+      "desc": "Play OG Fortnite in your browser: the 2017 Battle Royale map with Greasy Grove, Lonely Lodge and building, rebuilt in Rust by a fan. Public test, free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Super Mario Zombies",
+      "url": "https://smz.fun/",
+      "cover": "https://www.inxanitylabs.com/assets/games/super-mario-zombies.jpg",
+      "tags": [
+        "Zombies",
+        "FPS"
+      ],
+      "desc": "Play Super Mario Zombies free in your browser: every Black Ops 1 zombies map from 2010, with the horde swapped for 20+ Mario characters.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Moon (Zombies)",
+      "url": "https://moon-zombies.pages.dev/",
+      "cover": "https://www.inxanitylabs.com/assets/games/moon-zombies.jpg",
+      "tags": [
+        "Zombies",
+        "FPS"
+      ],
+      "desc": "Play Moon zombies in your browser: the 2011 Black Ops zombies map remade for the web. Solo survival on the lunar base, free, no download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Kino der Toten",
+      "url": "https://kino-der-toten.pages.dev/",
+      "cover": "https://www.inxanitylabs.com/assets/games/kino-der-toten.jpg",
+      "tags": [
+        "Zombies",
+        "FPS",
+        "Multiplayer"
+      ],
+      "desc": "Play Kino der Toten in your browser: the 2010 Black Ops zombies theater remade for the web, solo or online with friends. Free, no download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Cheese Cube (Zombies)",
+      "url": "https://cheese-cube.pages.dev/",
+      "cover": "https://www.inxanitylabs.com/assets/games/cheese-cube.jpg",
+      "tags": [
+        "Zombies",
+        "FPS"
+      ],
+      "desc": "Play Cheese Cube zombies in your browser: the cult Black Ops 3 custom zombies map, rebuilt for the web. Free, no download or install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Halo CE Mobile",
+      "url": "https://www.hcemobile.com/",
+      "cover": "https://www.inxanitylabs.com/assets/games/halo-ce-mobile.jpg",
+      "tags": [
+        "FPS",
+        "Multiplayer",
+        "Phone + PC"
+      ],
+      "desc": "Play Halo CE on your phone or PC: the 2001 original rebuilt from its decompilation, with online matchmaking, custom games and co-op.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "DOOM II Multiplayer",
+      "url": "https://doom.pieter.com/",
+      "cover": "https://www.inxanitylabs.com/assets/games/doom.jpg",
+      "tags": [
+        "Multiplayer",
+        "FPS",
+        "Classic"
+      ],
+      "desc": "Play DOOM II online in your browser: real 1994 deathmatch on the Odamex engine, multiplayer with whoever is on, no download or install. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Quake II",
+      "url": "https://q2.pieter.com/",
+      "cover": "https://www.inxanitylabs.com/assets/games/quake-2.jpg",
+      "tags": [
+        "Multiplayer",
+        "FPS",
+        "Classic"
+      ],
+      "desc": "Play Quake II online in your browser: the 1997 shooter's real multiplayer deathmatch for up to 8 players, no download or install. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "QuakeWorld",
+      "url": "https://q1.pieter.com/",
+      "cover": "https://www.inxanitylabs.com/assets/games/quakeworld.jpg",
+      "tags": [
+        "Multiplayer",
+        "FPS",
+        "Classic"
+      ],
+      "desc": "Play Quake online in your browser: QuakeWorld, the 1996 Quake's multiplayer mode, with low-latency netcode and up to 8 players. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Return to Castle Wolfenstein",
+      "url": "https://rtcw.pieter.com/",
+      "cover": "https://www.inxanitylabs.com/assets/games/rtcw.jpg",
+      "tags": [
+        "Multiplayer",
+        "FPS",
+        "Classic"
+      ],
+      "desc": "Play Return to Castle Wolfenstein online in your browser: the 2001 shooter's real multiplayer engine, Axis vs Allies on mp_beach. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Urban Terror",
+      "url": "https://ut.pieter.com/",
+      "cover": "https://www.inxanitylabs.com/assets/games/urban-terror.jpg",
+      "tags": [
+        "Multiplayer",
+        "FPS"
+      ],
+      "desc": "Play Urban Terror online in your browser: the 2000 tactical shooter on its real engine, multiplayer on Casa, Turnpike and Abbey. Free, no download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Quake III Arena",
+      "url": "https://q3.pieter.com/",
+      "cover": "https://www.inxanitylabs.com/assets/games/quake-3.jpg",
+      "tags": [
+        "Multiplayer",
+        "FPS",
+        "Classic"
+      ],
+      "desc": "Play Quake III Arena online in your browser: the 1999 arena shooter with live multiplayer deathmatch, also on phones and gamepads. Free, no download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Diablo",
+      "url": "https://johnimril.github.io/diablo_web/",
+      "cover": "https://www.inxanitylabs.com/assets/games/diablo.jpg",
+      "tags": [
+        "RPG",
+        "Classic"
+      ],
+      "desc": "Play Diablo in your browser: the 1996 action RPG ported to the web from its reconstructed source code. Free shareware version, no install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Black Ops Zombies",
+      "url": "https://vel.gg/bo1z",
+      "cover": "https://www.inxanitylabs.com/assets/games/bo1-zombies.jpg",
+      "tags": [
+        "Zombies",
+        "FPS"
+      ],
+      "desc": "Play Black Ops zombies in your browser: all ten maps from the 2010 game, from Kino der Toten to Moon, with no download. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "PES 6",
+      "url": "https://pes6.optijuegos.net/",
+      "cover": "https://www.inxanitylabs.com/assets/games/pes-6.jpg",
+      "tags": [
+        "Football",
+        "Online"
+      ],
+      "desc": "Play PES 6 online in your browser or phone: Pro Evolution Soccer 6 from 2006, recompiled for the web with online matches. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Half-Life",
+      "url": "https://pixelsuft.github.io/hl/",
+      "cover": "https://www.inxanitylabs.com/assets/games/half-life.jpg",
+      "tags": [
+        "FPS",
+        "Classic"
+      ],
+      "desc": "Play Half-Life in your browser: the 1998 shooter on the Xash3D engine compiled for the web, with the full game or free demos. No install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "skate. 3",
+      "url": "https://skate.aaddpp.lol/",
+      "cover": "https://www.inxanitylabs.com/assets/games/skate-3.jpg",
+      "tags": [
+        "Skateboarding",
+        "Multiplayer"
+      ],
+      "desc": "Play skate. 3 in your browser on PC or phone: a fan remake of the 2010 skating game on its own engine, with flick-it controls and multiplayer.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Surfd",
+      "url": "https://surfd.net/",
+      "cover": "https://www.inxanitylabs.com/assets/games/surfd.jpg",
+      "tags": [
+        "Surf",
+        "Movement"
+      ],
+      "desc": "Play CS surf online in your browser: Source-style surfing on fifteen classic maps, community servers and global leaderboards. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Cuphead",
+      "url": "https://wasm.rip/files/cuphead/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/cuphead.jpg",
+      "tags": [
+        "Run and gun",
+        "Bosses"
+      ],
+      "desc": "Play Cuphead in your browser: the 2017 run and gun with hand-drawn boss fights, ported to the web. No download or install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "RuneScape Classic",
+      "url": "https://runescapeclassic.gold/",
+      "cover": "https://www.inxanitylabs.com/assets/games/runescape-classic.jpg",
+      "tags": [
+        "MMO",
+        "Classic"
+      ],
+      "desc": "Play RuneScape Classic in your browser or phone: the original 2001 MMO, online with other players, no download or install. Free.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Stardew Valley",
+      "url": "https://wasm.rip/files/stardewvalley/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/stardew-valley.jpg",
+      "tags": [
+        "Farming",
+        "Cozy"
+      ],
+      "desc": "Play Stardew Valley in your browser: the 2016 farming game ported to the web. Farm, fish and mine in Pelican Town, no download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Among Us",
+      "url": "https://wasm.rip/files/amongus/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/among-us.jpg",
+      "tags": [
+        "Party",
+        "Social deduction"
+      ],
+      "desc": "Play Among Us in your browser: the 2018 social deduction game ported to the web, with online impostor servers. No download or install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Lethal Company",
+      "url": "https://wasm.rip/files/lethal/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/lethal-company.jpg",
+      "tags": [
+        "Horror",
+        "Co-op"
+      ],
+      "desc": "Play Lethal Company in your browser: the 2023 scrap-hunting horror game ported to the web. No download, no install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "RimWorld",
+      "url": "https://wasm.rip/files/rimworld/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/rimworld.jpg",
+      "tags": [
+        "Colony sim",
+        "Strategy"
+      ],
+      "desc": "Play RimWorld in your browser: the 2018 sci-fi colony sim ported to the web. Build, farm and survive raids, no download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Inscryption",
+      "url": "https://wasm.rip/files/inscryption/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/inscryption.jpg",
+      "tags": [
+        "Card game",
+        "Horror"
+      ],
+      "desc": "Play Inscryption in your browser: the 2021 card-game horror ported to the web. Face Leshy in his cabin, no download or install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Bendy and the Ink Machine",
+      "url": "https://wasm.rip/files/BATIM/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/bendy.jpg",
+      "tags": [
+        "Horror",
+        "Puzzle"
+      ],
+      "desc": "Play Bendy and the Ink Machine in your browser: the 2017 cartoon-studio horror game ported to the web. No download or install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "MiSide",
+      "url": "https://wasm.rip/files/miside/miside.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/miside.jpg",
+      "tags": [
+        "Horror",
+        "Story"
+      ],
+      "desc": "Play MiSide in your browser: the 2024 horror story game where you get pulled inside the game, ported to the web. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Trombone Champ",
+      "url": "https://wasm.rip/files/tchamp/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/trombone-champ.jpg",
+      "tags": [
+        "Rhythm",
+        "Comedy"
+      ],
+      "desc": "Play Trombone Champ in your browser: the 2022 rhythm comedy where you honk famous songs on a trombone, ported to the web.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Helltaker",
+      "url": "https://wasm.rip/files/Helltaker/helltaker.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/helltaker.jpg",
+      "tags": [
+        "Puzzle"
+      ],
+      "desc": "Play Helltaker in your browser: the 2020 puzzle game about sharply dressed demon girls, ported to the web. Free, no download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Ravenfield",
+      "url": "https://wasm.rip/files/ravenfield/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/ravenfield.jpg",
+      "tags": [
+        "FPS",
+        "Sandbox"
+      ],
+      "desc": "Play Ravenfield in your browser: the war sandbox with tanks, helicopters and boats against bots, ported to the web. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Lobotomy Corporation",
+      "url": "https://wasm.rip/files/lob-corp/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/lobotomy-corporation.jpg",
+      "tags": [
+        "Management",
+        "Horror"
+      ],
+      "desc": "Play Lobotomy Corporation in your browser: the 2018 monster-containment management game ported to the web. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "How to Fish",
+      "url": "https://wasm.rip/files/HowToFish/HowToFish.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/how-to-fish.jpg",
+      "tags": [
+        "Fishing",
+        "Physics"
+      ],
+      "desc": "Play How to Fish in your browser: a physics fishing game on a tiny island you crashed into, ported to the web. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Clustertruck",
+      "url": "https://wasm.rip/files/ClusterTruck/clustertruck.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/clustertruck.jpg",
+      "tags": [
+        "Platformer",
+        "Physics"
+      ],
+      "desc": "Play Clustertruck in your browser: the 2016 physics game where you jump across a stampede of trucks, ported to the web. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "OneShot: World Machine Edition",
+      "url": "https://wasm.rip/files/oneshot-wme/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/oneshot.jpg",
+      "tags": [
+        "Adventure",
+        "Puzzle"
+      ],
+      "desc": "Play OneShot: World Machine Edition in your browser: the puzzle adventure about bringing the sun back, ported to the web. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "FEZ",
+      "url": "https://wasm.rip/files/FEZ/fez.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/fez.jpg",
+      "tags": [
+        "Platformer",
+        "Puzzle"
+      ],
+      "desc": "Play FEZ in your browser: the 2012 platformer where you rotate a 2D world in 3D, ported to the web. No download or install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Brotato Paws n' Claws",
+      "url": "https://wasm.rip/files/bpac/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/brotato.jpg",
+      "tags": [
+        "Roguelite",
+        "Shooter"
+      ],
+      "desc": "Play Brotato in your browser: the 2023 arena roguelite with a six-gun potato, ported to the web. No download or install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Granny 3",
+      "url": "https://wasm.rip/files/granny/granny3.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/granny-3.jpg",
+      "tags": [
+        "Horror",
+        "Escape"
+      ],
+      "desc": "Play Granny 3 in your browser: escape Granny and Grandpa's house in five days. The horror game ported to the web, no download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Plague Inc",
+      "url": "https://wasm.rip/files/plauge/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/plague-inc.jpg",
+      "tags": [
+        "Strategy",
+        "Simulation"
+      ],
+      "desc": "Play Plague Inc in your browser: evolve a pathogen and infect the world before the cure, the 2012 strategy hit ported to the web.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Cheese Rolling",
+      "url": "https://wasm.rip/files/cheese-rolling/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/cheese-rolling.jpg",
+      "tags": [
+        "Ragdoll",
+        "Comedy"
+      ],
+      "desc": "Play Cheese Rolling in your browser: chase a cheese wheel down a steep hill as a ragdoll. Free, no download or install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Baldi's Basics Birthday Bash",
+      "url": "https://wasm.rip/files/birthdaybash/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/baldis-birthday-bash.jpg",
+      "tags": [
+        "Horror",
+        "Comedy"
+      ],
+      "desc": "Play Baldi's Basics Birthday Bash free in your browser: the 2019 anniversary edition of the horror comedy, no download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Hill Climb Racing",
+      "url": "https://wasm.rip/files/hcr/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/hill-climb-racing.jpg",
+      "tags": [
+        "Racing",
+        "Physics"
+      ],
+      "desc": "Play Hill Climb Racing in your browser: the 2012 physics driving game, upgrade your car and climb further. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Ages of Conflict",
+      "url": "https://wasm.rip/files/aoc/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/ages-of-conflict.jpg",
+      "tags": [
+        "Strategy",
+        "Simulation"
+      ],
+      "desc": "Play Ages of Conflict in your browser: make AI nations and watch them wage war over the map. No download or install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Dice A Million",
+      "url": "https://wasm.rip/files/diceAmillion/diceamillion.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/dice-a-million.jpg",
+      "tags": [
+        "Roguelite",
+        "Dice"
+      ],
+      "desc": "Play Dice A Million in your browser: a dice roguelite where you build the right bag and chase a million points. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "SCP: Containment Breach",
+      "url": "https://wasm.rip/files/scp/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/scp-containment-breach.jpg",
+      "tags": [
+        "Horror"
+      ],
+      "desc": "Play SCP: Containment Breach in your browser: the free 2012 horror game, escape the facility and don't blink near SCP-173.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Happy Room",
+      "url": "https://wasm.rip/files/happy-room/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/happy-room.jpg",
+      "tags": [
+        "Sandbox",
+        "Physics"
+      ],
+      "desc": "Play Happy Room in your browser: test weapons and traps on a very durable ragdoll in a lab sandbox. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "The Message From Deep Space",
+      "url": "https://wasm.rip/files/TMFDS/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/message-from-deep-space.jpg",
+      "tags": [
+        "Puzzle"
+      ],
+      "desc": "Play The Message From Deep Space in your browser: decode an alien message with maths and science. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "while True: learn()",
+      "url": "https://wasm.rip/files/wtl/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/while-true-learn.jpg",
+      "tags": [
+        "Puzzle",
+        "Programming"
+      ],
+      "desc": "Play while True: learn() in your browser: machine-learning puzzles where your cat is the better programmer. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "The Man From The Window 2",
+      "url": "https://wasm.rip/files/MFDW2/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/man-from-the-window-2.jpg",
+      "tags": [
+        "Horror"
+      ],
+      "desc": "Play The Man From The Window 2 in your browser: he is back at the window, survive the night. Short horror, no download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Toasterball",
+      "url": "https://wasm.rip/files/toasterball/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/toasterball.jpg",
+      "tags": [
+        "Sports",
+        "Physics"
+      ],
+      "desc": "Play Toasterball in your browser: physics football where you play as a toaster. Free, no download or install.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Boil Noodles at Night",
+      "url": "https://wasm.rip/files/boilnoodles/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/boil-noodles-at-night.jpg",
+      "tags": [
+        "Horror",
+        "Short"
+      ],
+      "desc": "Play Boil Noodles at Night free in your browser: a short late-night horror game about cooking instant noodles. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Dude, Stop",
+      "url": "https://wasm.rip/files/dudestop/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/dude-stop.jpg",
+      "tags": [
+        "Puzzle",
+        "Comedy"
+      ],
+      "desc": "Play Dude, Stop in your browser: easy puzzles and a narrator begging you to solve them properly. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Crashout Crew",
+      "url": "https://wasm.rip/files/cc/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/crashout-crew.jpg",
+      "tags": [
+        "Co-op",
+        "Chaos"
+      ],
+      "desc": "Play Crashout Crew in your browser: forklift chaos in the world's most efficient warehouse, ported to the web. No download.",
+      "status": 200
+    },
+    {
+      "source": "Inxanity",
+      "title": "Beatblock",
+      "url": "https://wasm.rip/files/beatblock/index.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/beatblock.jpg",
+      "tags": [
+        "Rhythm"
+      ],
+      "desc": "Play Beatblock in your browser: the rhythm game where you spin a paddle to block every beat. No download or install.",
+      "status": 200
+    }
+  ],
+  "broken": [
+    {
+      "source": "Inxanity",
+      "title": "Nacht der Untoten",
+      "url": "https://zombies.bitcoinsapi.com/",
+      "cover": "https://www.inxanitylabs.com/assets/games/nacht-der-untoten.jpg",
+      "tags": [
+        "Co-op",
+        "Zombies"
+      ],
+      "desc": "Play Nacht der Untoten in your browser: the 2008 World at War zombies map remade for the web, solo or 2 to 4 player online co-op. Free.",
+      "reason": "Bloqueado para iframe (X-Frame-Options: sameorigin)"
+    },
+    {
+      "source": "Inxanity",
+      "title": "Park Baron",
+      "url": "https://parkbaron.com/play",
+      "cover": "https://www.inxanitylabs.com/assets/games/park-baron.jpg",
+      "tags": [
+        "Tycoon"
+      ],
+      "desc": "Play Park Baron free in your browser: build roller coasters piece by piece and run a theme park with thousands of guests. No download.",
+      "reason": "Bloqueado para iframe (X-Frame-Options: deny)"
+    },
+    {
+      "source": "Inxanity",
+      "title": "GTA Vice City",
+      "url": "https://wasmarcade.com/vice-city",
+      "cover": "https://www.inxanitylabs.com/assets/games/gta-vice-city.jpg",
+      "tags": [
+        "Open world",
+        "Classic"
+      ],
+      "desc": "Play GTA Vice City in your browser with no download: the 2002 classic recompiled for the web on the reVC engine, with touch controls on phones. Free.",
+      "reason": "Bloqueado para iframe (X-Frame-Options: sameorigin)"
+    },
+    {
+      "source": "Inxanity",
+      "title": "GTA III",
+      "url": "https://wasmarcade.com/gta3",
+      "cover": "https://www.inxanitylabs.com/assets/games/gta-3.jpg",
+      "tags": [
+        "Open world",
+        "Classic"
+      ],
+      "desc": "Play GTA III in your browser with no download: the 2001 original recompiled for the web on the re3 engine, on PC or phone. Free.",
+      "reason": "Bloqueado para iframe (X-Frame-Options: sameorigin)"
+    },
+    {
+      "source": "Inxanity",
+      "title": "Black Ops II (Vibe Slops II)",
+      "url": "https://vibeslops.luckeysystems.com/",
+      "cover": "https://www.inxanitylabs.com/assets/games/black-ops-2.jpg",
+      "tags": [
+        "FPS"
+      ],
+      "desc": "Play Black Ops 2 in your browser: Vibe Slops II, a fan reconstruction of the 2012 Call of Duty made with AI. Free, no download.",
+      "reason": "fetch failed"
+    },
+    {
+      "source": "Inxanity",
+      "title": "Modern Warfare 2",
+      "url": "https://ovz-game-production.up.railway.app/",
+      "cover": "https://www.inxanitylabs.com/assets/games/modern-warfare-2.jpg",
+      "tags": [
+        "FPS",
+        "Multiplayer"
+      ],
+      "desc": "Play Modern Warfare 2 in your browser: a fan web version of the 2009 Call of Duty. Free, opens on its own site with no install.",
+      "reason": "HTTP 429"
+    },
+    {
+      "source": "Inxanity",
+      "title": "PEAK",
+      "url": "/peak.html",
+      "cover": "https://www.inxanitylabs.com/assets/games/peak.jpg",
+      "tags": [
+        "Climbing",
+        "Co-op",
+        "Mobile Mod"
+      ],
+      "desc": "Play PEAK in your browser: the 2025 climbing game where one slip ends the run, ported to the web. No download or install.",
+      "reason": "Failed to parse URL from /peak.html"
+    },
+    {
+      "source": "Inxanity",
+      "title": "The Simpsons: Hit & Run",
+      "url": "https://wasmarcade.com/simpsons",
+      "cover": "https://www.inxanitylabs.com/assets/games/simpsons-hit-and-run.jpg",
+      "tags": [
+        "Open world",
+        "Classic"
+      ],
+      "desc": "Play The Simpsons: Hit & Run in your browser: the 2003 classic compiled to WebAssembly, all seven levels of Springfield. Free, no download.",
+      "reason": "Bloqueado para iframe (X-Frame-Options: sameorigin)"
+    },
+    {
+      "source": "Inxanity",
+      "title": "Minecraft 1.8.8",
+      "url": "https://wasmarcade.com/minecraft",
+      "cover": "https://www.inxanitylabs.com/assets/games/minecraft.jpg",
+      "tags": [
+        "Sandbox",
+        "Survival"
+      ],
+      "desc": "Play Minecraft 1.8.8 in your browser: the 2014 Java version as EaglercraftX on WebAssembly, worlds saved on your device. Free, no download.",
+      "reason": "Bloqueado para iframe (X-Frame-Options: sameorigin)"
+    },
+    {
+      "source": "Inxanity",
+      "title": "Crash Bash Online",
+      "url": "https://crashbash.app/",
+      "cover": "https://www.inxanitylabs.com/assets/games/crash-bash.jpg",
+      "tags": [
+        "Party",
+        "Multiplayer"
+      ],
+      "desc": "Play Crash Bash online in your browser or phone: the 2000 PS1 party game in 4-player multiplayer rooms with friends. Free, no emulator.",
+      "reason": "Bloqueado para iframe (X-Frame-Options: sameorigin)"
+    },
+    {
+      "source": "Inxanity",
+      "title": "Flash Games (878)",
+      "url": "https://wasmarcade.com/flash-games",
+      "cover": "https://www.inxanitylabs.com/assets/games/flash-games.jpg",
+      "tags": [
+        "Collection",
+        "Flash"
+      ],
+      "desc": "Play 878 Flash games in your browser: Happy Wheels, Bloons TD 4, Age of War and more on the Ruffle emulator. Free, no plugin.",
+      "reason": "Bloqueado para iframe (X-Frame-Options: sameorigin)"
+    },
+    {
+      "source": "Inxanity",
+      "title": "Arcade Classics (227)",
+      "url": "https://wasmarcade.com/retro-games",
+      "cover": "https://www.inxanitylabs.com/assets/games/arcade-classics.jpg",
+      "tags": [
+        "Collection",
+        "Arcade"
+      ],
+      "desc": "Play 227 arcade games in your browser: Metal Slug, Street Fighter II and Neo Geo and Capcom classics. Free, no emulator setup.",
+      "reason": "Bloqueado para iframe (X-Frame-Options: sameorigin)"
+    }
+  ]
+}

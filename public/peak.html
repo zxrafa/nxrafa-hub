@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>PEAK — Mobile Touch Edition</title>
+  <style>
+    * {
+      box-sizing: border-box; margin: 0; padding: 0;
+      user-select: none; -webkit-user-select: none;
+      touch-action: none; -webkit-touch-callout: none;
+    }
+    html, body {
+      width: 100%; height: 100%; overflow: hidden; background: #000;
+      position: fixed; inset: 0; overscroll-behavior: none;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    #wrap {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; background: #000;
+      touch-action: none;
+    }
+    #unity-canvas {
+      width: 100%; height: 100%; outline: none; display: block; object-fit: contain;
+      touch-action: none;
+    }
+    #loading-ui {
+      position: absolute; display: flex; flex-direction: column; align-items: center;
+      gap: 12px; z-index: 10; pointer-events: none;
+    }
+    #bar {
+      width: 280px; height: 10px; border-radius: 999px; background: #222;
+      overflow: hidden; border: 1px solid #444;
+    }
+    #barfill { width: 0%; height: 100%; background: #22c55e; transition: width 0.1s linear; }
+    #msg { color: #aaa; font-size: 13px; font-family: monospace; }
+
+    /* Top Utility Bar */
+    .top-bar {
+      position: absolute; top: 12px; left: 16px; right: 16px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 60; pointer-events: none;
+    }
+    .top-pill {
+      background: rgba(18, 18, 20, 0.85); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1); color: #fff;
+      padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 600;
+      pointer-events: auto;
+    }
+    .top-btn {
+      background: rgba(18, 18, 20, 0.85); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1); color: #fff;
+      padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 600;
+      cursor: pointer; pointer-events: auto;
+    }
+
+    /* Mobile Controls Overlay */
+    #touch-hud {
+      position: absolute; inset: 0; pointer-events: none; z-index: 40;
+    }
+
+    /* Left Half - Dynamic Floating Movement Zone */
+    #left-touch-zone {
+      position: absolute; left: 0; top: 0; width: 50%; height: 100%;
+      pointer-events: auto; touch-action: none; z-index: 41;
+    }
+    #dynamic-joystick {
+      position: absolute; width: 120px; height: 120px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08); border: 2px solid rgba(255, 255, 255, 0.2);
+      display: none; place-items: center; transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    #joystick-thumb {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.45); border: 2px solid #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); pointer-events: none;
+      transform: translate(0px, 0px);
+    }
+
+    /* Right Half - Camera Look Zone */
+    #right-camera-zone {
+      position: absolute; right: 0; top: 0; width: 50%; height: 60%;
+      pointer-events: auto; touch-action: none; z-index: 41;
+    }
+
+    /* Action Buttons Cluster */
+    .actions-cluster {
+      position: absolute; right: 20px; bottom: 24px;
+      display: grid; grid-template-columns: repeat(2, 64px); gap: 12px;
+      pointer-events: auto; z-index: 45; touch-action: none;
+    }
+    .act-btn {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: rgba(18, 18, 20, 0.85); backdrop-filter: blur(8px);
+      border: 2px solid rgba(255, 255, 255, 0.2); color: #fff;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 700; gap: 2px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+      touch-action: none;
+    }
+    .act-btn:active, .act-btn.pressed {
+      background: rgba(34, 197, 94, 0.6) !important;
+      border-color: #22c55e !important;
+      transform: scale(0.92);
+    }
+    .act-btn.grip-l { border-color: #38bdf8; }
+    .act-btn.grip-r { border-color: #f43f5e; }
+    .act-btn.jump { border-color: #eab308; }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-pill">PEAK Mobile • Mod Touch V2</div>
+    <div style="display: flex; gap: 8px;">
+      <button class="top-btn" id="toggleHud">📱 Ocultar Controles</button>
+      <button class="top-btn" id="fsBtn">⛶ Tela Cheia</button>
+    </div>
+  </div>
+
+  <div id="wrap">
+    <canvas id="unity-canvas" width="960" height="600" tabindex="-1"></canvas>
+    <div id="loading-ui">
+      <div id="bar"><div id="barfill"></div></div>
+      <div id="msg">Iniciando download dos assets…</div>
+    </div>
+  </div>
+
+  <!-- Touch HUD -->
+  <div id="touch-hud">
+    <div id="left-touch-zone">
+      <div id="dynamic-joystick">
+        <div id="joystick-thumb"></div>
+      </div>
+    </div>
+    <div id="right-camera-zone"></div>
+    <div class="actions-cluster">
+      <div class="act-btn grip-l" id="btnGripL">🧗<span>MÃO ESQ</span></div>
+      <div class="act-btn grip-r" id="btnGripR">🧗<span>MÃO DIR</span></div>
+      <div class="act-btn" id="btnSprint">⚡<span>CORRER</span></div>
+      <div class="act-btn jump" id="btnJump">⬆️<span>PULAR</span></div>
+    </div>
+  </div>
+
+  <script>
+    // --- PREVENT ALL DEFAULT GESTURES (SCROLL, PULL, ZOOM) ---
+    document.addEventListener("gesturestart", (e) => e.preventDefault());
+    document.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
+
+    // --- VIRTUAL GAMEPAD API POLYFILL FOR UNITY ---
+    const virtualPad = {
+      id: "Virtual Mobile Gamepad",
+      index: 0,
+      connected: true,
+      timestamp: performance.now(),
+      mapping: "standard",
+      axes: [0, 0, 0, 0],
+      buttons: Array.from({ length: 17 }, () => ({ pressed: false, touched: false, value: 0 }))
+    };
+
+    const origGetGamepads = navigator.getGamepads ? navigator.getGamepads.bind(navigator) : () => [];
+    navigator.getGamepads = function() {
+      const real = origGetGamepads();
+      const list = Array.from(real || []);
+      virtualPad.timestamp = performance.now();
+      if (!list[0]) list[0] = virtualPad;
+      return list;
+    };
+
+    // --- CLEAN KEYBOARD STATE MACHINE (ZERO SPAM) ---
+    const keyState = { KeyW: false, KeyS: false, KeyA: false, KeyD: false, Space: false, ShiftLeft: false };
+
+    function setKey(code, key, active) {
+      if (active && !keyState[code]) {
+        keyState[code] = true;
+        window.dispatchEvent(new KeyboardEvent("keydown", { code, key, bubbles: true }));
+      } else if (!active && keyState[code]) {
+        keyState[code] = false;
+        window.dispatchEvent(new KeyboardEvent("keyup", { code, key, bubbles: true }));
+      }
+    }
+
+    function setPadBtn(index, isDown) {
+      virtualPad.buttons[index].pressed = isDown;
+      virtualPad.buttons[index].value = isDown ? 1.0 : 0.0;
+    }
+
+    function sendMouseClick(button, isDown) {
+      const c = document.getElementById("unity-canvas");
+      if (!c) return;
+      const type = isDown ? "mousedown" : "mouseup";
+      c.dispatchEvent(new MouseEvent(type, {
+        button: button,
+        buttons: isDown ? (button === 0 ? 1 : 2) : 0,
+        bubbles: true
+      }));
+    }
+
+    // --- FLOATING DYNAMIC JOYSTICK ON LEFT HALF ---
+    const leftZone = document.getElementById("left-touch-zone");
+    const dJoy = document.getElementById("dynamic-joystick");
+    const jThumb = document.getElementById("joystick-thumb");
+    let joyTouchId = null;
+    let joyCenter = { x: 0, y: 0 };
+    const JOY_RADIUS = 45;
+
+    leftZone.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      const t = e.changedTouches[0];
+      joyTouchId = t.identifier;
+      joyCenter = { x: t.clientX, y: t.clientY };
+      dJoy.style.left = `${joyCenter.x}px`;
+      dJoy.style.top = `${joyCenter.y}px`;
+      dJoy.style.display = "grid";
+      jThumb.style.transform = `translate(0px, 0px)`;
+    }, { passive: false });
+
+    leftZone.addEventListener("touchmove", (e) => {
+      e.preventDefault();
+      for (let i = 0; i < e.changedTouches.length; i++) {
+        const t = e.changedTouches[i];
+        if (t.identifier === joyTouchId) {
+          let dx = t.clientX - joyCenter.x;
+          let dy = t.clientY - joyCenter.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist > JOY_RADIUS) {
+            dx = (dx / dist) * JOY_RADIUS;
+            dy = (dy / dist) * JOY_RADIUS;
+          }
+          jThumb.style.transform = `translate(${dx}px, ${dy}px)`;
+
+          const nx = dx / JOY_RADIUS;
+          const ny = dy / JOY_RADIUS;
+          virtualPad.axes[0] = nx;
+          virtualPad.axes[1] = ny;
+
+          // Keyboard WASD with deadzone
+          setKey("KeyW", "w", ny < -0.25);
+          setKey("KeyS", "s", ny > 0.25);
+          setKey("KeyA", "a", nx < -0.25);
+          setKey("KeyD", "d", nx > 0.25);
+        }
+      }
+    }, { passive: false });
+
+    function resetJoy(e) {
+      if (e) e.preventDefault();
+      joyTouchId = null;
+      dJoy.style.display = "none";
+      jThumb.style.transform = `translate(0px, 0px)`;
+      virtualPad.axes[0] = 0;
+      virtualPad.axes[1] = 0;
+      setKey("KeyW", "w", false);
+      setKey("KeyS", "s", false);
+      setKey("KeyA", "a", false);
+      setKey("KeyD", "d", false);
+    }
+
+    leftZone.addEventListener("touchend", resetJoy, { passive: false });
+    leftZone.addEventListener("touchcancel", resetJoy, { passive: false });
+
+    // --- RIGHT HALF CAMERA TRACKPAD ---
+    const camZone = document.getElementById("right-camera-zone");
+    let camTouchId = null;
+    let lastCam = { x: 0, y: 0 };
+
+    camZone.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      const t = e.changedTouches[0];
+      camTouchId = t.identifier;
+      lastCam = { x: t.clientX, y: t.clientY };
+    }, { passive: false });
+
+    camZone.addEventListener("touchmove", (e) => {
+      e.preventDefault();
+      for (let i = 0; i < e.changedTouches.length; i++) {
+        const t = e.changedTouches[i];
+        if (t.identifier === camTouchId) {
+          const dx = t.clientX - lastCam.x;
+          const dy = t.clientY - lastCam.y;
+          lastCam = { x: t.clientX, y: t.clientY };
+
+          virtualPad.axes[2] = Math.max(-1, Math.min(1, dx * 0.12));
+          virtualPad.axes[3] = Math.max(-1, Math.min(1, dy * 0.12));
+
+          const c = document.getElementById("unity-canvas");
+          if (c) {
+            c.dispatchEvent(new MouseEvent("mousemove", {
+              movementX: dx * 1.8,
+              movementY: dy * 1.8,
+              bubbles: true
+            }));
+          }
+        }
+      }
+    }, { passive: false });
+
+    function resetCam(e) {
+      if (e) e.preventDefault();
+      camTouchId = null;
+      virtualPad.axes[2] = 0;
+      virtualPad.axes[3] = 0;
+    }
+    camZone.addEventListener("touchend", resetCam, { passive: false });
+    camZone.addEventListener("touchcancel", resetCam, { passive: false });
+
+    // --- CLIMBING & ACTION BUTTONS ---
+    function attachBtn(elem, onDown, onUp) {
+      const start = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        elem.classList.add("pressed");
+        onDown();
+      };
+      const end = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        elem.classList.remove("pressed");
+        onUp();
+      };
+      elem.addEventListener("touchstart", start, { passive: false });
+      elem.addEventListener("touchend", end, { passive: false });
+      elem.addEventListener("touchcancel", end, { passive: false });
+      elem.addEventListener("mousedown", start);
+      elem.addEventListener("mouseup", end);
+    }
+
+    // Mão Esquerda (Mouse 0 - Left Click + Trigger L2/LT)
+    attachBtn(
+      document.getElementById("btnGripL"),
+      () => { sendMouseClick(0, true); setPadBtn(4, true); setPadBtn(6, true); },
+      () => { sendMouseClick(0, false); setPadBtn(4, false); setPadBtn(6, false); }
+    );
+
+    // Mão Direita (Mouse 2 - Right Click + Trigger R2/RT)
+    attachBtn(
+      document.getElementById("btnGripR"),
+      () => { sendMouseClick(2, true); setPadBtn(5, true); setPadBtn(7, true); },
+      () => { sendMouseClick(2, false); setPadBtn(5, false); setPadBtn(7, false); }
+    );
+
+    // Pulo (Espaço + Botão A)
+    attachBtn(
+      document.getElementById("btnJump"),
+      () => { setKey("Space", " ", true); setPadBtn(0, true); },
+      () => { setKey("Space", " ", false); setPadBtn(0, false); }
+    );
+
+    // Correr (Shift + Stick Click L3)
+    attachBtn(
+      document.getElementById("btnSprint"),
+      () => { setKey("ShiftLeft", "Shift", true); setPadBtn(10, true); },
+      () => { setKey("ShiftLeft", "Shift", false); setPadBtn(10, false); }
+    );
+
+    // --- TOP BUTTONS ---
+    const hud = document.getElementById("touch-hud");
+    const toggleBtn = document.getElementById("toggleHud");
+    toggleBtn.onclick = () => {
+      const isHidden = hud.style.display === "none";
+      hud.style.display = isHidden ? "block" : "none";
+      toggleBtn.textContent = isHidden ? "📱 Ocultar Controles" : "📱 Mostrar Controles";
+    };
+
+    document.getElementById("fsBtn").onclick = () => {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      }
+    };
+
+    // --- UNITY ASSET ASSEMBLER & INITIALIZER ---
+    const MANIFEST = {
+      data: {
+        file: "WebGL.data.unityweb",
+        parts: [
+          "WebGL.data.unityweb.part000", "WebGL.data.unityweb.part001", "WebGL.data.unityweb.part002",
+          "WebGL.data.unityweb.part003", "WebGL.data.unityweb.part004", "WebGL.data.unityweb.part005",
+          "WebGL.data.unityweb.part006", "WebGL.data.unityweb.part007", "WebGL.data.unityweb.part008",
+          "WebGL.data.unityweb.part009", "WebGL.data.unityweb.part010", "WebGL.data.unityweb.part011",
+          "WebGL.data.unityweb.part012"
+        ],
+        bytes: 241608952
+      },
+      code: { file: "WebGL.wasm.unityweb", bytes: 12657365 },
+      framework: { file: "WebGL.framework.js.unityweb", bytes: 85982 },
+      loader: { file: "WebGL.loader.js", bytes: 117365 }
+    };
+    const CDN_BUILD = "https://cdn.jsdelivr.net/gh/wasmdotrip/Peak-Port@main/Build";
+    const canvas = document.querySelector("#unity-canvas");
+    const bar = document.querySelector("#bar");
+    const barfill = document.querySelector("#barfill");
+    const msg = document.querySelector("#msg");
+    const TOTAL = MANIFEST.data.bytes + MANIFEST.framework.bytes + MANIFEST.code.bytes;
+    let downloaded = 0;
+
+    async function assemble(entry, label) {
+      const urls = entry.parts || [entry.file];
+      const buffers = [];
+      for (let i = 0; i < urls.length; i++) {
+        const url = CDN_BUILD + "/" + urls[i];
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("Falha ao baixar " + url);
+        if (res.body && res.body.getReader) {
+          const reader = res.body.getReader();
+          while (true) {
+            const step = await reader.read();
+            if (step.done) break;
+            buffers.push(step.value);
+            downloaded += step.value.byteLength;
+            const pct = TOTAL ? downloaded / TOTAL : 0;
+            barfill.style.width = (pct * 100).toFixed(1) + "%";
+            msg.textContent = `Baixando ${label}… ${(downloaded / 1048576).toFixed(1)} / ${(TOTAL / 1048576).toFixed(1)} MB (${Math.floor(pct * 100)}%)`;
+          }
+        } else {
+          const buf = await res.arrayBuffer();
+          buffers.push(buf);
+          downloaded += buf.byteLength;
+        }
+      }
+      return URL.createObjectURL(new Blob(buffers));
+    }
+
+    (async function init() {
+      try {
+        const dataUrl = await assemble(MANIFEST.data, "dados do jogo");
+        const frameworkUrl = await assemble(MANIFEST.framework, "engine");
+        const codeUrl = await assemble(MANIFEST.code, "código WASM");
+
+        msg.textContent = "Iniciando motor gráfico…";
+        const script = document.createElement("script");
+        script.src = CDN_BUILD + "/" + MANIFEST.loader.file;
+        script.onload = () => {
+          createUnityInstance(canvas, {
+            dataUrl,
+            frameworkUrl,
+            codeUrl,
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "Aggro Crab & Landfall",
+            productName: "PEAK",
+            productVersion: "1.62.a"
+          }, (p) => {
+            barfill.style.width = Math.round(p * 100) + "%";
+            msg.textContent = "Compilando shaders… " + Math.round(p * 100) + "%";
+          }).then(() => {
+            document.getElementById("loading-ui").style.display = "none";
+          });
+        };
+        document.body.appendChild(script);
+      } catch (err) {
+        msg.textContent = "Erro ao carregar: " + err.message;
+      }
+    })();
+  </script>
+</body>
+</html>
