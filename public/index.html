@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nxrafa hub — O Acervo Infinito de ROMs e Emuladores Web</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟣</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/theme.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/views.css">
+  <link rel="stylesheet" href="./css/modal.css">
+  <link rel="stylesheet" href="./css/animations.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="brand-wrap">
+        <span class="brand-logo">NX</span>
+        <span class="brand-name">nxrafa hub</span>
+      </div>
+
+      <nav class="tabs-nav">
+        <button class="tab-btn active" data-tab="home">🏠 Início</button>
+        <button class="tab-btn" data-tab="roms">💾 ROMs</button>
+        <button class="tab-btn" data-tab="emulators">🕹️ Emuladores & Ports</button>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button class="stealth-btn" id="cloakBtn" title="Disfarçar aba como Google Drive">
+          🎭 Disfarce
+        </button>
+        <button class="stealth-btn" id="panicBtn" title="Redirecionar de emergência (Esc)">
+          🚨 Pânico
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ABA 1: HOME -->
+    <section id="tab-home" class="tab-content active fade-in">
+      <div class="hero-box">
+        <div class="hero-pill">✨ O Hub Definitivo de Preservação e Emulação</div>
+        <h1 class="hero-headline">O Acervo Infinito de Games Retrô na Web</h1>
+        <p class="hero-sub">Uma biblioteca mágica com 17.155+ ROMs originais verificadas, emuladores WebAssembly rodando direto no navegador e centenas de web ports prontos para jogar sem espera, sem anúncios e sem bloqueios.</p>
+        
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button class="btn-action btn-download" style="padding: 12px 24px; font-size: 14px;" onclick="goToTab('roms')">
+            💾 Explorar 17.155+ ROMs
+          </button>
+          <button class="btn-action btn-play" style="padding: 12px 24px; font-size: 14px;" onclick="goToTab('emulators')">
+            🕹️ Jogar no Navegador
+          </button>
+        </div>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-val" id="statTotalRoms">17.155</div>
+          <div class="metric-lbl">ROMs originais verificadas</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" id="statTotalConsoles">13+</div>
+          <div class="metric-lbl">Sistemas e consoles cobertos</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">207+</div>
+          <div class="metric-lbl">Web ports e jogos unblocked</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">0</div>
+          <div class="metric-lbl">Anúncios ou filas de espera</div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-bottom: 40px;">
+        <div class="metric-card" style="border-color: rgba(168,85,247,0.25);">
+          <div style="font-size: 24px; margin-bottom: 12px;">📚</div>
+          <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 6px;">Catálogo Completo em 1 Clique</h3>
+          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.5;">Todos os jogos de SNES, GBA, NES, Genesis, N64, GameCube, PS1 e mais com links diretos dos repositórios oficiais sem protetores de link.</p>
+        </div>
+        <div class="metric-card" style="border-color: rgba(168,85,247,0.25);">
+          <div style="font-size: 24px; margin-bottom: 12px;">⚡</div>
+          <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 6px;">Emulação WebAssembly</h3>
+          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.5;">Cores de emulação nativa Libretro/EmulatorJS rodando em 60 FPS dentro do seu navegador, com suporte a joystick e save states.</p>
+        </div>
+        <div class="metric-card" style="border-color: rgba(168,85,247,0.25);">
+          <div style="font-size: 24px; margin-bottom: 12px;">🛡️</div>
+          <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 6px;">Unblocked & Modo Disfarce</h3>
+          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.5;">Projetado para computadores de escola ou trabalho: ative o modo disfarce para camuflar como Google Drive ou aperte Esc para fechar instantaneamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 2: ROMS -->
+    <section id="tab-roms" class="tab-content fade-in">
+      <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+          <div style="position: relative; flex: 1; min-width: 280px; max-width: 580px;">
+            <svg style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-dim);" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="romSearch" class="search-bar" placeholder="Pesquisar entre 17.155+ ROMs (ex: Pokémon, Mario, Zelda, Sonic)...">
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <select id="regionSelect" class="chip" style="outline: none;">
+              <option value="all">🌐 Todas as Regiões</option>
+              <option value="USA">🇺🇸 USA</option>
+              <option value="Europe">🇪🇺 Europa</option>
+              <option value="Japan">🇯🇵 Japão</option>
+              <option value="Brazil">🇧🇷 Brasil</option>
+              <option value="Global">🌐 Global / Outros</option>
+            </select>
+            <div id="romsCountText" style="font-family: var(--font-mono); font-size: 13px; color: var(--text-dim);">Carregando catálogo...</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;" id="consoleChipsBar">
+          <button class="chip rom-console-chip active" data-console="all">Todos <span class="chip-badge">17.155</span></button>
+          <button class="chip rom-console-chip" data-console="SNES">SNES <span class="chip-badge">3.392</span></button>
+          <button class="chip rom-console-chip" data-console="GBA">GBA <span class="chip-badge">2.923</span></button>
+          <button class="chip rom-console-chip" data-console="Genesis">Mega Drive <span class="chip-badge">2.774</span></button>
+          <button class="chip rom-console-chip" data-console="NES">NES <span class="chip-badge">2.690</span></button>
+          <button class="chip rom-console-chip" data-console="GB">Game Boy <span class="chip-badge">1.604</span></button>
+          <button class="chip rom-console-chip" data-console="GBC">GBC <span class="chip-badge">1.417</span></button>
+          <button class="chip rom-console-chip" data-console="N64">N64 <span class="chip-badge">946</span></button>
+          <button class="chip rom-console-chip" data-console="GameCube">GameCube <span class="chip-badge">358</span></button>
+          <button class="chip rom-console-chip" data-console="NDS">Nintendo DS <span class="chip-badge">312</span></button>
+          <button class="chip rom-console-chip" data-console="Dreamcast">Dreamcast <span class="chip-badge">311</span></button>
+          <button class="chip rom-console-chip" data-console="PS2">PS2 <span class="chip-badge">229</span></button>
+          <button class="chip rom-console-chip" data-console="Wii">Wii <span class="chip-badge">110</span></button>
+          <button class="chip rom-console-chip" data-console="PS1">PS1 <span class="chip-badge">89</span></button>
+        </div>
+      </div>
+
+      <div class="rom-list-wrap" id="romsListContainer"></div>
+
+      <div style="text-align: center; margin: 32px 0;">
+        <button id="romsLoadMore" class="btn-action btn-download" style="display: none; padding: 12px 28px; margin: 0 auto;">
+          Carregar Mais Jogos...
+        </button>
+      </div>
+    </section>
+
+    <!-- ABA 3: EMULADORES & PORTS -->
+    <section id="tab-emulators" class="tab-content fade-in">
+      <div style="margin-bottom: 40px;">
+        <h2 style="font-size: 24px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 8px;">🎮 Clássicos Prontos para Jogar na Web</h2>
+        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Selecione um jogo lendário abaixo ou arraste uma ROM do seu computador para rodar offline instantaneamente.</p>
+
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 20px; background: var(--panel-bg); border: 1px solid var(--border-subtle); padding: 14px 18px; border-radius: 12px;">
+          <span style="font-size: 14px; font-weight: 600;">📁 Carregar ROM Própria:</span>
+          <select id="localCoreSelect" class="chip" style="outline: none;">
+            <option value="gba">Game Boy Advance (GBA)</option>
+            <option value="snes">Super Nintendo (SNES)</option>
+            <option value="nes">Nintendo (NES)</option>
+            <option value="n64">Nintendo 64 (N64)</option>
+            <option value="segaMD">Mega Drive / Genesis</option>
+            <option value="gb">Game Boy (GB)</option>
+            <option value="gbc">Game Boy Color (GBC)</option>
+            <option value="psx">PlayStation 1 (PS1)</option>
+            <option value="nds">Nintendo DS (NDS)</option>
+          </select>
+          <input type="file" id="localRomInput" style="font-size: 13px; color: var(--text-muted);">
+        </div>
+
+        <div class="ports-grid" id="classicsGrid"></div>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin: 40px 0;">
+
+      <div>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 20px;">
+          <div>
+            <h2 style="font-size: 24px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 4px;">🌐 207+ Web Ports & Jogos Unblocked</h2>
+            <p style="font-size: 14px; color: var(--text-muted);">Jogos modernos e clássicos recompilados em WebAssembly e HTML5 prontos para jogar na hora.</p>
+          </div>
+          <div id="portsCountText" style="font-family: var(--font-mono); font-size: 13px; color: var(--text-dim);"></div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px;">
+          <div style="position: relative; max-width: 580px;">
+            <svg style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-dim);" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="portSearch" class="search-bar" placeholder="Pesquisar nos Web Ports (ex: Baldi, Bendy, Brotato, Retro Bowl, FNAF)...">
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="chip port-cat-chip active" data-cat="all">Todos os Ports</button>
+            <button class="chip port-cat-chip" data-cat="Populares">🔥 Populares</button>
+            <button class="chip port-cat-chip" data-cat="WebAssembly Port">⚡ WebAssembly (WASM)</button>
+            <button class="chip port-cat-chip" data-cat="Inxanity Unblocked">🛡️ Unblocked</button>
+          </div>
+        </div>
+
+        <div class="ports-grid" id="portsGridContainer"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- THEATER PLAYER MODAL -->
+  <div class="theater-modal" id="theaterModal">
+    <div class="theater-box">
+      <div class="theater-header">
+        <div class="theater-info">
+          <span class="chip-badge" id="theaterBadge" style="background: var(--purple-600); color: #fff; padding: 4px 8px; border-radius: 6px;">PORT</span>
+          <div class="theater-title" id="theaterTitle">Jogo em Execução</div>
+        </div>
+        <div class="theater-actions">
+          <button class="theater-btn" id="theaterFsBtn" title="Tela Cheia">⛶ Tela Cheia</button>
+          <button class="theater-btn" id="theaterCloseBtn" title="Fechar (Esc)">✕ Fechar</button>
+        </div>
+      </div>
+      <div class="theater-body" id="theaterBody"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
