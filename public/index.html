@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>nxrafa hub — Acervo de ROMs, Emuladores e Web Ports</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2308080a'/><circle cx='50' cy='50' r='22' fill='%238b5cf6'/></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23060913'/><circle cx='50' cy='50' r='22' fill='%230070d1'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,8 +13,22 @@
   <link rel="stylesheet" href="./css/views.css">
   <link rel="stylesheet" href="./css/modal.css">
   <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/boot.css">
+  <link rel="stylesheet" href="./css/console.css">
+  <link rel="stylesheet" href="./css/carousel.css">
+  <link rel="stylesheet" href="./css/game-loader.css">
+  <link rel="stylesheet" href="./css/search.css">
+  <link rel="stylesheet" href="./css/control-center.css">
 </head>
 <body>
+  <!-- BOOT ANIMATION OVERLAY (ESTILO CONSOLE MINIMALISTA) -->
+  <div id="consoleBootOverlay" class="console-boot-overlay">
+    <div class="boot-title">nxrafa<span class="brand-dot">.</span>hub</div>
+    <div class="boot-bar-track">
+      <div class="boot-bar-fill"></div>
+    </div>
+  </div>
+
   <header>
     <div class="nav-container">
       <div class="brand-wrap" onclick="goToTab('home')">
@@ -24,7 +38,7 @@
       <nav class="tabs-nav">
         <button class="tab-btn active" data-tab="home">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          Início
+          Console
         </button>
         <button class="tab-btn" data-tab="ports">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
@@ -41,105 +55,97 @@
       </nav>
 
       <div style="display: flex; align-items: center; gap: 8px;">
-        <span id="gamepadBadge" style="display: none; align-items: center; gap: 5px; background: rgba(34, 197, 94, 0.12); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); padding: 5px 10px; border-radius: 8px; font-size: 11px; font-family: var(--font-mono); font-weight: 600;"></span>
+        <span id="consoleClock" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #f8fafc; padding: 5px 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-subtle); border-radius: 8px;">--:--</span>
+        <span id="gamepadBadge" style="display: none; align-items: center; gap: 5px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); padding: 5px 10px; border-radius: 8px; font-size: 11px; font-family: var(--font-mono); font-weight: 600;"></span>
+        <button class="stealth-btn" id="spotlightSearchBtn" title="Buscar Jogos (Ctrl+K)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          Buscar <kbd style="font-family: var(--font-mono); font-size: 9px; opacity: 0.6; padding: 1px 4px; background: rgba(255,255,255,0.08); border-radius: 4px;">^K</kbd>
+        </button>
+        <button class="stealth-btn" id="controlCenterBtn" title="Console Control Center & Áudio">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="18" r="2"/></svg>
+          Ajustes
+        </button>
         <button class="stealth-btn" id="cloakBtn" title="Disfarçar aba como Google Drive">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
           Disfarce
-        </button>
-        <button class="stealth-btn" id="blankBtn" title="Abrir em about:blank (Invisível no histórico de rede)">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg>
-          Furtivo
-        </button>
-        <button class="stealth-btn" id="backupBtn" title="Exportar backup dos saves locais">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-          Backup
-        </button>
-        <input type="file" id="backupInput" style="display: none;" accept=".json">
-        <button class="stealth-btn" id="panicBtn" title="Pânico imediato (Atalho: ~ ou Alt+Q)">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
-          Pânico
         </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- ABA 1: HOME -->
+    <!-- ABA 1: CONSOLE DASHBOARD (PS / XBOX STYLE) -->
     <section id="tab-home" class="tab-content active fade-in">
-      <div class="hero-box">
-        <div class="hero-pill">Preservação Digital & Emulação WebAssembly</div>
-        <h1 class="hero-headline">O Acervo de Games Retrô e Ports na Web</h1>
-        <p class="hero-sub">Biblioteca com 17.155+ ROMs originais verificadas, 300+ web ports prontos para jogar na hora e emuladores WebAssembly de alta fidelidade sem anúncios e sem esperas.</p>
-        
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <button class="btn-action btn-play" style="padding: 12px 24px; font-size: 14px;" onclick="goToTab('ports')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Explorar 300+ Web Ports
-          </button>
-          <button class="btn-action btn-download" style="padding: 12px 24px; font-size: 14px;" onclick="goToTab('emulators')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="12" y2="12"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="15" x2="15.01" y1="13" y2="13"/><line x1="18" x2="18.01" y1="11" y2="11"/><rect width="20" height="12" x="2" y="6" rx="6"/></svg>
-            Emuladores Web
-          </button>
-          <button class="btn-action btn-download" style="padding: 12px 24px; font-size: 14px;" onclick="goToTab('roms')">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
-            Catálogo 17.155+ ROMs
-          </button>
+      <!-- Ambient Hero Stage -->
+      <div class="console-hero-stage">
+        <div class="console-ambient-bg" id="consoleAmbientBg"></div>
+        <div class="console-hero-gradient"></div>
+        <div class="console-hero-content">
+          <div class="console-pill-badge" id="spotlightTag">CONSOLE DESTAQUE • 60 FPS</div>
+          <h1 class="console-hero-title" id="spotlightTitle">GTA V</h1>
+          <p class="console-hero-desc" id="spotlightDesc">Carregando catálogo do console...</p>
+          <div class="console-actions-row">
+            <button class="btn-console-play" id="spotlightPlayBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              JOGAR AGORA
+            </button>
+            <button class="btn-console-subtle" id="spotlightFavBtn">
+              ★ Favoritar
+            </button>
+            <span style="font-family: var(--font-mono); font-size: 12px; color: #38bdf8; font-weight: 600; padding: 6px 12px; background: rgba(56, 189, 248, 0.1); border-radius: 8px;" id="spotlightRating">★ 4.9</span>
+          </div>
         </div>
       </div>
 
-      <!-- RECENT GAMES -->
-      <div id="recentGamesSection" class="recent-section" style="display: none;">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-          <h2 style="font-size: 15px; font-weight: 700; color: var(--text-bright); display: flex; align-items: center; gap: 8px;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <!-- Horizontal Game Strip (PS4/PS5 style) -->
+      <div class="console-shelf-header">
+        <div class="console-shelf-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><polygon points="6 10 10 12 6 14 6 10"/></svg>
+          Biblioteca Principal • Jogos em Destaque
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-nav-btn" id="carouselPrevBtn" title="Anterior (Seta Esquerda)">◀</button>
+          <button class="carousel-nav-btn" id="carouselNextBtn" title="Próximo (Seta Direita)">▶</button>
+        </div>
+      </div>
+
+      <div class="console-filter-bar" id="carouselFilterBar">
+        <div class="filter-bumper-hint"><kbd>L1</kbd></div>
+        <div class="filter-pills-scroll">
+          <button class="console-filter-pill active" data-filter="all">Todos</button>
+          <button class="console-filter-pill" data-filter="ports">Web Ports</button>
+          <button class="console-filter-pill" data-filter="SNES">SNES</button>
+          <button class="console-filter-pill" data-filter="GBA">GBA</button>
+          <button class="console-filter-pill" data-filter="N64">N64</button>
+          <button class="console-filter-pill" data-filter="Genesis">Mega Drive</button>
+          <button class="console-filter-pill" data-filter="favs">★ Favoritos</button>
+        </div>
+        <div class="filter-bumper-hint"><kbd>R1</kbd></div>
+      </div>
+
+      <div class="console-carousel-wrap">
+        <div class="console-carousel-track" id="consoleCarouselTrack"></div>
+      </div>
+
+      <!-- RECENT GAMES SHELF -->
+      <div id="recentGamesSection" class="recent-section" style="display: none; margin-top: 14px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+          <h2 style="font-size: 13px; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-mono); display: flex; align-items: center; gap: 8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             Continuar Jogando
           </h2>
-          <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-dim);">Recentes</span>
+          <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-dim);">Sessão Recente</span>
         </div>
         <div class="recent-grid" id="recentGrid"></div>
       </div>
 
-      <div class="metrics-grid">
-        <div class="metric-card" style="cursor: pointer;" onclick="goToTab('ports')">
-          <div class="metric-val" id="statTotalPorts">302</div>
-          <div class="metric-lbl">Web ports e jogos unblocked</div>
-        </div>
-        <div class="metric-card" style="cursor: pointer;" onclick="goToTab('roms')">
-          <div class="metric-val" id="statTotalRoms">17.155</div>
-          <div class="metric-lbl">ROMs originais catalogadas</div>
-        </div>
-        <div class="metric-card" style="cursor: pointer;" onclick="goToTab('emulators')">
-          <div class="metric-val" id="statTotalConsoles">9+</div>
-          <div class="metric-lbl">Núcleos WebAssembly Libretro</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">0</div>
-          <div class="metric-lbl">Filas de espera ou anúncios</div>
-        </div>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-bottom: 40px;">
-        <div class="metric-card" style="cursor: pointer;" onclick="goToTab('ports')">
-          <div style="color: var(--violet-light); margin-bottom: 12px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-          </div>
-          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 6px;">300+ Web Ports Prontos</h3>
-          <p style="font-size: 13px; color: var(--text-dim); line-height: 1.5;">GTA V, Subway Surfers, Drive Mad, Slope, 1v1.LOL, BitLife, FNAF, Minecraft, Retro Bowl e mais rodando direto no navegador sem anúncios.</p>
-        </div>
-        <div class="metric-card" style="cursor: pointer;" onclick="goToTab('emulators')">
-          <div style="color: var(--violet-light); margin-bottom: 12px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          </div>
-          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 6px;">Emulação WebAssembly Isolada</h3>
-          <p style="font-size: 13px; color: var(--text-dim); line-height: 1.5;">Execute ROMs em 60 FPS com save states e joystick, ou arraste seus próprios arquivos .gba, .smc, .nes e .n64 para rodar offline.</p>
-        </div>
-        <div class="metric-card">
-          <div style="color: var(--violet-light); margin-bottom: 12px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 6px;">Unblocked & Modo Disfarce</h3>
-          <p style="font-size: 13px; color: var(--text-dim); line-height: 1.5;">Projetado para computadores de escola ou trabalho: ative o modo disfarce para camuflar como Google Drive ou aperte Esc para fechar instantaneamente.</p>
-        </div>
+      <!-- CONSOLE FOOTER GUIDE (PS5 / RETROARCH HUD) -->
+      <div class="console-hud-footer">
+        <div class="hud-pill"><kbd>ENTER</kbd> / <kbd>A</kbd> Iniciar</div>
+        <div class="hud-pill"><kbd>L1</kbd> <kbd>R1</kbd> / <kbd>Q</kbd> <kbd>E</kbd> Filtros</div>
+        <div class="hud-pill"><kbd>◄</kbd> <kbd>►</kbd> Navegar</div>
+        <div class="hud-pill"><kbd>^K</kbd> Busca</div>
+        <div class="hud-pill"><kbd>F</kbd> / <kbd>Y</kbd> Favoritar</div>
       </div>
     </section>
 
@@ -255,7 +261,7 @@
     <div class="theater-box">
       <div class="theater-header">
         <div class="theater-info">
-          <span class="chip-badge" id="theaterBadge" style="background: var(--violet-dark); color: #fff; padding: 4px 8px; border-radius: 6px;">PORT</span>
+          <span class="chip-badge" id="theaterBadge" style="background: var(--blue-dark); color: #fff; padding: 4px 8px; border-radius: 6px;">PORT</span>
           <div class="theater-title" id="theaterTitle">Jogo em Execução</div>
         </div>
         <div id="theaterServerWrap" style="display: none; align-items: center; gap: 8px;">
@@ -276,6 +282,81 @@
       <div class="theater-body" id="theaterBody"></div>
     </div>
   </div>
+
+  <!-- SPOTLIGHT SEARCH MODAL -->
+  <div class="spotlight-modal" id="spotlightSearchModal">
+    <div class="spotlight-card">
+      <div class="spotlight-input-wrap">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="spotlightSearchInput" class="spotlight-input" placeholder="Buscar qualquer jogo, clássico ou emulador..." autocomplete="off">
+        <span class="spotlight-kbd">ESC para fechar</span>
+      </div>
+      <div class="spotlight-results" id="spotlightResultsList"></div>
+    </div>
+  </div>
+
+  <!-- CONSOLE CONTROL CENTER DRAWER -->
+  <aside class="control-center-drawer" id="consoleControlCenter">
+    <div class="cc-header">
+      <div class="cc-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="18" r="2"/></svg>
+        Console Control Center
+      </div>
+      <button class="cc-close-btn" id="ccCloseBtn" title="Fechar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cc-body">
+      <div>
+        <div class="cc-section-title">Mixer de Áudio do Console</div>
+        <div class="cc-item" style="flex-direction: column; align-items: stretch; gap: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="cc-item-name">Volume Mestre</span>
+            <span style="font-family: var(--font-mono); font-size: 11px; color: #38bdf8; font-weight: 700;">100%</span>
+          </div>
+          <input type="range" id="ccMasterVol" class="cc-slider" min="0" max="100" value="100">
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="cc-item">
+          <div class="cc-item-label">
+            <span class="cc-item-name">Som Ambiente Sintetizado</span>
+            <span class="cc-item-desc">Pad atmosférico contínuo (estilo PS5)</span>
+          </div>
+          <div class="cc-switch active" id="ccAmbientSwitch"></div>
+        </div>
+        <div class="cc-item">
+          <div class="cc-item-label">
+            <span class="cc-item-name">Sons de Navegação & Ticks</span>
+            <span class="cc-item-desc">Feedback tátil de foco e seleção</span>
+          </div>
+          <div class="cc-switch active" id="ccSfxSwitch"></div>
+        </div>
+        <div class="cc-item">
+          <div class="cc-item-label">
+            <span class="cc-item-name">Modo Tela Cheia</span>
+            <span class="cc-item-desc">Imersão total sem barras do navegador</span>
+          </div>
+          <button class="stealth-btn" id="ccFullscreenBtn" style="padding: 6px 12px; font-size: 11px;">Alternar</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="cc-section-title">Diagnóstico de Sistema</div>
+        <div class="cc-stat-box">
+          <div class="cc-stat-tile">
+            <div class="cc-stat-name">Taxa de Quadros</div>
+            <div class="cc-stat-val" id="ccStatFps">60 FPS</div>
+          </div>
+          <div class="cc-stat-tile">
+            <div class="cc-stat-name">Gamepads Ativos</div>
+            <div class="cc-stat-val" id="ccStatPads">Nenhum</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
 
   <script type="module" src="./js/app.js"></script>
 </body>

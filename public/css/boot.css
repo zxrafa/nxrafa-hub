@@ -1,0 +1,63 @@
+/* Minimalist Console Boot Animation Styles */
+
+.console-boot-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #040711;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s ease;
+  user-select: none;
+}
+.console-boot-overlay.boot-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.console-boot-overlay.boot-fade-out {
+  opacity: 0;
+  transform: scale(1.02);
+}
+
+.boot-title {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #f8fafc;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.boot-title .brand-dot {
+  color: #38bdf8;
+  text-shadow: 0 0 16px rgba(56, 189, 248, 0.8);
+}
+
+.boot-bar-track {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+.boot-bar-fill {
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  background: linear-gradient(90deg, #0070d1, #38bdf8);
+  border-radius: 999px;
+  box-shadow: 0 0 14px #38bdf8;
+  animation: bootProgress 1.6s ease-in-out infinite;
+}
+
+@keyframes bootProgress {
+  0% { left: -45%; }
+  100% { left: 100%; }
+}

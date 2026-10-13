@@ -39,4 +39,40 @@ export function initGamepadDetection() {
     const active = Array.from(pads).find(p => p !== null);
     if (active) updateStatus(true, active.id);
   }
+
+  // Polling para navegação com controle (D-Pad / Analógico / Botão A/X)
+  let lastNav = 0;
+  function pollLoop() {
+    const pads = navigator.getGamepads ? navigator.getGamepads() : [];
+    const pad = Array.from(pads).find(p => p !== null);
+    if (pad) {
+      const now = performance.now();
+      if (now - lastNav > 220) {
+        if (pad.buttons[14]?.pressed || (pad.axes[0] && pad.axes[0] < -0.55)) {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowLeft" }));
+          lastNav = now;
+        } else if (pad.buttons[15]?.pressed || (pad.axes[0] && pad.axes[0] > 0.55)) {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowRight" }));
+          lastNav = now;
+        } else if (pad.buttons[4]?.pressed) {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "q" }));
+          lastNav = now + 250;
+        } else if (pad.buttons[5]?.pressed) {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "e" }));
+          lastNav = now + 250;
+        } else if (pad.buttons[8]?.pressed) {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "k", ctrlKey: true }));
+          lastNav = now + 350;
+        } else if (pad.buttons[0]?.pressed) {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter" }));
+          lastNav = now + 200;
+        } else if (pad.buttons[3]?.pressed) {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "f" }));
+          lastNav = now + 250;
+        }
+      }
+    }
+    requestAnimationFrame(pollLoop);
+  }
+  requestAnimationFrame(pollLoop);
 }

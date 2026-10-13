@@ -145,5 +145,5 @@ window.launchPortById = (portId) => {
   const sel = document.getElementById(`server-select-${p.id}`);
   const idx = sel ? parseInt(sel.value, 10) : 0;
   const url = (p.sources && p.sources[idx]?.url) || p.url;
-  openTheaterGame(url, p.title, p.sources, idx);
+  openTheaterGame(url, p.title, p.sources, idx, p.cover);
 };

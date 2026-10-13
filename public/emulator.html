@@ -2,109 +2,148 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>nxrafa hub — Emulador Web</title>
+  <link rel="stylesheet" href="./css/virtual-gamepad.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body {
-      width: 100%;
-      height: 100%;
-      background: #08080a;
-      overflow: hidden;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #f4f4f6;
-    }
-    #game-container {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      inset: 0;
-    }
-    .status-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: #08080a;
-      z-index: 10;
-      text-align: center;
-      padding: 24px;
-    }
-    .spinner {
-      width: 40px;
-      height: 40px;
-      border: 3px solid rgba(139, 92, 246, 0.2);
-      border-top-color: #a78bfa;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin-bottom: 16px;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .msg-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-    .msg-sub { font-size: 13px; color: #a1a1aa; font-family: monospace; }
+    html, body { width: 100%; height: 100%; background: #040711; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #f8fafc; }
+    #game-container { width: 100%; height: 100%; position: absolute; inset: 0; }
+    .status-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #040711; z-index: 20; text-align: center; padding: 24px; transition: opacity 0.3s ease; }
+    .loader-brand { font-family: monospace; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #64748b; margin-bottom: 8px; text-transform: uppercase; }
+    .msg-title { font-size: 18px; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.02em; color: #f8fafc; }
+    .msg-sub { font-size: 12px; color: #38bdf8; font-family: monospace; font-weight: 600; margin-bottom: 18px; }
+    .prog-box { width: 90%; max-width: 380px; display: flex; flex-direction: column; gap: 8px; }
+    .prog-track { width: 100%; height: 6px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
+    .prog-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #0070d1, #38bdf8); box-shadow: 0 0 14px rgba(56, 189, 248, 0.6); transition: width 0.15s ease-out; }
+    .prog-meta { display: flex; justify-content: space-between; font-family: monospace; font-size: 11px; color: #94a3b8; }
+    .hud-toggle-btn { position: fixed; top: 14px; right: 14px; z-index: 1000; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.15); color: #38bdf8; font-size: 11px; font-weight: 700; font-family: monospace; padding: 6px 12px; border-radius: 20px; cursor: pointer; }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/fflate@0.8.2/umd/index.min.js"></script>
 </head>
 <body>
   <div id="loader" class="status-overlay">
-    <div class="spinner"></div>
-    <div class="msg-title">Iniciando Emulador WebAssembly...</div>
-    <div class="msg-sub">Carregando núcleo e baixando dados da ROM</div>
+    <div class="loader-brand">nxrafa<span style="color:#0070d1;">.</span>hub</div>
+    <div class="msg-title" id="loaderTitle">Carregando Jogo...</div>
+    <div class="msg-sub" id="loaderSub">Inicializando emulador</div>
+    <div class="prog-box">
+      <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+      <div class="prog-meta">
+        <span id="progText">Conectando...</span>
+        <span id="progPct" style="color: #38bdf8; font-weight: 700;">0%</span>
+      </div>
+    </div>
   </div>
-
+  <button class="hud-toggle-btn" id="hudToggleBtn" title="Alternar Controles Virtuais">🎮 CONTROLE</button>
   <div id="game-container"></div>
+  <script type="module">
+    import { initVirtualGamepad } from "./js/virtualGamepad.js";
+    initVirtualGamepad(window);
+    document.getElementById("hudToggleBtn").onclick = () => {
+      document.getElementById("xboxHudContainer")?.classList.toggle("hidden");
+    };
 
-  <script>
     const params = new URLSearchParams(window.location.search);
     const core = params.get("core") || "gba";
-    let rawUrl = params.get("gameUrl") || "";
-    const isBlob = rawUrl.startsWith("blob:") || rawUrl.startsWith("data:");
-    const isLocal = rawUrl.startsWith("/") || rawUrl.startsWith("./") || rawUrl.startsWith("roms/");
-    const isProxy = rawUrl.startsWith("/api/proxy");
+    const rawUrl = params.get("gameUrl") || "";
+    const gameName = params.get("name") || "game.rom";
+    const fill = document.getElementById("progFill");
+    const pct = document.getElementById("progPct");
+    const txt = document.getElementById("progText");
+    const titleEl = document.getElementById("loaderTitle");
+    const loader = document.getElementById("loader");
 
-    let resolvedUrl = rawUrl;
-    if (!isBlob && !isLocal && !isProxy) {
-      resolvedUrl = `/api/proxy?url=${encodeURIComponent(rawUrl)}`;
+    if (titleEl && gameName) titleEl.textContent = decodeURIComponent(gameName);
+
+    function updateProgress(p, status) {
+      const clamped = Math.max(0, Math.min(100, Math.round(p)));
+      if (fill) fill.style.width = clamped + "%";
+      if (pct) pct.textContent = clamped + "%";
+      if (txt && status) txt.textContent = status;
     }
 
-    window.EJS_player = "#game-container";
-    window.EJS_core = core;
-    window.EJS_gameUrl = resolvedUrl;
-    window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-    window.EJS_startOnLoaded = true;
-
-    const hideLoader = () => {
-      const loader = document.getElementById("loader");
-      if (loader && loader.style.display !== "none") {
-        loader.style.opacity = "0";
-        setTimeout(() => { loader.style.display = "none"; }, 200);
+    async function downloadWithProgress(url) {
+      updateProgress(10, "Iniciando download...");
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const total = parseInt(res.headers.get("content-length") || "0", 10);
+      if (!total || !res.body) {
+        const buf = await res.arrayBuffer();
+        updateProgress(75, "Download concluído.");
+        return buf;
       }
-    };
-
-    window.EJS_onGameStart = hideLoader;
-    const readyWatcher = setInterval(() => {
-      if (document.querySelector("#game-container canvas") || document.querySelector(".ejs_game")) {
-        hideLoader();
-        clearInterval(readyWatcher);
+      const reader = res.body.getReader();
+      let received = 0;
+      const chunks = [];
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        chunks.push(value);
+        received += value.length;
+        const p = 10 + (received / total) * 65;
+        const mb = (received / (1024 * 1024)).toFixed(1);
+        const totMb = (total / (1024 * 1024)).toFixed(1);
+        updateProgress(p, `${mb}MB de ${totMb}MB`);
       }
-    }, 150);
+      const merged = new Uint8Array(received);
+      let offset = 0;
+      for (const c of chunks) { merged.set(c, offset); offset += c.length; }
+      return merged.buffer;
+    }
 
-    const script = document.createElement("script");
-    script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
-    script.onerror = () => {
-      clearInterval(readyWatcher);
-      const loader = document.getElementById("loader");
-      if (loader) {
-        loader.style.opacity = "1";
-        loader.innerHTML = `
-          <div style="font-size: 18px; font-weight: 700; color: #ef4444; margin-bottom: 8px;">Falha ao carregar núcleo</div>
-          <p style="font-size: 13px; color: #a1a1aa; margin-bottom: 14px;">Não foi possível carregar os arquivos WebAssembly.</p>
-          <button style="padding: 8px 16px; background: #8b5cf6; color: #fff; border: 0; border-radius: 8px; font-weight: 600; cursor: pointer;" onclick="window.location.reload()">Tentar Novamente</button>
-        `;
+    async function start() {
+      try {
+        let finalUrl = rawUrl;
+        const isLocal = rawUrl.startsWith("/") || rawUrl.startsWith("./") || rawUrl.startsWith("blob:");
+        const isProxy = rawUrl.startsWith("/api/proxy");
+        const fetchUrl = (isLocal || isProxy) ? rawUrl : `/api/proxy?url=${encodeURIComponent(rawUrl)}`;
+
+        if (rawUrl.toLowerCase().includes(".zip")) {
+          const buf = await downloadWithProgress(fetchUrl);
+          const bytes = new Uint8Array(buf);
+
+          if (bytes[0] === 0x50 && bytes[1] === 0x4B && window.fflate) {
+            updateProgress(85, "Descompactando ROM...");
+            const unzipped = window.fflate.unzipSync(bytes);
+            const romFile = Object.keys(unzipped).find(k => !k.endsWith("/") && !k.endsWith(".txt") && !k.endsWith(".nfo")) || Object.keys(unzipped)[0];
+            if (romFile) {
+              const blob = new Blob([unzipped[romFile]], { type: "application/octet-stream" });
+              finalUrl = URL.createObjectURL(blob);
+              window.EJS_gameName = romFile;
+            }
+          }
+        } else {
+          updateProgress(50, "Carregando dados da ROM...");
+        }
+
+        updateProgress(90, "Iniciando WebAssembly...");
+        window.EJS_player = "#game-container";
+        window.EJS_core = core;
+        window.EJS_gameUrl = finalUrl;
+        if (!window.EJS_gameName) window.EJS_gameName = gameName;
+        window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+        window.EJS_startOnLoaded = true;
+        const hide = () => {
+          updateProgress(100, "Pronto para jogar!");
+          if (loader) {
+            loader.style.opacity = "0";
+            setTimeout(() => loader.style.display = "none", 300);
+          }
+        };
+        window.EJS_onGameStart = hide;
+        const timer = setInterval(() => {
+          if (document.querySelector("#game-container canvas")) { hide(); clearInterval(timer); }
+        }, 150);
+
+        const s = document.createElement("script");
+        s.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
+        s.onerror = () => updateProgress(0, "Erro ao carregar WASM.");
+        document.body.appendChild(s);
+      } catch (err) {
+        updateProgress(0, "Falha: " + err.message);
       }
-    };
-    document.body.appendChild(script);
+    }
+    start();
   </script>
 </body>
 </html>

@@ -111,9 +111,9 @@
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 700;
-  background: rgba(139, 92, 246, 0.12);
-  border: 1px solid rgba(139, 92, 246, 0.3);
-  color: var(--violet-light);
+  background: rgba(0, 112, 209, 0.16);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: var(--blue-light);
   padding: 3px 8px;
   border-radius: 6px;
   flex-shrink: 0;
@@ -177,15 +177,15 @@
 }
 
 .btn-play {
-  background: rgba(139, 92, 246, 0.14);
-  border: 1px solid rgba(139, 92, 246, 0.35);
-  color: var(--violet-light);
+  background: rgba(0, 112, 209, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: var(--blue-light);
 }
 .btn-play:hover {
-  background: var(--violet-dark);
+  background: var(--blue-dark);
   color: #fff;
-  border-color: var(--violet-primary);
-  box-shadow: 0 0 14px var(--violet-glow);
+  border-color: var(--blue-light);
+  box-shadow: 0 0 16px var(--blue-glow);
 }
 
 .btn-external {
@@ -256,7 +256,7 @@
   font-family: var(--font-mono);
   font-size: 24px;
   font-weight: 800;
-  color: var(--violet-light);
+  color: var(--blue-light);
 }
 
 .fallback-tag {
@@ -403,15 +403,15 @@
 }
 
 .recent-card:hover {
-  border-color: var(--violet-primary);
+  border-color: var(--blue-primary);
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 /* Technical Info Card */
 .technical-info-card {
-  background: rgba(139, 92, 246, 0.04);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  background: rgba(0, 112, 209, 0.05);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 12px;
   padding: 18px 22px;
   margin-top: 32px;

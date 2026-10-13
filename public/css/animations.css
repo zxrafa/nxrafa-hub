@@ -4,8 +4,8 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 16px rgba(168, 85, 247, 0.2); }
-  50% { box-shadow: 0 0 28px rgba(168, 85, 247, 0.45); }
+  0%, 100% { box-shadow: 0 0 16px rgba(0, 112, 209, 0.25); }
+  50% { box-shadow: 0 0 28px rgba(56, 189, 248, 0.55); }
 }
 
 .fade-in {

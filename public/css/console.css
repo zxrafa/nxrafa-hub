@@ -1,0 +1,140 @@
+/* Console Ambient Hero Stage */
+.console-hero-stage {
+  position: relative;
+  min-height: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background: #090e1c;
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 36px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: flex-end;
+  padding: 34px 38px;
+}
+.console-ambient-bg {
+  position: absolute;
+  inset: -10px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(28px) saturate(1.4);
+  opacity: 0.42;
+  transform: scale(1.08);
+  transition: background-image 0.4s ease-out;
+}
+.console-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #060913 20%, rgba(6, 9, 19, 0.75) 60%, rgba(6, 9, 19, 0.4) 100%),
+              radial-gradient(ellipse 60% 70% at 0% 100%, rgba(0, 112, 209, 0.35), transparent 75%);
+}
+.console-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+.console-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 112, 209, 0.22);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  color: #38bdf8;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+  box-shadow: 0 0 12px rgba(0, 112, 209, 0.3);
+}
+.console-hero-title {
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  line-height: 1.05;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.8);
+}
+.console-hero-desc {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 22px;
+  max-width: 540px;
+}
+.console-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-console-play {
+  background: linear-gradient(135deg, #0070d1, #0284c7);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  padding: 12px 28px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 20px rgba(0, 112, 209, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: all 0.15s ease;
+}
+.btn-console-play:hover {
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 26px rgba(56, 189, 248, 0.65);
+}
+.btn-console-subtle {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+.btn-console-subtle:hover, .btn-console-subtle.active {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+/* Console Guide HUD */
+.console-hud-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  padding: 12px 18px;
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+.hud-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.hud-pill kbd {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #38bdf8;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+}

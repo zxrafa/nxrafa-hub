@@ -115,8 +115,8 @@
 .spinner {
   width: 40px;
   height: 40px;
-  border: 3px solid rgba(139, 92, 246, 0.2);
-  border-top-color: var(--violet-light);
+  border: 3px solid rgba(0, 112, 209, 0.2);
+  border-top-color: var(--blue-light);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
   margin-bottom: 18px;

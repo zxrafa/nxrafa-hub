@@ -1,6 +1,7 @@
 import { CONSOLE_CORES, EXTENSION_CORES } from "./state.js";
 import { getIcon } from "./icons.js";
 import { addRecentGame } from "./favoritesService.js";
+import { pauseAmbientForGame } from "./ambientAudio.js";
 
 export const FEATURED_CLASSICS = [
   { title: "Super Mario World", console: "SNES", url: "/roms/super-mario-world.sfc" },
@@ -51,7 +52,7 @@ function renderTechnicalNotice(container) {
   notice.style.gridColumn = "1 / -1";
   notice.innerHTML = `
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
       <h3 style="font-size:14px;font-weight:700;color:#f4f4f6;">Arquitetura: PS2, Wii U e Nintendo Switch</h3>
     </div>
     <p style="font-size:13px;color:var(--text-dim);line-height:1.6;margin-bottom:12px;">
@@ -74,6 +75,7 @@ export function launchWebEmulator(gameUrl, platformOrCore, title, isLocal = fals
   const serverWrap = document.getElementById("theaterServerWrap");
 
   if (!modal || !modalBody) return;
+  pauseAmbientForGame();
 
   const ext = gameUrl.split(".").pop().toLowerCase().split("?")[0];
   const core = CONSOLE_CORES[platformOrCore] || EXTENSION_CORES[ext] || platformOrCore.toLowerCase();
@@ -84,7 +86,7 @@ export function launchWebEmulator(gameUrl, platformOrCore, title, isLocal = fals
   if (coreBadge) coreBadge.textContent = (platformOrCore || core).toUpperCase();
   if (serverWrap) serverWrap.style.display = "none";
 
-  const runnerUrl = `/emulator.html?core=${encodeURIComponent(core)}&gameUrl=${encodeURIComponent(gameUrl)}`;
+  const runnerUrl = `/emulator.html?core=${encodeURIComponent(core)}&gameUrl=${encodeURIComponent(gameUrl)}&name=${encodeURIComponent(title)}`;
   modalBody.innerHTML = `
     <iframe id="emulator-runner-frame" src="${runnerUrl}" style="width:100%;height:100%;border:0;" allow="autoplay; fullscreen; gamepad; focus-without-user-activation *" allowfullscreen></iframe>
   `;

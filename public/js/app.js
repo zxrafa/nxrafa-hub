@@ -5,34 +5,43 @@ import { initRomsView, renderRomsList } from "./romsView.js";
 import { initEmulatorView } from "./emulatorView.js";
 import { initPortsView } from "./portsView.js";
 import { initGamepadDetection } from "./gamepadService.js";
-import { exportBackup, importBackup } from "./favoritesService.js";
 import { renderRecentGames } from "./recentsView.js";
+import { initBootScreen } from "./bootService.js";
+import { initConsoleView, setupConsoleLibrary } from "./consoleView.js";
+import { initSpotlightSearch } from "./searchService.js";
+import { initControlCenter } from "./controlCenter.js";
+import { startAmbient, resumeAmbientAfterGame, pauseAmbientForGame } from "./ambientAudio.js";
 
 async function init() {
+  initBootScreen();
   initCloak();
   initTabs();
   initModalControls();
   initGamepadDetection();
-  initBackupControls();
+  initSpotlightSearch();
+  initControlCenter();
+
+  // Autoplay compliance: iniciar áudio ambiente no primeiro toque/tecla
+  const kickAudio = () => startAmbient();
+  window.addEventListener("pointerdown", kickAudio, { once: true });
+  window.addEventListener("keydown", kickAudio, { once: true });
 
   initRomsView();
   initEmulatorView();
-  initPortsView();
+  await initPortsView();
+  initConsoleView();
+  setupConsoleLibrary();
   renderRecentGames();
 
   const stats = await loadRomStats();
   updateHomeStats(stats);
-
   await loadRomsData();
   renderRomsList();
 }
 
 function initTabs() {
   document.querySelectorAll(".tab-btn").forEach((btn) => {
-    btn.onclick = () => {
-      const target = btn.dataset.tab;
-      switchTab(target);
-    };
+    btn.onclick = () => switchTab(btn.dataset.tab);
   });
 }
 
@@ -44,43 +53,19 @@ export function switchTab(tabName) {
   document.querySelectorAll(".tab-content").forEach((c) => {
     c.classList.toggle("active", c.id === `tab-${tabName}`);
   });
-  if (tabName === "home") renderRecentGames();
+  if (tabName === "home") {
+    setupConsoleLibrary();
+    renderRecentGames();
+  }
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 window.goToTab = switchTab;
 
-function initBackupControls() {
-  const backupBtn = document.getElementById("backupBtn");
-  const backupInput = document.getElementById("backupInput");
-  if (!backupBtn || !backupInput) return;
-
-  backupBtn.onclick = () => {
-    const choice = confirm("Exportar ou Restaurar backup?\n\nClique OK para EXPORTAR (baixar arquivo .json) ou CANCELAR para IMPORTAR.");
-    if (choice) {
-      exportBackup();
-    } else {
-      backupInput.click();
-    }
-  };
-
-  backupInput.onchange = async (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      await importBackup(file);
-      alert("Backup restaurado com sucesso! Recarregando página...");
-      location.reload();
-    }
-  };
-}
-
 function updateHomeStats(stats) {
   const totalRomsEl = document.getElementById("statTotalRoms");
   const totalConsolesEl = document.getElementById("statTotalConsoles");
-
-  if (totalRomsEl && stats.All) {
-    totalRomsEl.textContent = stats.All.toLocaleString("pt-BR");
-  }
+  if (totalRomsEl && stats.All) totalRomsEl.textContent = stats.All.toLocaleString("pt-BR");
   if (totalConsolesEl) {
     const consoleCount = Object.keys(stats).filter(k => k !== "All").length;
     totalConsolesEl.textContent = `${consoleCount}+`;
@@ -98,15 +83,13 @@ function initModalControls() {
     if (modal) modal.classList.remove("active");
     if (body) body.innerHTML = "";
     if (serverWrap) serverWrap.style.display = "none";
+    resumeAmbientAfterGame();
     renderRecentGames();
   };
 
   if (closeBtn) closeBtn.onclick = closeModal;
-
   window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal && modal.classList.contains("active")) {
-      closeModal();
-    }
+    if (e.key === "Escape" && modal?.classList.contains("active")) closeModal();
   });
 
   if (fsBtn) {

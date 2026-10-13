@@ -22,7 +22,7 @@ export function renderRecentGames() {
       <div class="recent-card" data-idx="${idx}">
         <img src="${cover}" alt="${g.title}" style="width: 44px; height: 44px; object-fit: cover; border-radius: 6px; flex-shrink: 0;" onerror="this.src='./covers/default.jpg'">
         <div style="min-width: 0; flex: 1;">
-          <div style="font-size: 11px; font-family: var(--font-mono); color: var(--violet-light); font-weight: 700;">${badge}</div>
+          <div style="font-size: 11px; font-family: var(--font-mono); color: var(--blue-light); font-weight: 700;">${badge}</div>
           <div style="font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text-bright);">${g.title}</div>
         </div>
       </div>
